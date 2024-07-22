@@ -1,12 +1,19 @@
-
+import { channel } from "diagnostics_channel";
+import Head from "next/head";
+import React, { Children } from "react";
 
 export default function Home() {
   return (
-    <main className="w-full h-full flex justify-center">
-      <div className="title mt-20 flex-col">
-        <h1 className="text-5xl flex justify-center ">Golden Dragons (772)</h1>
-        <p className="flex justify-center">Team Website for FTC Team 772 Golden Dragons</p>
+    <main className="w-full flex justify-center -mt-20">
+      {/* Background */}
+      <div className="team w-full">
+        <div className="image w-full">
+          <img src="/parade.png" className="w-full" />
+        </div>
       </div>
+
+      {/* Description */}
+
     </main>
   );
 }

@@ -4,12 +4,10 @@ import Image from 'next/image';
 
 export default function Banner() {
 	const links = [
-		{ href: "/", text: "Home" },
-		{ href: "/about", text: "Team" },
+		{ href: "/", text: "Team" },
 		{ href: "/armory", text: "Robot"},
 		{ href: "/sponsor", text: "Sponsors" },
-		{ href: "/media", text: "Media"},
-		{ href: "/mission", text: "Mission" }
+		{ href: "/media", text: "Media"}
 	  ];
   return (
     <>
@@ -28,9 +26,11 @@ export default function Banner() {
 				))}
 				</div>
 			</div>
-			<div className="join flex text-nowrap justify-end mr-4">
-				<div className="px-4 py-2 bg-yellow-500 rounded-full text-black">Apply</div>
-			</div>
+			<a href='https://forms.office.com/r/T3MtSCQuB5' target="_blank">
+				<div className="join flex text-nowrap justify-end mr-4">
+					<div className="px-4 py-2 bg-yellow-500 rounded-full text-black">Apply</div>
+				</div>
+			</a>
 		</div>
     </>
   )

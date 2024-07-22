@@ -23,7 +23,8 @@ function Page() {
     "https://www.instagram.com/p/C58gUrxrbay/",
     "https://www.instagram.com/p/C6OrADrrsp4/",
     "https://www.instagram.com/p/C7KZvQ9OBEo/",
-    "https://www.instagram.com/p/C871lHBPLtc/"
+    "https://www.instagram.com/p/C871lHBPLtc/",
+    "https://www.instagram.com/p/C9G4PoHgGNP/"
   ]
 
   const [render, setRender] = useState(p.slice(p.length - 3, p.length))
