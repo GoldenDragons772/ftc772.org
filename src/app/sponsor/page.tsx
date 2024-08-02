@@ -1,32 +1,54 @@
-import React from "react";
+import Breadcrumb from "@/components/Common/Breadcrumb";
 
-export default function sponsor() {
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sponsors",
+  description: "Help us robot more by becoming a sponsor!",
+  // other metadata
+};
+
+const Blog = () => {
   return (
-    <div className="w-full flex flex-col space-y-4">
-      <div className="content flex-col justify-center">
-        <h2 className="text-3xl mt-5 flex justify-center">Our Sponsors</h2>
-        <div className="desc w-full flex justify-center">
-          <p className=" w-96 text-center mt-4">
-            We are grateful for the support of our sponsors since
-            their generosity helps us to continue to compete in FTC (FIRST Tech
-            Challenge) and provide students with hands-on experience using robotics
-            and engineering.
-          </p>
+    <>
+      <Breadcrumb
+        pageName="Our Sponsors"
+        description="We are grateful for the support of our sponsors since their generosity helps us to continue to compete in FTC (FIRST Tech Challenge) and provide students with hands-on experience using robotics and engineering."
+      />
+
+      <section className="pb-[120px] pt-[120px]">
+        <div className="container">
+          <div className="-mx-4 flex flex-wrap justify-center">
+            <div className="list min-w-80">
+              <li className="gssm mt-5 flex justify-center gap-20 flex-wrap">
+                <div className="gssm w-64 rounded-lg bg-white">
+                  <a className="w-90" href="https://scgssm.org" target="_blank">
+                    <img
+                      src="/images/brands/gssm.png"
+                      className="h-32 rounded-xl bg-white p-7"
+                    />
+                  </a>
+                </div>
+                <div className="foundation w-64 bg-white rounded-lg">
+                  <a href="https://www.scgssm.org/who-we-are/gssm-foundation" target="_blank">
+                    <img src="/images/brands/foundation.png" className="h-32 rounded-xl bg-white px-5 py-4"/>
+                  </a>
+                </div>
+                <div className="scadmin w-64 bg-white flex justify-center rounded-lg">
+                  <a href="https://www.admin.sc.gov/" target="_blank">
+                    <img
+                      src="/images/brands/scadmin.png"
+                      className="h-32 rounded-xl bg-white"
+                    />
+                  </a>
+                </div>
+              </li>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="list">
-        <li className="gssm flex justify-center space-x-20 mt-5">
-          <a href="https://scgssm.org" target="_blank">
-            <img src="/gssm.png" className="bg-white h-32 p-7 rounded-xl" />
-          </a>
-          <a href="https://www.scgssm.org/who-we-are/gssm-foundation" target="_blank">
-            <img src="/foundation.png" className="h-32 bg-white rounded-xl px-5 py-4" />
-          </a>
-          <a href="https://ed.sc.gov/" target="_blank">
-            <img src="/department.png" className="h-32 bg-white rounded-xl" />
-          </a>
-        </li>
-      </div>
-    </div>
+      </section>
+    </>
   );
-}
+};
+
+export default Blog;

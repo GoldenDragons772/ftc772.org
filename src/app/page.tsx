@@ -1,19 +1,20 @@
-import { channel } from "diagnostics_channel";
-import Head from "next/head";
-import React, { Children } from "react";
+import ScrollUp from "@/components/Common/ScrollUp";
+import Hero from "@/components/Hero";
+import Team from "@/components/Team";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Golden Dragons (772)",
+  description: "FTC 772 Golden Dragons Team Website.",
+  // other metadata
+};
 
 export default function Home() {
   return (
-    <main className="w-full flex justify-center -mt-20">
-      {/* Background */}
-      <div className="team w-full">
-        <div className="image w-full">
-          <img src="/parade.png" className="w-full" />
-        </div>
-      </div>
-
-      {/* Description */}
-
-    </main>
+    <>
+      <ScrollUp />
+      <Hero />
+      <Team />
+    </>
   );
 }

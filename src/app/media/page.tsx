@@ -1,9 +1,12 @@
 "use client";
 
-import React, { useState } from 'react'
-import { InstagramEmbed } from 'react-social-media-embed'
+import Breadcrumb from "@/components/Common/Breadcrumb";
 
-function Page() {
+import { useState } from "react";
+import { InstagramEmbed } from "react-social-media-embed";
+
+
+const ContactPage = () => {
 
   let p = [
     "https://www.instagram.com/p/CzRU35kO7_5/",
@@ -31,13 +34,15 @@ function Page() {
 
   return (
     <>
-      <div className="media">
-          <div className="posts flex justify-center text-3xl mb-5">Posts</div>
+      <Breadcrumb
+        pageName="Media"
+        description="You can see here what we're up to!"
+      />
+        <div className="media mt-10">
           <div className="media-containter flex justify-center overflow-hidden">
-            <div className="media flex-col justify-center space-y-5">
+            <div className="media flex-col justify-center space-y-5 sm:w-[650px]">
                 {render.map((link) => (
                     <InstagramEmbed
-                      width={650}
                       captioned
                       url={link}
                       key={link}
@@ -45,7 +50,7 @@ function Page() {
                 )).reverse()}
             </div>
           </div>
-          <div className="loadmore flex justify-center pt-4 pb-4">
+          <div className="loadmore flex justify-center pt-4 pb-12">
               {render.length != p.length &&
                 <button 
                 className='bg-blue-500 rounded-xl hover:opacity-80 transition-colors py-4 px-6 flex justify-center space-x-2' 
@@ -61,7 +66,7 @@ function Page() {
           </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Page
+export default ContactPage;

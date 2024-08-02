@@ -1,26 +1,37 @@
-import type { Metadata } from "next";
+"use client";
+
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Banner from "../components/Banner";
+import "node_modules/react-modal-video/css/modal-video.css";
+import "../styles/index.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Golden Dragons (772)",
-  description: "Team Website for FTC Team 772 Golden Dragons",
-};
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div className="banner"><Banner /></div>
-        <div className="pt-20">{children}</div>
+    <html suppressHydrationWarning lang="en">
+      {/*
+        <head /> will contain the components returned by the nearest parent
+        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
+      */}
+      <head />
+
+      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+          <ScrollToTop />
+        </Providers>
       </body>
     </html>
   );
 }
+
+import { Providers } from "./providers";
