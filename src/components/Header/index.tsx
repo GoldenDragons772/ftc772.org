@@ -59,9 +59,9 @@ const Header = () => {
                 <Image
                   src="/images/logo/logo.png"
                   alt="logo"
-                  width={140}
-                  height={30}
-                  className="hidden w-full dark:block "
+                  height={40}
+                  width={40}
+                  className="hidden dark:block"
                 />
               </Link>
             </div>
@@ -154,7 +154,7 @@ const Header = () => {
               <div className="flex items-center justify-end pr-16 lg:pr-0">
               <Link
                   target="_blank"
-                  href="https://forms.office.com/r/T3MtSCQuB5"
+                  href="https://forms.microsoft.com/r/SPZXq6T6Ya"
                   className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
                 >
                   Apply

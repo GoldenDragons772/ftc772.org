@@ -68,6 +68,12 @@ const teamData: Team[] = [
     role: ["Electrical Captain", "Mechanical", "Port/Outreach", "Drive/Strategy"]
   },
   {
+    id: 14,
+    image: "venus.png",
+    name: "Venus",
+    role: ["Outreach", "Drive/Strategy", ]
+  },
+  {
     id: 6,
     image: "peyton.png",
     name: "Peyton Weidner",
