@@ -32,12 +32,6 @@ const teamData: Team[] = [
     role: ["Software Captain", "Scouting", "Electrical", "web dev ❤️"]
   },
   {
-    id: 6,
-    image: "jack.png",
-    name: "Jack Szymanski",
-    role: ["Electrical Captain", "Mechanical", "Port/Outreach", "Drive/Strategy"]
-  },
-  {
     id: 7,
     image: "venus.png",
     name: "Venus",
