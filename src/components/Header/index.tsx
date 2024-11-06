@@ -161,7 +161,7 @@ const Header = () => {
                 </Link>
                 <Link
                   target="_blank"
-                  href="https://www.scgssm.org/contact"
+                  href="mailto:golden.dragons.gssm@gmail.com"
                   className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-yellow px-8 py-3 text-base font-medium text-black transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
                 >
                   Contact us
