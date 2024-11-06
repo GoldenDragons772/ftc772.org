@@ -75,7 +75,7 @@ const teamData: Team[] = [
   },
   {
     id: 14,
-    image: "crystal.png",
+    image: "crystal.jpeg",
     name: "Crystal Nguyen",
     role: ["Outreach/Portfolio"]
   }
