@@ -28,10 +28,11 @@ const ContactPage = () => {
     "https://www.instagram.com/p/C7KZvQ9OBEo/",
     "https://www.instagram.com/p/C871lHBPLtc/",
     "https://www.instagram.com/p/C9G4PoHgGNP/",
-    "https://www.instagram.com/p/DAL2q0dOYWZ/?img_index=1",
-    "https://www.instagram.com/p/DAgw8RQSP2h/?img_index=1",
-    "https://www.instagram.com/p/DBwozPNSktg/?img_index=1",
-    "https://www.instagram.com/p/DB41ueRxIm4/?img_index=1"
+    "https://www.instagram.com/p/DAL2q0dOYWZ/",
+    "https://www.instagram.com/p/DAgw8RQSP2h/",
+    "https://www.instagram.com/p/DBwozPNSktg/",
+    "https://www.instagram.com/p/DB41ueRxIm4/",
+    "https://www.instagram.com/p/DAj8ryqu6e0/"
   ]
 
   const [render, setRender] = useState(p.slice(p.length - 3, p.length))
