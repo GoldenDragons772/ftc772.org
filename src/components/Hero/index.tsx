@@ -17,7 +17,7 @@ const Hero = () => {https://stackoverflow.com/questions/50968731/same-background
                 Golden Dragons (FTC 772)
               </h1>
               <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-yellow sm:text-lg md:text-xl">
-                from the South Carolina Governor's School for Science and Mathematics
+                {`from the South Carolina Governor's School for Science and Mathematics`}
               </p>
             </div>
           </div>
