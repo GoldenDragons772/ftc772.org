@@ -21,13 +21,13 @@ const teamData: Team[] = [
   },
   {
     id: 4,
-    image: "shivali.png",
+    image: "shivali.jpeg",
     name: "Shivali Patel",
     role: ["Portfolio Captain", "Outreach Captain", "Scouting"]
   },
   {
     id: 5,
-    image: "rishi.png",
+    image: "rishi.jpeg",
     name: "Rishi Patel",
     role: ["Drive Captain", "Software"]
   },
@@ -39,8 +39,8 @@ const teamData: Team[] = [
   },
   {
     id: 8,
-    image: "venus.png",
-    name: "Venus",
+    image: "venus.jpeg",
+    name: "VanAtter",
     role: ["Outreach", "Drive/Strategy"]
   },
   {
