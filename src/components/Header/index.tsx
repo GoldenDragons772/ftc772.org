@@ -152,13 +152,6 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-              <Link
-                  target="_blank"
-                  href="https://forms.microsoft.com/r/SPZXq6T6Ya"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Apply
-                </Link>
                 <Link
                   target="_blank"
                   href="mailto:golden.dragons.gssm@gmail.com"
