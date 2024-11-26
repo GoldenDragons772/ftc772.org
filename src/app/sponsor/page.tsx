@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const Blog = () => {
+const Sponsors = () => {
   return (
     <>
       <Breadcrumb
@@ -31,13 +31,23 @@ const Blog = () => {
                 </div>
                 <div className="foundation w-64 bg-white rounded-lg">
                   <a href="https://www.scgssm.org/who-we-are/gssm-foundation" target="_blank">
-                    <img src="/images/brands/foundation.png" className="h-32 rounded-xl bg-white px-5 py-4"/>
+                    <img 
+                      src="/images/brands/foundation.png" 
+                      className="h-32 rounded-xl bg-white px-5 py-4"/>
                   </a>
                 </div>
                 <div className="scadmin w-64 bg-white flex justify-center rounded-lg">
                   <a href="https://www.admin.sc.gov/" target="_blank">
                     <img
                       src="/images/brands/scadmin.png"
+                      className="h-32 rounded-xl bg-white"
+                    />
+                  </a>
+                </div>
+                <div className="sarjilaw w-64 bg-white flex justify-center rounded-lg">
+                  <a href="https://sarjilawfirm.com" target="_blank">
+                    <img
+                      src="/images/brands/sarjilaw.png"
                       className="h-32 rounded-xl bg-white"
                     />
                   </a>
@@ -51,4 +61,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Sponsors;

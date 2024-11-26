@@ -38,7 +38,7 @@ const GilesCorey = () => {
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title="Giles Corey"
-                paragraph="Giles Correy is the 2023-24 robot from the Golden Dragons. It is designed to be a fast and efficient robot that can score quickly and accurately. Giles was named after a character from the Crucible since initially it needed weights to keep it from drifting."
+                paragraph="Giles Corey is the 2023-24 robot from the Golden Dragons. It is designed to be a fast and efficient robot that can score quickly and accurately. Giles was named after a character from the Crucible since initially it needed weights to keep it from drifting."
                 mb="44px"
               />
             </div>
