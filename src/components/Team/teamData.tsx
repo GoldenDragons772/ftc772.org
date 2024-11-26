@@ -3,19 +3,19 @@ import { Team } from "@/types/team";
 const teamData: Team[] = [
   {
     id: 1,
-    image: "braeden1.png",
+    image: "braeden.png",
     name: "Braeden Montroy",
     role: ["Team Captain", "Mechanical Captain", "Scouting Captain"]
   },
   {
     id: 2,
-    image: "sanjith1.png",
+    image: "sanjith.png",
     name: "Sanjith Sunil",
     role: ["Software Captain", "Scouting", "Electrical", "Web Dev ❤️"]
   },
   {
     id: 3,
-    image: "gabe1.png",
+    image: "gabe.png",
     name: "Gabriel Howe",
     role: ["Software Captain", "Scouting Captain", "Port/Outreach", "Drive/Strategy"]
   },
@@ -33,7 +33,7 @@ const teamData: Team[] = [
   },
   {
     id: 7,
-    image: "peyton1.png",
+    image: "peyton.png",
     name: "Peyton Weidner",
     role: ["Scouting Captain", "Mechanical", "Electrical", "Port/Outreach", "Software"]
   },
@@ -45,31 +45,31 @@ const teamData: Team[] = [
   },
   {
     id: 9,
-    image: "albert1.png",
+    image: "albert.png",
     name: "Albert Mathisz",
     role: ["Software", "Mechanical", "Outreach"]
   },
   {
     id: 10,
-    image: "griffin1.jpeg",
+    image: "griffin.jpeg",
     name: "Griffin LaRue",
     role: ["Mechanical", "Port/Outreach", "Drive/Strategy"]
   },
   {
     id: 11,
-    image: "vyom1.jpeg",
+    image: "vyom.jpeg",
     name: "Vyom Madeyanda",
     role: ["Mechanical", "Outreach", "Electrical"]
   },
   {
     id: 12,
-    image: "carolinel1.jpeg",
+    image: "carolinel.jpeg",
     name: "Caroline Locklair",
     role: ["Outreach/Portfolio", "Electrical", "Software"]
   },
   {
     id: 13,
-    image: "carolinep1.jpeg",
+    image: "carolinep.jpeg",
     name: "Caroline Pringle",
     role: ["Software", "Outreach/Portfolio"]
   },
