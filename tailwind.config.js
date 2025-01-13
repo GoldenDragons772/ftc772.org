@@ -76,7 +76,7 @@ module.exports = {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
       },
       backgroundImage: {
-        "team": "url('/images/team/team_tint.png')",
+        "team": "url('/images/team/new_team_tint.png')",
 
       },
     },
