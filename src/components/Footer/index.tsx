@@ -126,10 +126,10 @@ const Footer = () => {
                   <li>
                     <Link
                       target="_blank"
-                      href="https://www.youtube.com/watch?v=6e-5Uo1dRic"
+                      href="https://youtu.be/ewlDPvRK4U4?si=81Au6CfuAiAtxrSC"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      CENTERSTAGE
+                      INTO THE DEEP
                     </Link>
                   </li>
                 </ul>
