@@ -17,7 +17,7 @@ const teamData: Team[] = [
     id: 3,
     image: "gabe.png",
     name: "Gabriel Howe",
-    role: ["Software Captain", "Scouting Captain", "Port/Outreach", "Drive/Strategy"]
+    role: ["Software Captain", "Scouting Captain", "Outreach/Portfolio", "Drive/Strategy"]
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const teamData: Team[] = [
     id: 7,
     image: "peyton.png",
     name: "Peyton Weidner",
-    role: ["Scouting Captain", "Mechanical", "Electrical", "Port/Outreach", "Software"]
+    role: ["Scouting Captain", "Mechanical", "Electrical", "Outreach/Portfolio", "Software"]
   },
   {
     id: 8,
@@ -53,7 +53,7 @@ const teamData: Team[] = [
     id: 10,
     image: "griffin.jpeg",
     name: "Griffin LaRue",
-    role: ["Mechanical", "Port/Outreach", "Drive/Strategy"]
+    role: ["Mechanical", "Outreach/Portfolio", "Drive/Strategy"]
   },
   {
     id: 11,
