@@ -45,7 +45,8 @@ const ContactPage = () => {
     {type: "instagram", url: "https://www.instagram.com/p/DB41ueRxIm4/"},
     {type: "instagram", url: "https://www.instagram.com/p/DCpzm9SRlKj/"},
     {type: "instagram", url: "https://www.instagram.com/p/DCxB3Vxy9cn/"},
-    {type: "youtube", url: "https://youtu.be/R9iVv4WKt9c?si=_OPmi7fMM8FGFj0i"}
+    {type: "youtube", url: "https://youtu.be/R9iVv4WKt9c?si=_OPmi7fMM8FGFj0i"},
+    {type: "instagram", url: "https://www.instagram.com/p/DFCT6y9uN4W/?img_index=1"}
   ]
 
   const [render, setRender] = useState(p.slice(p.length - 3, p.length))
