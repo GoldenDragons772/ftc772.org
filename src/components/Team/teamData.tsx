@@ -72,13 +72,8 @@ const teamData: Team[] = [
     image: "carolinep.jpeg",
     name: "Caroline Pringle",
     role: ["Software", "Outreach/Portfolio"]
-  },
-  {
-    id: 14,
-    image: "crystal.jpeg",
-    name: "Crystal Nguyen",
-    role: ["Outreach/Portfolio"]
   }
+
 ]
 
 export default teamData
