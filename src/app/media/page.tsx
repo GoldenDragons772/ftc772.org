@@ -47,12 +47,6 @@ const ContactPage = () => {
     {type: "instagram", url: "https://www.instagram.com/p/DCxB3Vxy9cn/"},
     {type: "youtube", url: "https://youtu.be/R9iVv4WKt9c?si=_OPmi7fMM8FGFj0i"},
     {type: "instagram", url: "https://www.instagram.com/p/DFCT6y9uN4W/?img_index=1"}
-    {type: "instagram", url: "https://www.instagram.com/reel/DFbdEzqRFz2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
-    {type: "instagram", url: "https://www.instagram.com/reel/DFdTk1WRPRL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
-    {type: "instagram", url: "https://www.instagram.com/p/DFiopt9RE0v/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
-    {type: "instagram", url: "https://www.instagram.com/reel/DFjln0WOlHf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
-    {type: "instagram", url: "https://www.instagram.com/reel/DFqvEN4SV6o/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
-    {type: "instagram", url: "https://www.instagram.com/p/DFwNnwHRr6Y/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="}
   ]
 
   const [render, setRender] = useState(p.slice(p.length - 3, p.length))
