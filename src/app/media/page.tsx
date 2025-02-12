@@ -52,7 +52,9 @@ const ContactPage = () => {
     {type: "instagram", url: "https://www.instagram.com/p/DFiopt9RE0v/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
     {type: "instagram", url: "https://www.instagram.com/reel/DFjln0WOlHf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
     {type: "instagram", url: "https://www.instagram.com/reel/DFqvEN4SV6o/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
-    {type: "instagram", url: "https://www.instagram.com/p/DFwNnwHRr6Y/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="}
+    {type: "instagram", url: "https://www.instagram.com/p/DFwNnwHRr6Y/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
+    {type: "instagram", url: "https://www.instagram.com/p/DF6L57XyrSv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
+    {type: "instagram", url: "https://www.instagram.com/reel/DF9J9eKuQoM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="}
   ]
 
   const [render, setRender] = useState(p.slice(p.length - 3, p.length))
