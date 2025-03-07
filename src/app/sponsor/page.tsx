@@ -48,6 +48,20 @@ const Sponsors = () => {
                         className="h-32 rounded-xl invert brightness-0 px-5 py-4"/>
                   </a>
                 </div>
+                <div className="andersonbrass w-64 invert brightness-0 rounded-lg">
+                  <a href="https://www.andersonbrass.com/products" target="_blank">
+                    <img
+                         src="/images/brands/andersonbrass.png"
+                         className="h-32 rounded-xl invert brightness-0 px-5 py-4"/>
+                  </a>
+                </div>
+                <div className="isi w-64 invert brightness-0 rounded-lg">
+                  <a href="https://isirobots.com/" target="_blank">
+                    <img
+                          src="/images/brands/isi.png"
+                          className="h-32 rounded-xl invert brightness-0 px-5 py-4"/>
+                  </a>
+                </div>
               </li>
             </div>
           </div>
