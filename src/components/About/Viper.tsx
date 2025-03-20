@@ -42,7 +42,7 @@ const Viper = () => {
                                     exposure="0.65"
                                     shadow-softness="0"
                                     disable-tap
-                                    poster="/images/robot/2025.png"
+                                    //poster="/images/robot/2025.png"
                                     disable-pan
                                     tone-mapping="neutral"
                                     shadow-intensity="1"

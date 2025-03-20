@@ -56,7 +56,7 @@ const GilesCorey = () => {
                       exposure="0.65"
                       shadow-softness="0"
                       disable-tap
-                      poster="/images/robot/2024.png"
+                      //poster="/images/robot/2024.png"
                       disable-pan
                       tone-mapping="neutral"
                       shadow-intensity="1"

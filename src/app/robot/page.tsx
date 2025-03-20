@@ -1,4 +1,5 @@
 import GilesCorey from "@/components/About/GilesCorey";
+import Hydra from "@/components/About/Hydra";
 import Viper from "@/components/About/Viper";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
@@ -17,8 +18,9 @@ const AboutPage = () => {
         pageName="Robot"
         description="Robot Page for 772 Golden Dragons"
       />
-      <GilesCorey />
+      <Hydra />
       <Viper />
+      <GilesCorey />
     </>
   );
 };
