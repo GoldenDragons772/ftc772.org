@@ -1,6 +1,7 @@
 import ScrollUp from "@/components/Common/ScrollUp";
 import Hero from "@/components/Hero";
 import Team from "@/components/Team";
+import RobotIcons from "@/components/RobotIcons";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <ScrollUp />
       <Hero />
+      <RobotIcons />
       <Team />
     </>
   );
