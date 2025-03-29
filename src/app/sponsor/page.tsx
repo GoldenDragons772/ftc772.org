@@ -62,6 +62,13 @@ const Sponsors = () => {
                           className="h-32 rounded-xl invert brightness-0 px-5 py-4"/>
                   </a>
                 </div>
+                <div className="goldendragon w-64 invert brightness-0 rounded-lg">
+                                  <a href="https://www.goldendragon2hartsville.com/" target="_blank">
+                                    <img
+                                         src="/images/brands/gdlogo.png"
+                                         className="h-32 rounded-xl invert brightness-0 px-5 py-4"/>
+                                  </a>
+                                </div>
               </li>
             </div>
           </div>
