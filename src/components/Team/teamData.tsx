@@ -11,7 +11,7 @@ const teamData: Team[] = [
     id: 2,
     image: "sanjith.png",
     name: "Sanjith Sunil",
-    role: ["Software Captain", "Scouting", "Electrical", "Web Dev ❤️"]
+    role: ["Mentor", "gg"]
   },
   {
     id: 3,
