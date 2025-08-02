@@ -3,4 +3,5 @@ export type Team = {
   image: string,
   name: string,
   role: string[],
+  type: 'member' | 'mentor',
 }
