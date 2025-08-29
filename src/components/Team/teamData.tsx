@@ -13,21 +13,21 @@ const teamData: Team[] = [
     id: 2,
     image: "griffin.jpeg",
     name: "Griffin LaRue",
-    role: ["Mechanical Captain", "Drive Captain", "Outreach/Portfolio", "Strategy"],
+    role: ["Mechanical Captain", "Drive Captain", "Outreach/Portfolio", "Strategy", "Scouting"],
     type: "member"
   },
   {
     id: 3,
     image: "carolinel.jpeg",
     name: "Caroline Locklair",
-    role: ["Portfolio Captain", "Outreach Captain", "Electrical", "Software"],
+    role: ["Portfolio Captain", "Outreach Captain", "Mechanical", "Electrical" "Scouting"],
     type: "member"
   },
   {
     id: 4,
     image: "vyom.jpeg",
     name: "Vyom Madeyanda",
-    role: ["Mechanical Captain", "Electrical Captain", "Outreach"],
+    role: ["Mechanical Captain", "Electrical Captain", "Outreach", "Scouting"],
     type: "member"
   },
   {
@@ -55,7 +55,7 @@ const teamData: Team[] = [
     id: 8,
     image: "carolinep.jpeg",
     name: "Caroline Pringle",
-    role: ["Outreach Captain", "Portfolio Captain", "Software"],
+    role: ["Outreach Captain", "Portfolio Captain", "Software", "Scouting"],
     type: "member"
   },
   {
