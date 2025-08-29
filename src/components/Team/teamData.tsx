@@ -20,7 +20,7 @@ const teamData: Team[] = [
     id: 3,
     image: "carolinel.jpeg",
     name: "Caroline Locklair",
-    role: ["Portfolio Captain", "Outreach Captain", "Mechanical", "Electrical" "Scouting"],
+    role: ["Portfolio Captain", "Outreach Captain", "Mechanical", "Electrical", "Scouting"],
     type: "member"
   },
   {
