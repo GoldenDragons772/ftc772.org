@@ -25,7 +25,7 @@ const teamData: Team[] = [
   },
   {
     id: 4,
-    image: "vyom.jpeg",
+    image: "vyom.jpg",
     name: "Vyom Madeyanda",
     role: ["Mechanical Captain", "Electrical Captain", "Outreach", "Scouting"],
     type: "member"
@@ -53,7 +53,7 @@ const teamData: Team[] = [
   },
   {
     id: 8,
-    image: "carolinep.jpeg",
+    image: "carolinep.jpg",
     name: "Caroline Pringle",
     role: ["Outreach Captain", "Portfolio Captain", "Software", "Scouting"],
     type: "member"
@@ -88,28 +88,28 @@ const teamData: Team[] = [
   },
   {
       id: 13,
-      image: "arath.png",
+      image: "arath.jpg",
       name: "Arath Bernal",
       role: ["Mechanical", "Electrical", "Software"],
       type: "member"
     },
     {
       id: 14,
-      image: "lainey.png",
+      image: "lainey.jpg",
       name: "Lainey Purser",
       role: ["Outreach/Portfolio"],
       type: "member"
     },
     {
       id: 15,
-      image: "kyle.png",
+      image: "kyle.jpg",
       name: "Kyle Pacheco",
       role: ["Mechanical", "Electrical"],
       type: "member"
     },
     {
       id: 16,
-      image: "logan.png",
+      image: "logan.jpg",
       name: "Logan Pacheco",
       role: ["Mechanical", "Electrical"],
       type: "member"
@@ -123,42 +123,42 @@ const teamData: Team[] = [
     },
     {
       id: 18,
-      image: "kennick.png",
+      image: "kennick.jpg",
       name: "Kennick Oldenkamp",
       role: ["Software"],
       type: "member"
     },
     {
       id: 19,
-      image: "marie.png",
+      image: "marie.jpg",
       name: "Marie Alvarez",
       role: ["Mechanical"],
       type: "member"
     },
     {
       id: 20,
-      image: "shree.png",
+      image: "shree.jpeg",
       name: "Shree Patel",
       role: ["Software", "Outreach/Portfolio"],
       type: "member"
     },
     {
       id: 21,
-      image: "victor.png",
+      image: "victor.jpg",
       name: "Victor Zhang",
       role: ["Software"],
       type: "member"
     },
     {
       id: 22,
-      image: "shreeji.png",
+      image: "shreeji.jpg",
       name: "Shreeji Patel",
       role: ["Mechanical"],
       type: "member"
     },
     {
       id: 23,
-      image: "alex.png",
+      image: "alex.jpg",
       name: "Alex Cotran",
       role: ["Mechanical", "Electrical", "Software"],
       type: "member"
