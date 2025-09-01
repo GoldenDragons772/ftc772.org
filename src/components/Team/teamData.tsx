@@ -68,7 +68,7 @@ const teamData: Team[] = [
   {
     id: 10,
     image: "venus.webp",
-    name: "VanAtter",
+    name: "Venus",
     role: ["Outreach", "Drive/Strategy"],
     type: "mentor"
   },
