@@ -88,49 +88,49 @@ const teamData: Team[] = [
   },
   {
       id: 13,
-      image: "arathpfp.png",
+      image: "arath.png",
       name: "Arath Bernal",
       role: ["Mechanical", "Electrical", "Software"],
       type: "member"
     },
     {
       id: 14,
-      image: "laineypfp.png",
+      image: "lainey.png",
       name: "Lainey Purser",
       role: ["Outreach/Portfolio"],
       type: "member"
     },
     {
       id: 15,
-      image: "kylepfp.png",
+      image: "kyle.png",
       name: "Kyle Pacheco",
       role: ["Mechanical", "Electrical"],
       type: "member"
     },
     {
       id: 16,
-      image: "loganpfp.png",
+      image: "logan.png",
       name: "Logan Pacheco",
       role: ["Mechanical", "Electrical"],
       type: "member"
     },
     {
       id: 17,
-      image: "divyapfp.png",
+      image: "divya.png",
       name: "Divya Rustgi",
       role: ["Mechanical", "Outreach"],
       type: "member"
     },
     {
       id: 18,
-      image: "kennickpfp.png",
+      image: "kennick.png",
       name: "Kennick Oldenkamp",
       role: ["Software"],
       type: "member"
     },
     {
       id: 19,
-      image: "mariepfp.png",
+      image: "marie.png",
       name: "Marie Alvarez",
       role: ["Mechanical"],
       type: "member"
@@ -144,21 +144,21 @@ const teamData: Team[] = [
     },
     {
       id: 21,
-      image: "victorpfp.png",
+      image: "victor.png",
       name: "Victor Zhang",
       role: ["Software"],
       type: "member"
     },
     {
       id: 22,
-      image: "shreejipfp.png",
+      image: "shreeji.png",
       name: "Shreeji Patel",
       role: ["Mechanical"],
       type: "member"
     },
     {
       id: 23,
-      image: "alexpfp.png",
+      image: "alex.png",
       name: "Alex Cotran",
       role: ["Mechanical", "Electrical", "Software"],
       type: "member"
