@@ -4,7 +4,7 @@ import teamData from './teamData'
 
 function Team() {
   const members = teamData.filter(user => user.type === 'member');
-  const mentors = teamData.filter(user => user.type === 'mentor');
+  const alumni = teamData.filter(user => user.type === 'mentor');
   return (
     <>
       <section>
@@ -38,9 +38,9 @@ function Team() {
               );
             })}
           </div>
-          <div className="text-2xl font-semibold flex justify-center pb-4">Mentors</div>
+          <div className="text-2xl font-semibold flex justify-center pb-4">Alumni</div>
           <div className="userProfiles flex flex-wrap justify-center gap-2">
-            {mentors.map((user, id) => {
+            {alumni.map((user, id) => {
               const isCaptain = user.role.some(role => role.toLowerCase().includes('captain'));
               return (
                 <div

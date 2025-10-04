@@ -20,7 +20,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                © 2024 Golden Dragons. All Rights Reserved.
+                © 2025 Golden Dragons. All Rights Reserved.
                 </p>
                 <div className="flex items-center">
                   <a
