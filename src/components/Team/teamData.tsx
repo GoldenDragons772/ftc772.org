@@ -4,7 +4,7 @@ import { Team } from "@/types/team";
 const teamData: Team[] = [
   {
     id: 1,
-    image: "albert.png",
+    image: "albert.jpg",
     name: "Albert Mathisz",
     role: ["Software Captain", "Mechanical", "Outreach", "Strategy"],
     type: "member"
@@ -122,38 +122,31 @@ const teamData: Team[] = [
       type: "member"
     },
     {
-      id: 18,
-      image: "kennick.jpg",
-      name: "Kennick Oldenkamp",
-      role: ["Software"],
-      type: "member"
-    },
-    {
       id: 19,
       image: "marie.jpg",
       name: "Marie Alvarez",
-      role: ["Mechanical"],
+      role: ["Mechanical", "Drive"],
       type: "member"
     },
     {
       id: 20,
       image: "shree.jpeg",
       name: "Shree Patel",
-      role: ["Software", "Outreach/Portfolio"],
+      role: ["Software", "Outreach/Portfolio", "Drive"],
       type: "member"
     },
     {
       id: 21,
       image: "victor.jpg",
       name: "Victor Zhang",
-      role: ["Software"],
+      role: ["Software", "Drive"],
       type: "member"
     },
     {
       id: 22,
       image: "shreeji.jpg",
       name: "Shreeji Patel",
-      role: ["Mechanical"],
+      role: ["Mechanical", "Drive"],
       type: "member"
     },
     {
