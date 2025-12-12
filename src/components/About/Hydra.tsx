@@ -37,7 +37,7 @@ const Hydra = () => {
                                     className="w-full h-[500px]"
                                     src="/images/robot/model/2025_V2.glb"
                                     camera-controls
-                                    camera-orbit="320deg 80deg 25m"
+                                    camera-orbit="50deg 80deg 25m"
                                     loading="auto"
                                     powerPreference="low-power"
                                     exposure="0.65"

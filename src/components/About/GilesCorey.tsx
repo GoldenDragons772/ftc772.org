@@ -50,7 +50,7 @@ const GilesCorey = () => {
                       className="w-full h-[500px]"
                       src="/images/robot/model/2024.glb"
                       camera-controls
-                      camera-orbit="-40deg 80deg 2m"
+                      camera-orbit="40deg 80deg 2m"
                       loading="auto"
                       powerPreference="low-power"
                       exposure="0.65"

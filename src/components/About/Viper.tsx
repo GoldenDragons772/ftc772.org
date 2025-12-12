@@ -36,7 +36,7 @@ const Viper = () => {
                                     className="w-full h-[500px]"
                                     src="/images/robot/model/2025.glb"
                                     camera-controls
-                                    camera-orbit="230deg 80deg 10m"
+                                    camera-orbit="310deg 80deg 10m"
                                     loading="auto"
                                     powerPreference="low-power"
                                     exposure="0.65"
