@@ -1,15 +1,12 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
-
+import {Document} from 'react-pdf';
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
     title: "Newsletter",
     description: "Keep up with our team!",
     // other metadata
   };
-<iframe
-  src="https://your-host.com/newsletter.pdf"
-  style={{ width: "100%", height: "100vh" }}
-/>
 
   const BlogPage = () => {
     return (
@@ -22,5 +19,11 @@ export const metadata: Metadata = {
       </>
     );
   };
+
+
+
+
+
+
 
   export default BlogPage;

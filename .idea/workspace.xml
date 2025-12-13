@@ -8,7 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/blog/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/blog/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/menuData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/menuData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/media/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/media/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Team/teamData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Team/teamData.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +28,12 @@
     &quot;assignee&quot;: &quot;c-pringle&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/GoldenDragons772/ftc772.org.git",
-    "accountId": "624c9987-588b-4970-b82e-e017b8585fe7"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/GoldenDragons772/ftc772.org.git&quot;,
+    &quot;accountId&quot;: &quot;624c9987-588b-4970-b82e-e017b8585fe7&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>

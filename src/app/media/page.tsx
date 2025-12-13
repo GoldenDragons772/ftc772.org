@@ -63,6 +63,17 @@ const ContactPage = () => {
     {type: "instagram", url: "https://www.instagram.com/p/DIh2RlLxDEG/"},
     {type: "instagram", url: "https://www.instagram.com/p/DIndYwJMAm2/"},
     {type: "instagram", url: "https://www.instagram.com/p/DIrU3Nxxly_/"},
+    {type: "instagram", url: "https://www.instagram.com/p/DNWzEV7O6sX/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA=="},
+    {type: "instagram", url: "https://www.instagram.com/p/DOSGpkpjBXI/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
+    {type: "instagram", url: "https://www.instagram.com/p/DOjq-yaESr-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
+    {type: "instagram", url: "https://www.instagram.com/p/DOuDVzlkU3P/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
+    {type: "instagram", url: "https://www.instagram.com/p/DRFTo4FkUiC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
+    {type: "instagram", url: "https://www.instagram.com/p/DRJAx1tjGQP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
+    {type: "instagram", url: "https://www.instagram.com/p/DRLJNFiEWIs/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
+    {type: "instagram", url: "https://www.instagram.com/p/DRcpk5MkSBU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
+    {type: "instagram", url: "https://www.instagram.com/reel/DRfYbP2EorN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
+    {type: "instagram", url: "https://www.instagram.com/p/DRrpdgdkeqK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
+    {type: "instagram", url: "https://www.instagram.com/reel/DSBYjcQkeAx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
   ]
 
   const [render, setRender] = useState(p.slice(p.length - 3, p.length))

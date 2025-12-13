@@ -94,13 +94,6 @@ const teamData: Team[] = [
       type: "member"
     },
     {
-      id: 14,
-      image: "lainey.jpg",
-      name: "Lainey Purser",
-      role: ["Outreach/Portfolio"],
-      type: "member"
-    },
-    {
       id: 15,
       image: "kyle.jpg",
       name: "Kyle Pacheco",
