@@ -1,5 +1,5 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import {Document} from 'react-pdf';
+//import {Document} from 'react-pdf';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
