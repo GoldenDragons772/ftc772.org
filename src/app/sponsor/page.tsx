@@ -40,6 +40,8 @@ const Sponsors = () => {
                         src="/images/brands/scadmin.png"
                         className="h-32 rounded-xl invert brightness-0 px-5 py-4"/>
                   </a>
+                  
+
                 </div>
                 <div className="sarjilaw w-64 invert brightness-0 rounded-lg">
                   <a href="https://sarjilawfirm.com" target="_blank">
@@ -55,11 +57,19 @@ const Sponsors = () => {
                          className="h-32 rounded-xl invert brightness-0 px-5 py-4"/>
                   </a>
                 </div>
+
                 <div className="isi w-64 invert brightness-0 rounded-lg">
                   <a href="https://isirobots.com/" target="_blank">
                     <img
                           src="/images/brands/isi.png"
                           className="h-32 rounded-xl invert brightness-0 px-5 py-4"/>
+                     </a>
+                                    </div>
+                                    <div className="foundation w-64 invert brightness-0 rounded-lg">
+                                      <a href="https://www.duke-energy.com/home" target="_blank">
+                                        <img
+                                            src="/images/brands/dukeEnergy.png"
+                                            className="h-32 rounded-xl invert brightness-0 px-5 py-4"/>
                   </a>
                 </div>
                 <div className="goldendragon w-64 invert brightness-0 rounded-lg">
@@ -69,6 +79,7 @@ const Sponsors = () => {
                                          className="h-32 rounded-xl invert brightness-0 px-5 py-4"/>
                                   </a>
                                 </div>
+
               </li>
             </div>
           </div>
