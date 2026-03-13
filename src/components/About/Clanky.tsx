@@ -16,7 +16,7 @@ const checkIcon = (
     </svg>
   );
 
-const Viper = () => {
+const Clanky = () => {
     return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
         <div className="container">
@@ -58,4 +58,4 @@ const Viper = () => {
     );
 };
 
-export default Viper;
+export default Clanky;
