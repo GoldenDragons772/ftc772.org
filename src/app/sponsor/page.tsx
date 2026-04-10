@@ -10,16 +10,18 @@ export const metadata: Metadata = {
 const Sponsors = () => {
   return (
     <>
-      <Breadcrumb
-        pageName="Our Sponsors"
-        description="We are grateful for the support of our sponsors since their generosity helps us to continue to compete in FTC (FIRST Tech Challenge) and provide students with hands-on experience using robotics and engineering."
-        titleClassName="text-white text-4xl sm:text-5xl tracking-[0.08em]"
-        subtitle="Powered by partnership"
-        subtitleClassName="text-xs text-yellow tracking-[0.4em]"
-      />
-      <section className="relative overflow-hidden bg-[#171717] pb-[60px] pt-[20px]">
-        <div className="absolute inset-0 bg-dragon-grid bg-[size:32px_32px] opacity-15 [mask-image:radial-gradient(70%_60%_at_50%_0%,rgba(0,0,0,1),transparent)]" />
-        <div className="container relative z-10">
+      <div className="relative overflow-hidden bg-[#171717]">
+        <div className="absolute inset-0 bg-triangle-mesh bg-cover bg-center opacity-40" />
+        <div className="relative z-10">
+          <Breadcrumb
+            pageName="Our Sponsors"
+            description="We are grateful for the support of our sponsors since their generosity helps us to continue to compete in FTC (FIRST Tech Challenge) and provide students with hands-on experience using robotics and engineering."
+            titleClassName="text-white text-4xl sm:text-5xl tracking-[0.08em]"
+            subtitle="Powered by partnership"
+            subtitleClassName="text-xs text-yellow tracking-[0.4em]"
+          />
+          <section className="relative overflow-hidden pb-[60px] pt-[20px]">
+            <div className="container relative z-10">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="list min-w-80 w-full">
               <li className="gssm mt-8 mb-12 grid w-full grid-cols-1 justify-items-center gap-10 sm:grid-cols-2 xl:grid-cols-3">
@@ -116,7 +118,9 @@ const Sponsors = () => {
             </div>
           </div>
         </div>
-      </section>
+          </section>
+        </div>
+      </div>
     </>
   );
 };

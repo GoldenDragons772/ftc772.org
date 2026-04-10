@@ -84,6 +84,7 @@ module.exports = {
         "team": "url('/images/team/new_team_tint.png')",
         "dragon-grid":
           "linear-gradient(0deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px)",
+        "triangle-mesh": "url('/images/backgrounds/TrangleMeshThingy.jpg')",
 
       },
     },

@@ -15,8 +15,7 @@ const Breadcrumb = ({
 }) => {
   return (
     <>
-      <section className="relative z-10 overflow-hidden bg-[#171717] pt-28 lg:pt-[150px]">
-        <div className="absolute inset-0 bg-dragon-grid bg-[size:32px_32px] opacity-25 [mask-image:radial-gradient(70%_60%_at_50%_0%,rgba(0,0,0,1),transparent)]" />
+      <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap items-start">
             <div className="w-full px-4 md:w-8/12 lg:w-7/12">

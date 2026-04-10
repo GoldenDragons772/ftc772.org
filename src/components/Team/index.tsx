@@ -7,8 +7,7 @@ function Team() {
   const alumni = teamData.filter(user => user.type === 'mentor');
   return (
     <>
-      <section id="team" className="relative overflow-hidden bg-[#171717]">
-        <div className="absolute inset-0 bg-dragon-grid bg-[size:32px_32px] opacity-20 [mask-image:radial-gradient(70%_70%_at_50%_10%,rgba(0,0,0,1),transparent)]" />
+      <section id="team" className="relative overflow-hidden">
         <div className="container relative z-10 py-16 md:py-18 lg:py-24">
           <div className="mb-10 text-center">
             <div className="text-xl font-light uppercase tracking-[0.4em] text-yellow">Meet the Team</div>

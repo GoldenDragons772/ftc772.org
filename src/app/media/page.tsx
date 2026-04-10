@@ -81,16 +81,18 @@ const ContactPage = () => {
 
   return (
     <>
-      <Breadcrumb
-        pageName="Media"
-        description="You can see here what we're up to!"
-        titleClassName="text-white text-4xl sm:text-5xl tracking-[0.08em]"
-        subtitle="Latest highlights"
-        subtitleClassName="text-xs text-yellow tracking-[0.4em]"
-      />
-      <section className="relative overflow-hidden bg-[#171717] pb-16 pt-6">
-        <div className="absolute inset-0 bg-dragon-grid bg-[size:32px_32px] opacity-15 [mask-image:radial-gradient(70%_60%_at_50%_0%,rgba(0,0,0,1),transparent)]" />
-        <div className="container relative z-10">
+      <div className="relative overflow-hidden bg-[#171717]">
+        <div className="absolute inset-0 bg-triangle-mesh bg-cover bg-center opacity-40" />
+        <div className="relative z-10">
+          <Breadcrumb
+            pageName="Media"
+            description="You can see here what we're up to!"
+            titleClassName="text-white text-4xl sm:text-5xl tracking-[0.08em]"
+            subtitle="Latest highlights"
+            subtitleClassName="text-xs text-yellow tracking-[0.4em]"
+          />
+          <section className="relative overflow-hidden pb-16 pt-6">
+            <div className="container relative z-10">
           <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
             <div className="text-sm font-normal text-white/70">
               Showing {render.length} of {p.length} posts
@@ -171,8 +173,10 @@ const ContactPage = () => {
               })
               .reverse()}
           </div>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
     </>
   );
 };

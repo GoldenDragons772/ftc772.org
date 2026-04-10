@@ -27,12 +27,11 @@ const GilesCorey = () => {
   );
 
   return (
-    <section id="about" className="relative overflow-hidden bg-[#171717] pt-16 md:pt-20 lg:pt-28">
-      <div className="absolute inset-0 bg-dragon-grid bg-[size:32px_32px] opacity-20 [mask-image:radial-gradient(70%_70%_at_50%_10%,rgba(0,0,0,1),transparent)]" />
-        <Script
-          type="module"
-          src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
-        />
+    <section id="about" className="relative overflow-hidden pt-16 md:pt-20 lg:pt-28">
+      <Script
+        type="module"
+        src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
+      />
       <div className="container relative z-10">
         <div className="border-b border-white/10 pb-16 md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap-reverse items-center">

@@ -25,6 +25,16 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Supercharge Expand";
+  src:
+    url("/fonts/superchargeexpand.otf") format("opentype"),
+    url("/fonts/superchargeexpand.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer components {
   input[type="checkbox"]:checked ~ label span svg {
     @apply inline-flex;

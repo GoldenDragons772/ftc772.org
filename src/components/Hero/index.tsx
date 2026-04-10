@@ -5,11 +5,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative overflow-hidden bg-[#171717] pt-28 md:pt-32">
-      <div className="absolute inset-0 bg-[#171717]" />
-      <div className="absolute inset-0 bg-dragon-grid bg-[size:32px_32px] opacity-30 [mask-image:radial-gradient(60%_60%_at_50%_30%,rgba(0,0,0,1),transparent)]" />
-      <div className="absolute -top-24 right-0 h-[420px] w-[420px] rounded-full bg-yellow/15 blur-3xl" />
-      <div className="absolute bottom-0 left-0 h-[360px] w-[360px] rounded-full bg-[#CE8D00]/10 blur-3xl" />
+    <section id="home" className="relative overflow-hidden pt-28 md:pt-32">
 
       <div className="container relative z-10">
         <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
@@ -17,8 +13,9 @@ const Hero = () => {
             <div className="mb-4 flex items-center gap-4 text-xl font-light uppercase tracking-[0.4em] text-yellow">
               <span className="h-px w-12 bg-yellow/80" />
               FTC 772
+              <span className="h-px w-12 bg-yellow/80" />
             </div>
-            <h1 className="font-display text-5xl lowercase leading-[0.9] tracking-[0.08em] text-white sm:text-6xl md:text-7xl">
+            <h1 className="text-5xl lowercase leading-[0.9] tracking-[0.08em] text-white sm:text-6xl md:text-7xl" style={{ fontFamily: "\"Supercharge Expand\", sans-serif" }}>
               golden
               <span className="block text-yellow">dragons</span>
             </h1>

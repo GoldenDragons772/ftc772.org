@@ -13,8 +13,13 @@ export default function Home() {
   return (
     <>
       <ScrollUp />
-      <Hero />
-      <Team />
+      <div className="relative overflow-hidden bg-[#171717]">
+        <div className="absolute inset-0 bg-triangle-mesh bg-cover bg-center opacity-40" />
+        <div className="relative z-10">
+          <Hero />
+          <Team />
+        </div>
+      </div>
     </>
   );
 }
