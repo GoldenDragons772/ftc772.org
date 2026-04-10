@@ -15,9 +15,9 @@ const Hero = () => {
               FTC 772
               <span className="h-px w-12 bg-yellow/80" />
             </div>
-            <h1 className="text-5xl lowercase leading-[0.9] tracking-[0.08em] text-white sm:text-6xl md:text-7xl" style={{ fontFamily: "\"Supercharge Expand\", sans-serif" }}>
+            <h1 className="text-5xl lowercase leading-[0.9] tracking-[0.08em] text-yellow sm:text-6xl md:text-7xl" style={{ fontFamily: "\"Supercharge Expand\", sans-serif" }}>
               golden
-              <span className="block text-yellow">dragons</span>
+              <span className="block text-white">dragons</span>
             </h1>
             <p className="mt-4 max-w-xl text-base font-normal text-white/80">
               The South Carolina Governor&apos;s School for Science and Mathematics robotics
@@ -45,9 +45,9 @@ const Hero = () => {
             </div>
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
               {[
-                { label: "Years Competing", value: "15+" },
-                { label: "Outreach Hours", value: "1,200+" },
-                { label: "State Awards", value: "30+" },
+                { label: "Years Competing", value: "18+" },
+                { label: "Outreach Hours", value: "3,000+" },
+                { label: "State Awards", value: "10+" },
               ].map((stat) => (
                 <div
                   key={stat.label}
