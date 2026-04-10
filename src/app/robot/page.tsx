@@ -17,8 +17,11 @@ const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Robot"
+        pageName="our robots"
         description="Robot Page for 772 Golden Dragons"
+        titleClassName="text-yellow text-3xl sm:text-4xl tracking-[0.14em]"
+        subtitle="Built for competition"
+        subtitleClassName="text-xs text-[#CE8D00] tracking-[0.45em]"
       />
       <Botsune1 />
       <Clanky />

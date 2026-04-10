@@ -18,8 +18,8 @@ const checkIcon = (
 
 const GilesCorey = () => {
   const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+    <p className="mb-5 flex items-center text-base font-normal text-[#919191]">
+      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-yellow/10 text-yellow">
         {checkIcon}
       </span>
       {text}
@@ -27,13 +27,14 @@ const GilesCorey = () => {
   );
 
   return (
-    <section id="about" className="pt-16 md:pt-20 lg:pt-28">
+    <section id="about" className="relative overflow-hidden bg-[#171717] pt-16 md:pt-20 lg:pt-28">
+      <div className="absolute inset-0 bg-dragon-grid bg-[size:32px_32px] opacity-20 [mask-image:radial-gradient(70%_70%_at_50%_10%,rgba(0,0,0,1),transparent)]" />
         <Script
           type="module"
           src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
         />
-      <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+      <div className="container relative z-10">
+        <div className="border-b border-white/10 pb-16 md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap-reverse items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
