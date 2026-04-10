@@ -15,7 +15,7 @@ function Team() {
             <div className="mt-3 font-display text-4xl lowercase tracking-[0.1em] text-white">
               golden dragons 772
             </div>
-            <p className="mt-2 text-sm font-normal text-[#919191]">
+            <p className="mt-2 text-sm font-normal text-white/80">
               Builders, programmers, and leaders driving the season forward.
             </p>
           </div>
@@ -40,7 +40,7 @@ function Team() {
                   </div>
                   <div className="flex justify-center text-lg font-semibold py-3 text-white">{user.name}</div>
                   <div className="role">{user.role.map((role, idx) => (
-                    <p key={idx} className='flex justify-center text-xs font-normal uppercase tracking-[0.2em] text-[#919191]'>{role}</p>
+                    <p key={idx} className='flex justify-center text-xs font-normal uppercase tracking-[0.2em] text-white/70'>{role}</p>
                   ))}</div>
                 </div>
               );
@@ -64,7 +64,7 @@ function Team() {
                   </div>
                   <div className="flex justify-center text-lg font-semibold py-3 text-white">{user.name}</div>
                   <div className="role">{user.role.map((role, idx) => (
-                    <p key={idx} className='flex justify-center text-xs uppercase tracking-[0.2em] text-[#919191]'>{role}</p>
+                    <p key={idx} className='flex justify-center text-xs uppercase tracking-[0.2em] text-white/70'>{role}</p>
                   ))}</div>
                 </div>
               );

@@ -22,7 +22,7 @@ const Hero = () => {
               golden
               <span className="block text-yellow">dragons</span>
             </h1>
-            <p className="mt-4 max-w-xl text-base font-normal text-[#919191]">
+            <p className="mt-4 max-w-xl text-base font-normal text-white/80">
               The South Carolina Governor&apos;s School for Science and Mathematics robotics
               team. We build competitive robots, grow STEM leaders, and design with purpose.
             </p>
@@ -57,7 +57,7 @@ const Hero = () => {
                   className="rounded-md border border-white/10 bg-[#171717] px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.35)]"
                 >
                   <div className="text-2xl font-semibold text-yellow">{stat.value}</div>
-                  <div className="text-xs font-normal uppercase tracking-[0.2em] text-[#919191]">
+                  <div className="text-xs font-normal uppercase tracking-[0.2em] text-white/70">
                     {stat.label}
                   </div>
                 </div>
@@ -105,7 +105,7 @@ const Hero = () => {
               <div className="text-lg font-semibold text-white">
                 {item.title}
               </div>
-              <p className="mt-2 text-sm font-normal text-[#919191]">{item.detail}</p>
+              <p className="mt-2 text-sm font-normal text-white/80">{item.detail}</p>
             </div>
           ))}
         </div>

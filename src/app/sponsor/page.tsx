@@ -11,11 +11,11 @@ const Sponsors = () => {
   return (
     <>
       <Breadcrumb
-        pageName="our sponsors"
+        pageName="Our Sponsors"
         description="We are grateful for the support of our sponsors since their generosity helps us to continue to compete in FTC (FIRST Tech Challenge) and provide students with hands-on experience using robotics and engineering."
-        titleClassName="text-yellow text-3xl sm:text-4xl tracking-[0.14em]"
+        titleClassName="text-white text-4xl sm:text-5xl tracking-[0.08em]"
         subtitle="Powered by partnership"
-        subtitleClassName="text-xs text-[#CE8D00] tracking-[0.45em]"
+        subtitleClassName="text-xs text-yellow tracking-[0.4em]"
       />
       <section className="relative overflow-hidden bg-[#171717] pb-[60px] pt-[20px]">
         <div className="absolute inset-0 bg-dragon-grid bg-[size:32px_32px] opacity-15 [mask-image:radial-gradient(70%_60%_at_50%_0%,rgba(0,0,0,1),transparent)]" />

@@ -76,53 +76,103 @@ const ContactPage = () => {
     {type: "instagram", url: "https://www.instagram.com/reel/DSBYjcQkeAx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="},
   ]
 
-  const [render, setRender] = useState(p.slice(p.length - 3, p.length))
+  const initialCount = 9;
+  const [render, setRender] = useState(p.slice(Math.max(0, p.length - initialCount), p.length))
 
   return (
     <>
       <Breadcrumb
         pageName="Media"
         description="You can see here what we're up to!"
+        titleClassName="text-white text-4xl sm:text-5xl tracking-[0.08em]"
+        subtitle="Latest highlights"
+        subtitleClassName="text-xs text-yellow tracking-[0.4em]"
       />
-        <div className="media mt-10">
-          <div className="media-containter flex justify-center overflow-hidden">
-            <div className="media flex-col justify-center space-y-5 sm:w-[650px]">
-                {render.map((link) => {
-                  if (link.type === "instagram"){
-                    return(
-                      <InstagramEmbed
-                        captioned
-                        url={link.url}
-                        key={link.url}
-                      />
-                    );
-                  }
-                  else if(link.type === "youtube"){
-                    return(
-                      <YouTubeEmbed
-                        url={link.url}
-                        key={link.url}
-                      />
-                    );
-                  }
-                }).reverse()}
+      <section className="relative overflow-hidden bg-[#171717] pb-16 pt-6">
+        <div className="absolute inset-0 bg-dragon-grid bg-[size:32px_32px] opacity-15 [mask-image:radial-gradient(70%_60%_at_50%_0%,rgba(0,0,0,1),transparent)]" />
+        <div className="container relative z-10">
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+            <div className="text-sm font-normal text-white/70">
+              Showing {render.length} of {p.length} posts
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {render.length < p.length && (
+                <button
+                  className="rounded-sm border border-yellow/60 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-yellow transition hover:bg-[#FFBA24]/10"
+                  onClick={() => setRender(p)}
+                >
+                  Show all
+                </button>
+              )}
+              {render.length < p.length && (
+                <button
+                  className="rounded-sm bg-yellow px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-black shadow-[0_10px_30px_rgba(251,176,64,0.25)] transition hover:-translate-y-0.5"
+                  onClick={() => {
+                    const increment = 6;
+                    const newLength = render.length + increment;
+                    setRender(p.slice(Math.max(0, p.length - newLength), p.length));
+                  }}
+                >
+                  Load more
+                </button>
+              )}
             </div>
           </div>
-          <div className="loadmore flex justify-center pt-4 pb-12">
-              {render.length != p.length &&
-                <button 
-                className='bg-blue-500 rounded-xl hover:opacity-80 transition-colors py-4 px-6 flex justify-center space-x-2' 
-                onClick={() => {
-                  const increment = 3;
-                  const newLength = render.length + increment;
-                  setRender(p.slice(Math.max(0, p.length - newLength), p.length));
-                }}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-rotate"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.95 11a8 8 0 1 0 -.5 4m.5 5v-5h-5" /></svg>
-                  <p>Load more</p>
-                </button>
-              }
+          <div className="grid items-stretch gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {render
+              .map((link) => {
+                if (link.type === "instagram") {
+                  return (
+                    <div
+                      key={link.url}
+                      className="overflow-hidden rounded-xl border border-white/10 bg-[#101010] shadow-[0_0_30px_rgba(0,0,0,0.35)]"
+                    >
+                      <div className="relative aspect-[4/5] w-full overflow-hidden bg-black">
+                        <div className="h-full w-full scale-[0.98]">
+                          <InstagramEmbed captioned={false} url={link.url} />
+                        </div>
+                        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-[#101010]/90 backdrop-blur-lg [mask-image:linear-gradient(to_top,rgba(0,0,0,1),rgba(0,0,0,0.75),rgba(0,0,0,0))]" />
+                      </div>
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-yellow transition hover:bg-white/5"
+                      >
+                        <span>View on Instagram</span>
+                        <span className="text-white/70">→</span>
+                      </a>
+                    </div>
+                  );
+                }
+                if (link.type === "youtube") {
+                  return (
+                    <div
+                      key={link.url}
+                      className="overflow-hidden rounded-xl border border-white/10 bg-[#101010] shadow-[0_0_30px_rgba(0,0,0,0.35)]"
+                    >
+                      <div className="relative aspect-[4/5] w-full overflow-hidden bg-black">
+                        <YouTubeEmbed url={link.url} />
+                        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-[#101010]/90 backdrop-blur-lg [mask-image:linear-gradient(to_top,rgba(0,0,0,1),rgba(0,0,0,0.75),rgba(0,0,0,0))]" />
+                      </div>
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-yellow transition hover:bg-white/5"
+                      >
+                        <span>Watch on YouTube</span>
+                        <span className="text-white/70">→</span>
+                      </a>
+                    </div>
+                  );
+                }
+                return null;
+              })
+              .reverse()}
           </div>
-      </div>
+        </div>
+      </section>
     </>
   );
 };
