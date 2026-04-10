@@ -103,7 +103,7 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
+                            className={`flex py-2 text-sm uppercase tracking-[0.15em] font-medium transition-all duration-300 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
                                 ? "text-yellow"
                                 : "text-white hover:text-yellow"
@@ -115,7 +115,7 @@ const Header = () => {
                           <>
                             <p
                               onClick={() => handleSubmenu(index)}
-                              className="flex cursor-pointer items-center justify-between py-2 text-base text-white group-hover:text-yellow lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
+                              className="flex cursor-pointer items-center justify-between py-2 text-sm uppercase tracking-[0.15em] font-medium text-white transition-all duration-300 group-hover:text-yellow lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                             >
                               {menuItem.title}
                               <span className="pl-3">
@@ -138,7 +138,7 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path}
                                   key={index}
-                                  className="block rounded py-2.5 text-sm text-white hover:text-yellow lg:px-3"
+                                  className="block rounded py-2.5 text-xs uppercase tracking-[0.15em] font-medium text-white/70 transition-all duration-300 hover:text-yellow lg:px-3"
                                 >
                                   {submenuItem.title}
                                 </Link>
@@ -155,7 +155,7 @@ const Header = () => {
                 <Link
                   target="_blank"
                   href="mailto:golden.dragons.gssm@gmail.com"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-yellow px-8 py-3 text-base font-medium text-black transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
+                  className="ease-in-up hidden rounded-md border border-yellow/60 bg-[#171717] px-8 py-3 text-xs uppercase tracking-[0.2em] font-semibold text-yellow shadow-[0_0_20px_rgba(251,176,64,0.15)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(251,176,64,0.35)] md:block md:px-9 lg:px-6 xl:px-9"
                 >
                   Contact us
                 </Link>
