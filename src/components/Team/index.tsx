@@ -7,60 +7,64 @@ function Team() {
   const alumni = teamData.filter(user => user.type === 'mentor');
   return (
     <>
-      <section>
-        <div className="py-16 md:py-18 lg:py-24">
-          <div className="Heading text-4xl font-bold flex justify-center pb-10">Meet our Team</div>
-          <div className="text-2xl font-semibold flex justify-center pb-4">Current Members</div>
-          <div className="userProfiles flex flex-wrap justify-center gap-2 mb-10">
+      <section id="team" className="relative overflow-hidden bg-[#171717]">
+        <div className="absolute inset-0 bg-dragon-grid bg-[size:32px_32px] opacity-20 [mask-image:radial-gradient(70%_70%_at_50%_10%,rgba(0,0,0,1),transparent)]" />
+        <div className="container relative z-10 py-16 md:py-18 lg:py-24">
+          <div className="mb-10 text-center">
+            <div className="text-xl font-light uppercase tracking-[0.4em] text-yellow">Meet the Team</div>
+            <div className="mt-3 font-display text-4xl lowercase tracking-[0.1em] text-white">
+              golden dragons 772
+            </div>
+            <p className="mt-2 text-sm font-normal text-[#919191]">
+              Builders, programmers, and leaders driving the season forward.
+            </p>
+          </div>
+
+          <div className="mb-4 text-center text-2xl font-light uppercase tracking-[0.35em] text-yellow">
+            Current Members
+          </div>
+          <div className="userProfiles flex flex-wrap justify-center gap-4 mb-12">
             {members.map((user, id) => {
               const isCaptain = user.role.some(role => role.toLowerCase().includes('captain'));
               return (
                 <div
                   key={id}
-                  className={`w-48 card py-4 px-2 bg-gray-dark rounded-lg border transition-all duration-300 hover:scale-105 ${
+                  className={`w-48 card py-4 px-3 rounded-md border transition-all duration-300 hover:-translate-y-1 ${
                     isCaptain 
-                      ? 'border-2 shadow-2xl' 
-                      : 'border-gray-700 shadow-xl hover:shadow-2xl'
+                      ? 'border-yellow/60 shadow-[0_0_25px_rgba(251,176,64,0.25)] bg-[#171717]'
+                      : 'border-white/10 bg-[#171717] shadow-[0_0_25px_rgba(0,0,0,0.4)]'
                   }`}
-                  style={isCaptain ? { 
-                    borderColor: '#4a5568',
-                    boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(74, 85, 104, 0.4), 0 0 15px rgba(74, 85, 104, 0.2)' 
-                  } : {}}
                 >
                   <div className="image w-full h-24 flex justify-center">
-                    <img width={96} height={96} className='rounded-full' src={`/images/team/members/${user.image}`} />
+                    <img width={96} height={96} className='rounded-full border border-white/10' src={`/images/team/members/${user.image}`} />
                   </div>
-                  <div className="flex justify-center text-lg font-bold py-3">{user.name}</div>
+                  <div className="flex justify-center text-lg font-semibold py-3 text-white">{user.name}</div>
                   <div className="role">{user.role.map((role, idx) => (
-                    <p key={idx} className='flex justify-center text-gray-400'>{role}</p>
+                    <p key={idx} className='flex justify-center text-xs font-normal uppercase tracking-[0.2em] text-[#919191]'>{role}</p>
                   ))}</div>
                 </div>
               );
             })}
           </div>
-          <div className="text-2xl font-semibold flex justify-center pb-4">Alumni</div>
-          <div className="userProfiles flex flex-wrap justify-center gap-2">
+          <div className="mb-4 text-center text-2xl font-light uppercase tracking-[0.35em] text-yellow">Alumni</div>
+          <div className="userProfiles flex flex-wrap justify-center gap-4">
             {alumni.map((user, id) => {
               const isCaptain = user.role.some(role => role.toLowerCase().includes('captain'));
               return (
                 <div
                   key={id}
-                  className={`w-48 card py-4 px-2 bg-gray-dark rounded-lg border transition-all duration-300 hover:scale-105 ${
+                  className={`w-48 card py-4 px-3 rounded-md border transition-all duration-300 hover:-translate-y-1 ${
                     isCaptain 
-                      ? 'border-2 shadow-2xl' 
-                      : 'border-gray-700 shadow-xl hover:shadow-2xl'
+                      ? 'border-yellow/60 shadow-[0_0_25px_rgba(251,176,64,0.25)] bg-[#171717]'
+                      : 'border-white/10 bg-[#171717] shadow-[0_0_25px_rgba(0,0,0,0.4)]'
                   }`}
-                  style={isCaptain ? { 
-                    borderColor: '#4a5568',
-                    boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(74, 85, 104, 0.4), 0 0 15px rgba(74, 85, 104, 0.2)' 
-                  } : {}}
                 >
                   <div className="image w-full h-24 flex justify-center">
-                    <img width={96} height={96} className='rounded-full' src={`/images/team/members/${user.image}`} />
+                    <img width={96} height={96} className='rounded-full border border-white/10' src={`/images/team/members/${user.image}`} />
                   </div>
-                  <div className="flex justify-center text-lg font-bold py-3">{user.name}</div>
+                  <div className="flex justify-center text-lg font-semibold py-3 text-white">{user.name}</div>
                   <div className="role">{user.role.map((role, idx) => (
-                    <p key={idx} className='flex justify-center text-gray-400'>{role}</p>
+                    <p key={idx} className='flex justify-center text-xs uppercase tracking-[0.2em] text-[#919191]'>{role}</p>
                   ))}</div>
                 </div>
               );

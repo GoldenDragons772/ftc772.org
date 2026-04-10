@@ -1,11 +1,11 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
   return (
     <>
-      <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
+      <footer className="relative z-10 bg-[#171717] pt-16 md:pt-20 lg:pt-24">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
@@ -14,13 +14,13 @@ const Footer = () => {
                   <Image
                     src="/images/logo/logo.png"
                     alt="logo"
-                    className="hidden w-full dark:block"
+                    className="w-full"
                     width={60}
                     height={60}
                   />
                 </Link>
-                <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                © 2025 Golden Dragons. All Rights Reserved.
+                <p className="mb-9 text-base leading-relaxed text-[#919191]">
+                  (c) 2025 Golden Dragons. All Rights Reserved.
                 </p>
                 <div className="flex items-center">
                   <a
@@ -28,7 +28,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 text-[#919191] duration-300 hover:text-yellow"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -42,7 +42,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 text-[#919191] duration-300 hover:text-yellow"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="icon icon-tabler icons-tabler-filled icon-tabler-brand-youtube">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -54,7 +54,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="text-[#919191] duration-300 hover:text-yellow"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -67,14 +67,14 @@ const Footer = () => {
 
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+                <h2 className="mb-10 text-xl font-semibold uppercase tracking-[0.25em] text-white">
                   Useful Links
                 </h2>
                 <ul>
                   <li>
                     <Link
                       href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-[#919191] duration-300 hover:text-yellow"
                     >
                       Team
                     </Link>
@@ -82,7 +82,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/robot"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-[#919191] duration-300 hover:text-yellow"
                     >
                       Robot
                     </Link>
@@ -90,7 +90,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/sponsor"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-[#919191] duration-300 hover:text-yellow"
                     >
                       Sponsors
                     </Link>
@@ -101,7 +101,7 @@ const Footer = () => {
 
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+                <h2 className="mb-10 text-xl font-semibold uppercase tracking-[0.25em] text-white">
                   First Robotics
                 </h2>
                 <ul>
@@ -109,7 +109,7 @@ const Footer = () => {
                     <Link
                       target="_blank"
                       href="https://www.firstinspires.org/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-[#919191] duration-300 hover:text-yellow"
                     >
                       FIRST
                     </Link>
@@ -118,7 +118,7 @@ const Footer = () => {
                     <Link
                       target="_blank"
                       href="https://www.firstinspires.org/robotics/ftc"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-[#919191] duration-300 hover:text-yellow"
                     >
                       FTC
                     </Link>
@@ -127,7 +127,7 @@ const Footer = () => {
                     <Link
                       target="_blank"
                       href="https://youtu.be/ewlDPvRK4U4?si=81Au6CfuAiAtxrSC"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-[#919191] duration-300 hover:text-yellow"
                     >
                       INTO THE DEEP
                     </Link>
@@ -138,7 +138,7 @@ const Footer = () => {
 
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+                <h2 className="mb-10 text-xl font-semibold uppercase tracking-[0.25em] text-white">
                   GSSM
                 </h2>
                 <ul>
@@ -146,7 +146,7 @@ const Footer = () => {
                     <Link
                       target="_blank"
                       href="https://www.scgssm.org/robotics"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-[#919191] duration-300 hover:text-yellow"
                     >
                       Robotics
                     </Link>
@@ -155,7 +155,7 @@ const Footer = () => {
                     <Link
                       target="_blank"
                       href="https://www.scgssm.org/who-we-are"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-[#919191] duration-300 hover:text-yellow"
                     >
                       About
                     </Link>
@@ -164,7 +164,7 @@ const Footer = () => {
                     <Link
                       target="_blank"
                       href="https://www.scgssm.org/contact"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-[#919191] duration-300 hover:text-yellow"
                     >
                       Contact
                     </Link>
@@ -173,7 +173,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
         </div>
       </footer>
     </>
