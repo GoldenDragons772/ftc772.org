@@ -64,9 +64,9 @@ const Hero = () => {
 
           <div className="relative">
             <div className="rounded-md border border-yellow/30 bg-[#171717] p-3 shadow-[0_0_40px_rgba(251,176,64,0.12)]">
-              <div className="relative h-[420px] overflow-hidden rounded-md border border-white/10">
+              <div className="relative h-[400px] overflow-hidden rounded-md border border-white/10">
                 <Image
-                  src="/images/team/team_2025.jpg"
+                  src="/images/team/team_2026_alt.jpg"
                   alt="Golden Dragons team"
                   fill
                   className="object-cover"
@@ -80,19 +80,19 @@ const Hero = () => {
         <div className="mt-16 grid gap-6 lg:grid-cols-3">
           {[
             {
-              title: "Design + Strategy",
+              title: "Impact",
               detail:
-                "Game breakdowns, rapid prototypes, and elegant drive systems.",
+                "Changing the way that students view STEM and robotics on a personal level.",
             },
             {
-              title: "Software Precision",
+              title: "Consistency",
               detail:
-                "Path planning, vision pipelines, and operator-first controls.",
+                "Developing robots that perform well in 80%+ of matches and do not break down at competition.",
             },
             {
-              title: "Community Impact",
+              title: "Sustainability",
               detail:
-                "STEM nights, mentorship, and local partnership growth.",
+                "A team where our junior members feel confident and prepared enough to fully lead the team independently. ",
             },
           ].map((item) => (
             <div

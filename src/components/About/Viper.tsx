@@ -1,5 +1,6 @@
 import "./model.css";
 import SectionTitle from "../Common/SectionTitle";
+import RobotInfoBox from "./RobotInfoBox";
 import Script from "next/script";
 
 declare global {
@@ -17,6 +18,25 @@ const checkIcon = (
   );
 
 const Viper = () => {
+    const quickFacts = [
+      { label: "Name", value: "Viper" },
+      { label: "Status", value: "Disassembled" },
+      { label: "Season", value: "2024-25" },
+      { label: "Drive", value: "GoBilda" },
+    ];
+
+    const schedule = [
+      { title: "SC Midlands Scrim.", detail: "Competed" },
+      { title: "SC Upstate Scrim.", detail: "Competed" },
+      { title: "SC Midlands Qual.", detail: "Tournament Finalist" },
+    ];
+
+    const abilities = [
+      "Compact scoring robot",
+      "Rapid sample/specimen intake",
+      "Quick scoring cycles",
+    ];
+
     return (
     <section id="about" className="relative overflow-hidden pt-16 md:pt-20 lg:pt-28">
         <div className="container relative z-10">
@@ -27,6 +47,11 @@ const Viper = () => {
                             title="Viper"
                             paragraph="Viper is the GoBilda Robot for Golden Dragons' 2024-25 season. This robot is a compact machine designed to score samples and specimen as quickly as possible. Viper was named after its resemblence to the snake in its attack position."
                             mb="44px"
+                            />
+                            <RobotInfoBox
+                              quickFacts={quickFacts}
+                              schedule={schedule}
+                              abilities={abilities}
                             />
                         </div>
                         <div className="w-full px-4 lg:w-1/2">

@@ -1,5 +1,6 @@
 import "./model.css";
 import SectionTitle from "../Common/SectionTitle";
+import RobotInfoBox from "./RobotInfoBox";
 import Script from "next/script";
 
 declare global {
@@ -17,6 +18,24 @@ const checkIcon = (
   );
 
 const Clanky = () => {
+    const quickFacts = [
+      { label: "Name", value: "Clanky" },
+      { label: "Status", value: "Disassembled" },
+      { label: "Season", value: "2025" },
+      { label: "Drive", value: "GoBilda" },
+    ];
+
+    const schedule = [
+      { title: "GSSM Scrim. 1", detail: "Winner" },
+      { title: "Ri3D", detail: "Robot in 3 Days" },
+    ];
+
+    const abilities = [
+      "Fast cycle between human zone and goal",
+      "Catapult-based scoring",
+      "Simplified drivetrain for rapid testing",
+    ];
+
     return (
     <section id="about" className="relative overflow-hidden pt-16 md:pt-20 lg:pt-28">
         <div className="container relative z-10">
@@ -27,6 +46,11 @@ const Clanky = () => {
                             title="Clanky"
                             paragraph="Clanky is the GoBilda Robot for Golden Dragons' 2025-26 season. This robot was built in a Robot in 3 Days challenge and competed at the GSSM Fall Scrimmage. It is very basic and runs a catapult design that allows it to cycle quickly between the human zone and goal."
                             mb="44px"
+                            />
+                            <RobotInfoBox
+                              quickFacts={quickFacts}
+                              schedule={schedule}
+                              abilities={abilities}
                             />
                         </div>
                         <div className="w-full px-4 lg:w-1/2">

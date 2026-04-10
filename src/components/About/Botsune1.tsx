@@ -1,5 +1,6 @@
 import "./model.css";
 import SectionTitle from "../Common/SectionTitle";
+import RobotInfoBox from "./RobotInfoBox";
 import Script from "next/script";
 
 declare global {
@@ -17,6 +18,25 @@ const checkIcon = (
   );
 
 const Botsune1 = () => {
+    const quickFacts = [
+      { label: "Name", value: "Botsune Miku I" },
+      { label: "Status", value: "In Service" },
+      { label: "Season", value: "2025-26" },
+      { label: "Drive", value: "Custom" },
+    ];
+
+    const schedule = [
+      { title: "GSSM Scrim. 2", detail: "Tournament Finalist" },
+      { title: "SC Upstate Qual.", detail: "Tournament Winner" },
+      { title: "SC State Champ.", detail: "Tournament Winner" },
+    ];
+
+    const abilities = [
+      "Spindexer design to sort artifacts on field",
+      "Turreted shooter for any-field scoring",
+      "Indexer system to fire 3 artifacts in 0.5 seconds",
+    ];
+
     return (
     <section id="about" className="relative overflow-hidden pt-16 md:pt-20 lg:pt-28">
         <div className="container relative z-10">
@@ -30,6 +50,11 @@ const Botsune1 = () => {
                             This robot features a spindexer design that allows it to actively sort artifacts on field. It also contains a turreted shooter that can point
                             at the goal from anywhere on the field, and an indexer system that allows the robot to fire all 3 artifacts in 0.5 Seconds."
                             mb="44px"
+                            />
+                            <RobotInfoBox
+                              quickFacts={quickFacts}
+                              schedule={schedule}
+                              abilities={abilities}
                             />
                         </div>
                         <div className="w-full px-4 lg:w-1/2">

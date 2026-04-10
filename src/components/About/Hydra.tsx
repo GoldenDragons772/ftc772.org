@@ -1,5 +1,6 @@
 import "./model.css";
 import SectionTitle from "../Common/SectionTitle";
+import RobotInfoBox from "./RobotInfoBox";
 import Script from "next/script";
 
 declare global {
@@ -17,6 +18,25 @@ const checkIcon = (
   );
 
 const Hydra = () => {
+    const quickFacts = [
+      { label: "Name", value: "Hydra" },
+      { label: "Status", value: "Displayable" },
+      { label: "Season", value: "2024-25" },
+      { label: "Drive", value: "Custom" },
+    ];
+
+    const schedule = [
+      { title: "SC State Champ.", detail: "Tournament Finalist" },
+      { title: "World Champ.", detail: "Division Semifinalist" },
+      { title: "Chicago Robotics Invit.", detail: "Enrico Fermi Scouting Award" },
+    ];
+
+    const abilities = [
+      "Lightweight scoring robot",
+      "Endgame hanging",
+      "Fast sample/specimen cycles",
+    ];
+
     return (
     <section id="about" className="relative overflow-hidden pt-16 md:pt-20 lg:pt-28">
         <div className="container relative z-10">
@@ -28,6 +48,11 @@ const Hydra = () => {
                             paragraph="Hydra is the Custom Robot for Golden Dragons' 2024-25 season. This robot is a lightweight and efficient machine used to score as many samples and specimen as possible during the match as well as hanging during endgame. This robot was an evolution of Viper and kept to the original naming conventions."
                             mb="44px"
                             
+                            />
+                            <RobotInfoBox
+                              quickFacts={quickFacts}
+                              schedule={schedule}
+                              abilities={abilities}
                             />
                         </div>
                         <div className="w-full px-4 lg:w-1/2">
