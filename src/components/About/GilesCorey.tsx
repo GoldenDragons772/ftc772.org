@@ -1,7 +1,10 @@
+"use client";
 import "./model.css";
 import SectionTitle from "../Common/SectionTitle";
 import RobotInfoBox from "./RobotInfoBox";
 import Script from "next/script";
+import { useInView } from "@/hooks/useInView";
+import { useMemo } from "react";
 
 declare global {
   namespace JSX {
@@ -12,6 +15,12 @@ declare global {
 }
 
 const GilesCorey = () => {
+  const observerOptions = useMemo(() => ({ 
+    threshold: 0.1,
+    rootMargin: "-35% 0px -35% 0px"
+  }), []);
+  const [ref, isInView] = useInView(observerOptions);
+
   const quickFacts = [
     { label: "Name", value: "Giles Corey" },
     { label: "Status", value: "Dissassembled" },
@@ -41,12 +50,13 @@ const GilesCorey = () => {
         <div className="border-b border-white/10 pb-16 md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap-reverse items-center">
             <div className="w-full px-4 lg:w-1/2">
-              <div className="rounded-md border border-white/10 bg-black/60 p-6 shadow-[0_0_35px_rgba(0,0,0,0.45)] mb-6">
+              <div ref={ref} className="rounded-md border border-white/10 bg-black/60 p-6 shadow-[0_0_35px_rgba(0,0,0,0.45)] mb-6">
                 <SectionTitle
                   title="Giles Corey"
                   paragraph="Giles Corey is the 2023-24 robot from the Golden Dragons. It is designed to be a fast and efficient robot that can score quickly and accurately. Giles was named after a character from the Crucible since initially it needed weights to keep it from drifting."
                   mb="0"
                   width="100%"
+                  gradientActive={isInView}
                 />
                 <div className="my-6 border-t border-white/10" />
                 <RobotInfoBox

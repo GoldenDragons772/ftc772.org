@@ -1,7 +1,10 @@
+"use client";
 import "./model.css";
 import SectionTitle from "../Common/SectionTitle";
 import RobotInfoBox from "./RobotInfoBox";
 import Script from "next/script";
+import { useInView } from "@/hooks/useInView";
+import { useMemo } from "react";
 
 declare global {
   namespace JSX {
@@ -18,6 +21,12 @@ const checkIcon = (
 );
 
 const Viper = () => {
+  const observerOptions = useMemo(() => ({ 
+    threshold: 0.1,
+    rootMargin: "-35% 0px -35% 0px"
+  }), []);
+  const [ref, isInView] = useInView(observerOptions);
+
   const quickFacts = [
     { label: "Name", value: "Viper" },
     { label: "Status", value: "Disassembled" },
@@ -43,12 +52,13 @@ const Viper = () => {
         <div className="border-b border-white/10 pb-16 md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap-reverse items-center">
             <div className="w-full px-4 lg:w-1/2">
-              <div className="rounded-md border border-white/10 bg-black/60 p-6 shadow-[0_0_35px_rgba(0,0,0,0.45)] mb-6">
+              <div ref={ref} className="rounded-md border border-white/10 bg-black/60 p-6 shadow-[0_0_35px_rgba(0,0,0,0.45)] mb-6">
                 <SectionTitle
                   title="Viper"
                   paragraph="Viper is the GoBilda Robot for Golden Dragons' 2024-25 season. This robot is a compact machine designed to score samples and specimen as quickly as possible. Viper was named after its resemblence to the snake in its attack position."
                   mb="0"
                   width="100%"
+                  gradientActive={isInView}
                 />
                 <div className="my-6 border-t border-white/10" />
                 <RobotInfoBox

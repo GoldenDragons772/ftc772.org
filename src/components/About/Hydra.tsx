@@ -1,7 +1,10 @@
+"use client";
 import "./model.css";
 import SectionTitle from "../Common/SectionTitle";
 import RobotInfoBox from "./RobotInfoBox";
 import Script from "next/script";
+import { useInView } from "@/hooks/useInView";
+import { useMemo } from "react";
 
 declare global {
   namespace JSX {
@@ -18,6 +21,12 @@ const checkIcon = (
 );
 
 const Hydra = () => {
+  const observerOptions = useMemo(() => ({ 
+    threshold: 0.1,
+    rootMargin: "-35% 0px -35% 0px"
+  }), []);
+  const [ref, isInView] = useInView(observerOptions);
+
   const quickFacts = [
     { label: "Name", value: "Hydra" },
     { label: "Status", value: "Displayable" },
@@ -43,12 +52,13 @@ const Hydra = () => {
         <div className="border-b border-white/10 pb-16 md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap-reverse items-center">
             <div className="w-full px-4 lg:w-1/2">
-              <div className="rounded-md border border-white/10 bg-black/60 p-6 shadow-[0_0_35px_rgba(0,0,0,0.45)] mb-6">
+              <div ref={ref} className="rounded-md border border-white/10 bg-black/60 p-6 shadow-[0_0_35px_rgba(0,0,0,0.45)] mb-6">
                 <SectionTitle
                   title="Hydra"
                   paragraph="Hydra is the Custom Robot for Golden Dragons' 2024-25 season. This robot is a lightweight and efficient machine used to score as many samples and specimen as possible during the match as well as hanging during endgame. This robot was an evolution of Viper and kept to the original naming conventions."
                   mb="0"
                   width="100%"
+                  gradientActive={isInView}
                 />
                 <div className="my-6 border-t border-white/10" />
                 <RobotInfoBox
