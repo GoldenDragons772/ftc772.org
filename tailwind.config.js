@@ -37,6 +37,7 @@ module.exports = {
       fontFamily: {
         body: ["var(--font-body)", "system-ui", "sans-serif"],
         display: ["var(--font-display)", "system-ui", "sans-serif"],
+        names: ["var(--font-names)", "system-ui", "sans-serif"],
       },
       colors: {
         current: "currentColor",

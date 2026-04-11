@@ -13,14 +13,14 @@ const teamData: Team[] = [
     id: 2,
     image: "griffin.jpeg",
     name: "Griffin LaRue",
-    role: ["Mechanical Captain", "Drive Captain", "Outreach/Portfolio", "Strategy", "Scouting"],
+    role: ["Mechanical Captain", "Drive Captain", "Outreach", "Strategy"],
     type: "member"
   },
   {
     id: 3,
     image: "carolinel.jpeg",
     name: "Caroline Locklair",
-    role: ["Portfolio Captain", "Outreach Captain", "Mechanical", "Electrical", "Scouting"],
+    role: ["Portfolio Captain", "Outreach Captain", "Mechanical", "Scouting"],
     type: "member"
   },
   {
@@ -87,68 +87,68 @@ const teamData: Team[] = [
     type: "mentor"
   },
   {
-      id: 13,
-      image: "arath.jpg",
-      name: "Arath Bernal",
-      role: ["Mechanical", "Electrical", "Software"],
-      type: "member"
-    },
-    {
-      id: 15,
-      image: "kyle.jpg",
-      name: "Kyle Pacheco",
-      role: ["Mechanical", "Electrical"],
-      type: "member"
-    },
-    {
-      id: 16,
-      image: "logan.jpg",
-      name: "Logan Pacheco",
-      role: ["Mechanical", "Electrical"],
-      type: "member"
-    },
-    {
-      id: 17,
-      image: "divya.png",
-      name: "Divya Rustgi",
-      role: ["Mechanical", "Outreach"],
-      type: "member"
-    },
-    {
-      id: 19,
-      image: "marie.jpg",
-      name: "Marie Alvarez",
-      role: ["Mechanical", "Drive"],
-      type: "member"
-    },
-    {
-      id: 20,
-      image: "shree.jpeg",
-      name: "Shree Patel",
-      role: ["Software", "Outreach/Portfolio", "Drive"],
-      type: "member"
-    },
-    {
-      id: 21,
-      image: "victor.jpg",
-      name: "Victor Zhang",
-      role: ["Software", "Drive"],
-      type: "member"
-    },
-    {
-      id: 22,
-      image: "shreeji.jpg",
-      name: "Shreeji Patel",
-      role: ["Mechanical", "Drive"],
-      type: "member"
-    },
-    {
-      id: 23,
-      image: "alex.jpg",
-      name: "Alex Cotran",
-      role: ["Mechanical", "Electrical", "Software"],
-      type: "member"
-    }
+    id: 13,
+    image: "arath.jpg",
+    name: "Arath Bernal",
+    role: ["Mechanical", "Electrical", "Software"],
+    type: "member"
+  },
+  {
+    id: 15,
+    image: "kyle.jpg",
+    name: "Kyle Pacheco",
+    role: ["Mechanical", "Electrical"],
+    type: "member"
+  },
+  {
+    id: 16,
+    image: "logan.jpg",
+    name: "Logan Pacheco",
+    role: ["Mechanical", "Electrical"],
+    type: "member"
+  },
+  {
+    id: 17,
+    image: "divya.png",
+    name: "Divya Rustgi",
+    role: ["Mechanical", "Outreach"],
+    type: "member"
+  },
+  {
+    id: 19,
+    image: "marie.jpg",
+    name: "Marie Alvarez",
+    role: ["Mechanical", "Drive"],
+    type: "member"
+  },
+  {
+    id: 20,
+    image: "shree.jpeg",
+    name: "Shree Patel",
+    role: ["Software", "Outreach/Portfolio", "Drive"],
+    type: "member"
+  },
+  {
+    id: 21,
+    image: "victor.jpg",
+    name: "Victor Zhang",
+    role: ["Software", "Drive"],
+    type: "member"
+  },
+  {
+    id: 22,
+    image: "shreeji.jpg",
+    name: "Shreeji Patel",
+    role: ["Mechanical", "Drive"],
+    type: "member"
+  },
+  {
+    id: 23,
+    image: "alex.jpg",
+    name: "Alex Cotran",
+    role: ["Mechanical", "Electrical", "Software"],
+    type: "member"
+  }
 ]
 
 export default teamData

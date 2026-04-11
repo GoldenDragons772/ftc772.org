@@ -1,8 +1,25 @@
-import React from 'react'
+"use client";
+import React, { useEffect } from 'react'
 import teamData from './teamData'
 
-
 function Team() {
+  useEffect(() => {
+    const equalizeHeights = () => {
+      const cards = document.querySelectorAll('.team-card') as NodeListOf<HTMLElement>;
+      let maxH = 0;
+      cards.forEach(c => { c.style.minHeight = '0px'; });
+      cards.forEach(c => {
+        if (c.offsetHeight > maxH) maxH = c.offsetHeight;
+      });
+      cards.forEach(c => { c.style.minHeight = `${maxH}px`; });
+    };
+
+    equalizeHeights();
+    setTimeout(equalizeHeights, 100);
+    setTimeout(equalizeHeights, 500);
+    window.addEventListener('resize', equalizeHeights);
+    return () => window.removeEventListener('resize', equalizeHeights);
+  }, []);
   const members = teamData.filter(user => user.type === 'member');
   const captains = members.filter(user =>
     user.role.some(role => role.toLowerCase().includes('captain'))
@@ -13,6 +30,19 @@ function Team() {
   const alumni = teamData.filter(user => user.type === 'mentor');
   const splitRole = (role: string) =>
     role.split("/").map(part => part.trim()).filter(Boolean);
+  const getRoleStyle = (part: string) => {
+    const r = part.toLowerCase();
+    if (r.includes('mech')) return { border: 'border-red-600/60' };
+    if (r.includes('soft')) return { border: 'border-blue-500/60' };
+    if (r.includes('drive')) return { border: 'border-purple-600/60' };
+    if (r.includes('strat')) return { border: 'border-orange-500/60' };
+    if (r.includes('elect')) return { border: 'border-yellow/60' };
+    if (r.includes('outreach') || r.includes('port')) return { border: 'border-pink-500/60' };
+    if (r.includes('scout')) return { border: 'border-cyan-400/60' };
+    if (r.includes('design') || r.includes('media')) return { border: 'border-green-500/60' };
+    if (r.includes('cnc')) return { border: 'border-indigo-500/60' };
+    return { border: 'border-gray-500/60' };
+  };
   return (
     <>
       <section id="team" className="relative overflow-hidden">
@@ -29,7 +59,7 @@ function Team() {
           </div>
 
           <div className="mb-4 flex justify-center">
-            <div className="rounded-md border border-white/10 bg-black px-5 py-2 text-m font-semibold uppercase tracking-[0.35em] text-yellow shadow-[0_0_25px_rgba(0,0,0,0.35)]">
+            <div className="rounded-md border border-white/10 bg-black px-5 py-2 text-m font-semibold uppercase tracking-[0.5em] text-yellow shadow-[0_0_25px_rgba(0,0,0,0.35)]">
               Current Members
             </div>
           </div>
@@ -37,19 +67,24 @@ function Team() {
             {captains.map((user, id) => (
               <div
                 key={id}
-                className="w-52 h-full card py-4 px-4 rounded-md border border-yellow/60 shadow-[0_0_25px_rgba(251,176,64,0.25)] bg-[#171717] transition-all duration-300 hover:-translate-y-1"
+                className="team-card w-52 h-full flex flex-col card py-4 px-4 rounded-md border border-yellow/60 shadow-[0_0_25px_rgba(251,176,64,0.25)] bg-[#171717] transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="image w-full h-24 flex justify-center">
                   <img width={96} height={96} className='rounded-full border border-white/10 object-cover' src={`/images/team/members/${user.image}`} alt={user.name} />
                 </div>
-                <div className="pt-3 text-left text-lg font-semibold text-white">{user.name}</div>
-                <div className="role mt-2 space-y-1 text-left">
+                <div className="pt-3 text-center font-names text-[15px] lowercase tracking-wide leading-snug bg-gradient-to-r from-[#FFF7b0] via-yellow to-yellow-dark text-transparent bg-clip-text">{user.name}</div>
+                <div className="role mt-3 flex flex-col items-center gap-1.5 text-center">
                   {user.role.flatMap((role) =>
-                    splitRole(role).map((part, idx) => (
-                      <p key={`${role}-${idx}`} className='text-xs font-normal uppercase tracking-[0.2em] text-white/70'>
-                        {part}
-                      </p>
-                    ))
+                    splitRole(role).map((part, idx) => {
+                      const style = getRoleStyle(part);
+                      return (
+                        <div key={`${role}-${idx}`} className={`inline-flex items-center gap-2 rounded-full border ${style.border} bg-black/20 px-3 py-1`}>
+                          <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-white/80">
+                            {part}
+                          </span>
+                        </div>
+                      );
+                    })
                   )}
                 </div>
               </div>
@@ -59,19 +94,24 @@ function Team() {
             {nonCaptains.map((user, id) => (
               <div
                 key={id}
-                className="w-48 h-full card py-4 px-4 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_25px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1"
+                className="team-card w-48 h-full flex flex-col card py-4 px-4 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_25px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="image w-full h-24 flex justify-center">
                   <img width={96} height={96} className='rounded-full border border-white/10 object-cover' src={`/images/team/members/${user.image}`} alt={user.name} />
                 </div>
-                <div className="pt-3 text-left text-lg font-semibold text-white">{user.name}</div>
-                <div className="role mt-2 space-y-1 text-left">
+                <div className="pt-3 text-center font-names text-[15px] lowercase tracking-wide text-white leading-snug">{user.name}</div>
+                <div className="role mt-3 flex flex-col items-center gap-1.5 text-center">
                   {user.role.flatMap((role) =>
-                    splitRole(role).map((part, idx) => (
-                      <p key={`${role}-${idx}`} className='text-xs font-normal uppercase tracking-[0.2em] text-white/70'>
-                        {part}
-                      </p>
-                    ))
+                    splitRole(role).map((part, idx) => {
+                      const style = getRoleStyle(part);
+                      return (
+                        <div key={`${role}-${idx}`} className={`inline-flex items-center gap-2 rounded-full border ${style.border} bg-black/20 px-3 py-1`}>
+                          <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-white/80">
+                            {part}
+                          </span>
+                        </div>
+                      );
+                    })
                   )}
                 </div>
               </div>
@@ -89,19 +129,24 @@ function Team() {
                 .map((user, id) => (
                   <div
                     key={id}
-                    className="w-52 h-full card py-4 px-4 rounded-md border border-yellow/60 shadow-[0_0_25px_rgba(251,176,64,0.25)] bg-[#171717] transition-all duration-300 hover:-translate-y-1"
+                    className="team-card w-52 h-full flex flex-col card py-4 px-4 rounded-md border border-yellow/60 shadow-[0_0_25px_rgba(251,176,64,0.25)] bg-[#171717] transition-all duration-300 hover:-translate-y-1"
                   >
                     <div className="image w-full h-24 flex justify-center">
                       <img width={96} height={96} className='rounded-full border border-white/10 object-cover' src={`/images/team/members/${user.image}`} alt={user.name} />
                     </div>
-                    <div className="pt-3 text-left text-lg font-semibold text-white">{user.name}</div>
-                    <div className="role mt-2 space-y-1 text-left">
+                    <div className="pt-3 text-center font-names text-[15px] lowercase tracking-wide leading-snug bg-gradient-to-r from-[#FFF7b0] via-yellow to-yellow-dark text-transparent bg-clip-text">{user.name}</div>
+                    <div className="role mt-3 flex flex-col items-center gap-1.5 text-center">
                       {user.role.flatMap((role) =>
-                        splitRole(role).map((part, idx) => (
-                          <p key={`${role}-${idx}`} className='text-xs uppercase tracking-[0.2em] text-white/70'>
-                            {part}
-                          </p>
-                        ))
+                        splitRole(role).map((part, idx) => {
+                          const style = getRoleStyle(part);
+                          return (
+                            <div key={`${role}-${idx}`} className={`inline-flex items-center gap-2 rounded-full border ${style.border} bg-black/20 px-3 py-1`}>
+                              <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-white/80">
+                                {part}
+                              </span>
+                            </div>
+                          );
+                        })
                       )}
                     </div>
                   </div>
@@ -112,21 +157,26 @@ function Team() {
             {alumni
               .filter(user => !user.role.some(role => role.toLowerCase().includes('captain')))
               .map((user, id) => (
-              <div
-                key={id}
-                className="w-48 h-full card py-4 px-4 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_25px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="image w-full h-24 flex justify-center">
-                  <img width={96} height={96} className='rounded-full border border-white/10 object-cover' src={`/images/team/members/${user.image}`} alt={user.name} />
-                </div>
-                  <div className="pt-3 text-left text-lg font-semibold text-white">{user.name}</div>
-                  <div className="role mt-2 space-y-1 text-left">
+                <div
+                  key={id}
+                  className="team-card w-48 h-full flex flex-col card py-4 px-4 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_25px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div className="image w-full h-24 flex justify-center">
+                    <img width={96} height={96} className='rounded-full border border-white/10 object-cover' src={`/images/team/members/${user.image}`} alt={user.name} />
+                  </div>
+                  <div className="pt-3 text-center font-names text-[15px] lowercase tracking-wide text-white leading-snug">{user.name}</div>
+                  <div className="role mt-3 flex flex-col items-center gap-1.5 text-center">
                     {user.role.flatMap((role) =>
-                      splitRole(role).map((part, idx) => (
-                        <p key={`${role}-${idx}`} className='text-xs uppercase tracking-[0.2em] text-white/70'>
-                          {part}
-                        </p>
-                      ))
+                      splitRole(role).map((part, idx) => {
+                        const style = getRoleStyle(part);
+                        return (
+                          <div key={`${role}-${idx}`} className={`inline-flex items-center gap-2 rounded-full border ${style.border} bg-black/20 px-3 py-1`}>
+                            <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-white/80">
+                              {part}
+                            </span>
+                          </div>
+                        );
+                      })
                     )}
                   </div>
                 </div>
