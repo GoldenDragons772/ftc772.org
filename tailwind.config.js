@@ -34,18 +34,25 @@ module.exports = {
       // => @media (min-width: 1400px) { ... }
     },
     extend: {
+      fontFamily: {
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "system-ui", "sans-serif"],
+        names: ["var(--font-names)", "system-ui", "sans-serif"],
+        straight: ["var(--font-straight)", "system-ui", "sans-serif"],
+      },
       colors: {
         current: "currentColor",
         transparent: "transparent",
         white: "#FFFFFF",
-        black: "#121723",
-        dark: "#1D2430",
+        black: "#171717",
+        dark: "#171717",
         primary: "#4A6CF7",
-        yellow: "#FBB040",
+        yellow: "#FFBA24",
+        "yellow-dark": "#CE8D00",
         "bg-color-dark": "#171C28",
         "body-color": {
-          DEFAULT: "#788293",
-          dark: "#959CB1",
+          DEFAULT: "#919191",
+          dark: "#919191",
         },
         stroke: {
           stroke: "#E3E8EF",
@@ -77,6 +84,9 @@ module.exports = {
       },
       backgroundImage: {
         "team": "url('/images/team/new_team_tint.png')",
+        "dragon-grid":
+          "linear-gradient(0deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px)",
+        "triangle-mesh": "url('/images/backgrounds/TrangleMeshThingy.jpg')",
 
       },
     },

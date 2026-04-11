@@ -43,7 +43,7 @@ const Header = () => {
       <header
         className={`header left-0 top-0 z-40 flex w-full items-center ${
           sticky
-            ? "dark:bg-gray-950 dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
+            ? "fixed z-[9999] bg-[#171717]/90 shadow-sticky backdrop-blur-sm transition border-b border-white/10"
             : "absolute bg-transparent"
         }`}
       >
@@ -61,7 +61,7 @@ const Header = () => {
                   alt="logo"
                   height={40}
                   width={40}
-                  className="hidden dark:block"
+                  className="block"
                 />
               </Link>
             </div>
@@ -91,7 +91,7 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                  className={`navbar absolute right-0 z-30 w-[250px] rounded border border-white/10 bg-[#171717] px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
@@ -103,10 +103,10 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
+                            className={`flex py-2 text-sm uppercase tracking-[0.15em] font-medium transition-all duration-300 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
-                                ? "text-primary dark:text-white"
-                                : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
+                                ? "text-yellow"
+                                : "text-white hover:text-yellow"
                             }`}
                           >
                             {menuItem.title}
@@ -115,7 +115,7 @@ const Header = () => {
                           <>
                             <p
                               onClick={() => handleSubmenu(index)}
-                              className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
+                              className="flex cursor-pointer items-center justify-between py-2 text-sm uppercase tracking-[0.15em] font-medium text-white transition-all duration-300 group-hover:text-yellow lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                             >
                               {menuItem.title}
                               <span className="pl-3">
@@ -130,7 +130,7 @@ const Header = () => {
                               </span>
                             </p>
                             <div
-                              className={`submenu relative left-0 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                              className={`submenu relative left-0 top-full rounded-sm bg-[#171717] transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
@@ -138,7 +138,7 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path}
                                   key={index}
-                                  className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
+                                  className="block rounded py-2.5 text-xs uppercase tracking-[0.15em] font-medium text-white/70 transition-all duration-300 hover:text-yellow lg:px-3"
                                 >
                                   {submenuItem.title}
                                 </Link>
@@ -155,7 +155,7 @@ const Header = () => {
                 <Link
                   target="_blank"
                   href="mailto:golden.dragons.gssm@gmail.com"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-yellow px-8 py-3 text-base font-medium text-black transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
+                  className="ease-in-up hidden rounded-md border border-yellow/60 bg-[#171717] px-8 py-3 text-xs uppercase tracking-[0.2em] font-semibold text-yellow shadow-[0_0_20px_rgba(251,176,64,0.15)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(251,176,64,0.35)] md:block md:px-9 lg:px-6 xl:px-9"
                 >
                   Contact us
                 </Link>

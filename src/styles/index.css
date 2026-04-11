@@ -1,13 +1,64 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  body {
-    font-family: "Inter", sans-serif;
+  :root {
+    --font-display: "Supercharge";
+    --font-names: "Supercharge Straight Expand";
+    --font-straight: "Supercharge Straight";
+    --font-body: "Montserrat";
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body), system-ui, sans-serif;
+    background-color: #171717;
+    color: #ffffff;
+  }
+}
+
+@font-face {
+  font-family: "Supercharge";
+  src:
+    url("/fonts/supercharge.otf") format("opentype"),
+    url("/fonts/supercharge.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Supercharge Expand";
+  src:
+    url("/fonts/superchargeexpand.otf") format("opentype"),
+    url("/fonts/superchargeexpand.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Supercharge Straight Expand";
+  src:
+    url("/fonts/superchargestraightexpand.otf") format("opentype"),
+    url("/fonts/superchargestraightexpand.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Supercharge Straight";
+  src:
+    url("/fonts/superchargestraight.otf") format("opentype"),
+    url("/fonts/superchargestraight.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @layer components {
