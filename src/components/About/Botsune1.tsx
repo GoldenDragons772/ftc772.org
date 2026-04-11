@@ -43,19 +43,23 @@ const Botsune1 = () => {
         <div className="border-b border-white/10 pb-16 md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap-reverse items-center">
             <div className="w-full px-4 lg:w-1/2">
-              <SectionTitle
-                title="Botsune Miku I"
-                paragraph="Botsune Miku is the first iteration robot for Golden Dragons' 2025-26 season. 
-                            Miku has competed at both the SC Upstate Tournament and the SC State Championship, where it was the tournament winning robot at each event.
-                            This robot features a spindexer design that allows it to actively sort artifacts on field. It also contains a turreted shooter that can point
-                            at the goal from anywhere on the field, and an indexer system that allows the robot to fire all 3 artifacts in 0.5 Seconds."
-                mb="44px"
-              />
-              <RobotInfoBox
-                quickFacts={quickFacts}
-                schedule={schedule}
-                abilities={abilities}
-              />
+              <div className="rounded-md border border-white/10 bg-black/60 p-6 shadow-[0_0_35px_rgba(0,0,0,0.45)] mb-6">
+                <SectionTitle
+                  title="Botsune Miku I"
+                  paragraph="Botsune Miku is the first iteration robot for Golden Dragons' 2025-26 season. 
+                              Miku has competed at both the SC Upstate Tournament and the SC State Championship, where it was the tournament winning robot at each event.
+                              This robot features a spindexer design that allows it to actively sort artifacts on field. It also contains a turreted shooter that can point
+                              at the goal from anywhere on the field, and an indexer system that allows the robot to fire all 3 artifacts in 0.5 Seconds."
+                  mb="0"
+                  width="100%"
+                />
+                <div className="my-6 border-t border-white/10" />
+                <RobotInfoBox
+                  quickFacts={quickFacts}
+                  schedule={schedule}
+                  abilities={abilities}
+                />
+              </div>
             </div>
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] sm:mb-5 max-w-[500px] lg:mr-0 flex justify-center">

@@ -41,16 +41,20 @@ const GilesCorey = () => {
         <div className="border-b border-white/10 pb-16 md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap-reverse items-center">
             <div className="w-full px-4 lg:w-1/2">
-              <SectionTitle
-                title="Giles Corey"
-                paragraph="Giles Corey is the 2023-24 robot from the Golden Dragons. It is designed to be a fast and efficient robot that can score quickly and accurately. Giles was named after a character from the Crucible since initially it needed weights to keep it from drifting."
-                mb="44px"
-              />
-              <RobotInfoBox
-                quickFacts={quickFacts}
-                schedule={schedule}
-                abilities={abilities}
-              />
+              <div className="rounded-md border border-white/10 bg-black/60 p-6 shadow-[0_0_35px_rgba(0,0,0,0.45)] mb-6">
+                <SectionTitle
+                  title="Giles Corey"
+                  paragraph="Giles Corey is the 2023-24 robot from the Golden Dragons. It is designed to be a fast and efficient robot that can score quickly and accurately. Giles was named after a character from the Crucible since initially it needed weights to keep it from drifting."
+                  mb="0"
+                  width="100%"
+                />
+                <div className="my-6 border-t border-white/10" />
+                <RobotInfoBox
+                  quickFacts={quickFacts}
+                  schedule={schedule}
+                  abilities={abilities}
+                />
+              </div>
             </div>
 
             <div className="w-full px-4 lg:w-1/2">

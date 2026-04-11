@@ -43,16 +43,20 @@ const Viper = () => {
         <div className="border-b border-white/10 pb-16 md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap-reverse items-center">
             <div className="w-full px-4 lg:w-1/2">
-              <SectionTitle
-                title="Viper"
-                paragraph="Viper is the GoBilda Robot for Golden Dragons' 2024-25 season. This robot is a compact machine designed to score samples and specimen as quickly as possible. Viper was named after its resemblence to the snake in its attack position."
-                mb="44px"
-              />
-              <RobotInfoBox
-                quickFacts={quickFacts}
-                schedule={schedule}
-                abilities={abilities}
-              />
+              <div className="rounded-md border border-white/10 bg-black/60 p-6 shadow-[0_0_35px_rgba(0,0,0,0.45)] mb-6">
+                <SectionTitle
+                  title="Viper"
+                  paragraph="Viper is the GoBilda Robot for Golden Dragons' 2024-25 season. This robot is a compact machine designed to score samples and specimen as quickly as possible. Viper was named after its resemblence to the snake in its attack position."
+                  mb="0"
+                  width="100%"
+                />
+                <div className="my-6 border-t border-white/10" />
+                <RobotInfoBox
+                  quickFacts={quickFacts}
+                  schedule={schedule}
+                  abilities={abilities}
+                />
+              </div>
             </div>
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] sm:mb-5 max-w-[500px] lg:mr-0 flex justify-center">

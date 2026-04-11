@@ -16,7 +16,7 @@ type RobotInfoBoxProps = {
 
 const RobotInfoBox = ({ quickFacts, schedule, abilities }: RobotInfoBoxProps) => {
   return (
-    <div className="mt-6 rounded-md border border-white/10 bg-black/60 p-5 shadow-[0_0_35px_rgba(0,0,0,0.45)]">
+    <div>
       <div className="grid gap-6 lg:grid-cols-2">
         <div>
           <div className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-yellow">
