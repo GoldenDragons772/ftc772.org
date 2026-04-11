@@ -38,7 +38,7 @@ const Viper = () => {
   ];
 
   return (
-    <section id="about" className="relative overflow-hidden pt-16 md:pt-20 lg:pt-28">
+    <section id="viper" className="relative overflow-hidden pt-16 md:pt-20 lg:pt-28">
       <div className="container relative z-10">
         <div className="border-b border-white/10 pb-16 md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap-reverse items-center">

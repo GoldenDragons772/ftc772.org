@@ -32,7 +32,7 @@ const GilesCorey = () => {
     "1 of 2 robots that had a Gobilda Archetype at MTI.",
   ];
   return (
-    <section id="about" className="relative overflow-hidden pt-16 md:pt-20 lg:pt-28">
+    <section id="gilescorey" className="relative overflow-hidden pt-16 md:pt-20 lg:pt-28">
       <Script
         type="module"
         src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"

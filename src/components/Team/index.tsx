@@ -47,16 +47,7 @@ function Team() {
     <>
       <section id="team" className="relative overflow-hidden">
         <div className="container relative z-10 py-16 md:py-18 lg:py-24">
-          <div className="mb-10 flex justify-center">
-            <div className="w-full max-w-[860px] rounded-md border border-white/10 bg-black px-6 py-6 text-center shadow-[0_0_35px_rgba(0,0,0,0.45)]">
-              <div className="text-4xl font-semibold uppercase tracking-[0.12em] text-white">
-                Meet the Team
-              </div>
-              <p className="mt-3 text-xs font-normal uppercase tracking-[0.28em] text-white/70">
-                Builders, programmers, and leaders driving the season forward.
-              </p>
-            </div>
-          </div>
+
 
           <div className="mb-4 flex justify-center">
             <div className="rounded-md border border-white/10 bg-black px-5 py-2 text-m font-semibold uppercase tracking-[0.5em] text-yellow shadow-[0_0_25px_rgba(0,0,0,0.35)]">
