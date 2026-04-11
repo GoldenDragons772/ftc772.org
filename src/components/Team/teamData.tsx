@@ -34,21 +34,21 @@ const teamData: Team[] = [
     id: 5,
     image: "braeden.png",
     name: "Braeden Montroy",
-    role: ["Mechanical", "Scouting"],
+    role: ["Mechanical"],
     type: "mentor"
   },
   {
     id: 6,
     image: "shivali.jpeg",
     name: "Shivali Patel",
-    role: ["Outreach/Portfolio", "Scouting"],
+    role: ["Portfolio"],
     type: "mentor"
   },
   {
     id: 7,
     image: "rishi.jpeg",
     name: "Rishi Patel",
-    role: ["Drive", "Software"],
+    role: ["Drive"],
     type: "mentor"
   },
   {
@@ -62,28 +62,28 @@ const teamData: Team[] = [
     id: 9,
     image: "sanjith.png",
     name: "Sanjith Sunil",
-    role: ["Software", "Scouting"],
+    role: ["Software"],
     type: "mentor"
   },
   {
     id: 10,
     image: "venus.webp",
     name: "Venus",
-    role: ["Outreach", "Drive/Strategy"],
+    role: ["Outreach"],
     type: "mentor"
   },
   {
     id: 11,
     image: "gabe.png",
     name: "Gabriel Howe",
-    role: ["Software", "Scouting", "Outreach/Portfolio", "Drive/Strategy"],
+    role: ["Software"],
     type: "mentor"
   },
   {
     id: 12,
     image: "peyton.png",
     name: "Peyton Weidner",
-    role: ["Scouting", "Mechanical", "Electrical", "Outreach/Portfolio", "Software"],
+    role: ["Portfolio"],
     type: "mentor"
   },
   {

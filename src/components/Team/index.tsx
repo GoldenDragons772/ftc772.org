@@ -5,8 +5,8 @@ import Image from 'next/image'
 
 function Team() {
   useEffect(() => {
-    const equalizeHeights = () => {
-      const cards = document.querySelectorAll('.team-card') as NodeListOf<HTMLElement>;
+    const equalize = (selector: string) => {
+      const cards = document.querySelectorAll(selector) as NodeListOf<HTMLElement>;
       let maxH = 0;
       cards.forEach(c => { c.style.minHeight = '0px'; });
       cards.forEach(c => {
@@ -15,11 +15,16 @@ function Team() {
       cards.forEach(c => { c.style.minHeight = `${maxH}px`; });
     };
 
-    equalizeHeights();
-    setTimeout(equalizeHeights, 100);
-    setTimeout(equalizeHeights, 500);
-    window.addEventListener('resize', equalizeHeights);
-    return () => window.removeEventListener('resize', equalizeHeights);
+    const runEqualize = () => {
+      equalize('.member-card');
+      equalize('.alumni-card');
+    };
+
+    runEqualize();
+    setTimeout(runEqualize, 100);
+    setTimeout(runEqualize, 500);
+    window.addEventListener('resize', runEqualize);
+    return () => window.removeEventListener('resize', runEqualize);
   }, []);
   const members = teamData.filter(user => user.type === 'member');
   const captains = members.filter(user =>
@@ -59,7 +64,7 @@ function Team() {
             {captains.map((user, id) => (
               <div
                 key={id}
-                className="team-card w-52 h-full flex flex-col card py-4 px-4 rounded-md border border-yellow/60 shadow-[0_0_25px_rgba(251,176,64,0.25)] bg-[#171717] transition-all duration-300 hover:-translate-y-1"
+                className="team-card member-card w-52 h-full flex flex-col card py-4 px-4 rounded-md border border-yellow/60 shadow-[0_0_25px_rgba(251,176,64,0.25)] bg-[#171717] transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="image w-full h-24 flex justify-center">
                   <Image width={96} height={96} className='rounded-full border border-white/10 object-cover' src={`/images/team/members/${user.image}`} alt={user.name} />
@@ -86,7 +91,7 @@ function Team() {
             {nonCaptains.map((user, id) => (
               <div
                 key={id}
-                className="team-card w-48 h-full flex flex-col card py-4 px-4 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_25px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1"
+                className="team-card member-card w-48 h-full flex flex-col card py-4 px-4 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_25px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="image w-full h-24 flex justify-center">
                   <Image width={96} height={96} className='rounded-full border border-white/10 object-cover' src={`/images/team/members/${user.image}`} alt={user.name} />
@@ -121,7 +126,7 @@ function Team() {
                 .map((user, id) => (
                   <div
                     key={id}
-                    className="team-card w-52 h-full flex flex-col card py-4 px-4 rounded-md border border-yellow/60 shadow-[0_0_25px_rgba(251,176,64,0.25)] bg-[#171717] transition-all duration-300 hover:-translate-y-1"
+                    className="team-card alumni-card w-52 h-full flex flex-col card py-4 px-4 rounded-md border border-yellow/60 shadow-[0_0_25px_rgba(251,176,64,0.25)] bg-[#171717] transition-all duration-300 hover:-translate-y-1"
                   >
                     <div className="image w-full h-24 flex justify-center">
                       <Image width={96} height={96} className='rounded-full border border-white/10 object-cover' src={`/images/team/members/${user.image}`} alt={user.name} />
@@ -151,7 +156,7 @@ function Team() {
               .map((user, id) => (
                 <div
                   key={id}
-                  className="team-card w-48 h-full flex flex-col card py-4 px-4 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_25px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1"
+                  className="team-card alumni-card w-48 h-full flex flex-col card py-4 px-4 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_25px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="image w-full h-24 flex justify-center">
                     <Image width={96} height={96} className='rounded-full border border-white/10 object-cover' src={`/images/team/members/${user.image}`} alt={user.name} />
