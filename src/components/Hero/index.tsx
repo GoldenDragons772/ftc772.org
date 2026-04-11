@@ -31,7 +31,7 @@ const Hero = () => {
                 Our Robots
               </Link>
               <Link
-                href="#team"
+                href="/team"
                 className="rounded-sm border border-yellow/60 px-6 py-3 font-semibold uppercase tracking-wider text-yellow transition hover:bg-[#FFBA24]/10"
               >
                 Meet the Team
