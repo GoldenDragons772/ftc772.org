@@ -42,20 +42,21 @@ const Sponsors = () => {
 
                     {/* Platinum Sponsors */}
                     <div className="foundation h-[18rem] w-full max-w-[32rem] rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] flex items-center p-6 hover:border-yellow/50 transition">
-                      <a href="https://www.duke-energy.com/home" target="_blank">
+                      <a href="https://www.duke-energy.com/home" target="_blank" className="block w-full h-full">
                     <div className="relative h-full w-full">
                       <Image
                         src="/images/brands/dukeEnergy.png"
                         alt="Duke Energy"
                         fill
                         className="rounded-xl invert brightness-0 object-contain"
+                        priority
                       />
                     </div>
                       </a>
                     </div>
 
                     <div className="gssm h-[18rem] w-full max-w-[32rem] rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] flex items-center p-6 hover:border-yellow/50 transition">
-                      <a href="https://www.scgssm.org" target="_blank">
+                      <a href="https://www.scgssm.org" target="_blank" className="block w-full h-full">
                     <div className="relative h-full w-full">
                       <Image
                         src="/images/brands/gssm.png"
@@ -68,13 +69,13 @@ const Sponsors = () => {
                     </div>
 
                     <div className="foundation h-[18rem] w-full max-w-[32rem] rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] flex items-center p-6 hover:border-yellow/50 transition">
-                      <a href="https://www.uscb.edu/academics/honors/index.html" target="_blank">
+                      <a href="https://www.uscb.edu/academics/honors/index.html" target="_blank" className="block w-full h-full">
                     <div className="relative h-full w-full">
                       <Image
                         src="/images/brands/USCBH.png"
                         alt="USCB Honors"
                         fill
-                        className="rounded-l invert brightness-0 object-contain"
+                        className="rounded-xl invert brightness-0 object-contain"
                       />
                     </div>
                       </a>
