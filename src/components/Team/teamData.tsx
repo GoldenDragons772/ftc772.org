@@ -104,42 +104,42 @@ const teamData: Team[] = [
     id: 16,
     image: "logan.jpg",
     name: "Logan Pacheco",
-    role: ["Mechanical", "Electrical"],
+    role: ["Mechanical", "Electrical", "Drive"],
     type: "member"
   },
   {
     id: 17,
     image: "divya.png",
     name: "Divya Rustgi",
-    role: ["Mechanical", "Outreach"],
+    role: ["Mechanical", "Outreach/Portfolio"],
     type: "member"
   },
   {
     id: 19,
     image: "marie.jpg",
     name: "Marie Alvarez",
-    role: ["Mechanical", "Drive"],
+    role: ["Mechanical", "Outreach/Portfolio", "Drive", "Scouting"],
     type: "member"
   },
   {
     id: 20,
     image: "shree.jpeg",
     name: "Shree Patel",
-    role: ["Software", "Outreach/Portfolio", "Drive"],
+    role: ["Software", "Outreach/Portfolio", "Drive", "Scouting"],
     type: "member"
   },
   {
     id: 21,
     image: "victor.jpg",
     name: "Victor Zhang",
-    role: ["Software", "Drive"],
+    role: ["Software", "Mechanical", "Drive"],
     type: "member"
   },
   {
     id: 22,
     image: "shreeji.jpg",
     name: "Shreeji Patel",
-    role: ["Mechanical", "Drive"],
+    role: ["Mechanical", "Electrical", "Outreach/Portfolio", "Drive", "Scouting"],
     type: "member"
   },
   {
