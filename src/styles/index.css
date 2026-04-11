@@ -6,7 +6,12 @@
   :root {
     --font-display: "Supercharge";
     --font-names: "Supercharge Straight Expand";
+    --font-straight: "Supercharge Straight";
     --font-body: "Montserrat";
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
@@ -41,6 +46,16 @@
   src:
     url("/fonts/superchargestraightexpand.otf") format("opentype"),
     url("/fonts/superchargestraightexpand.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Supercharge Straight";
+  src:
+    url("/fonts/superchargestraight.otf") format("opentype"),
+    url("/fonts/superchargestraight.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
