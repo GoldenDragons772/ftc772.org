@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const robots = [
   {
@@ -49,9 +50,11 @@ const RecentRobots = () => {
             >
               <div className="relative z-10 mb-6 flex-grow flex items-center justify-center">
                 <div className="w-full h-48 transform transition-transform duration-500 group-hover:scale-110">
-                  <img
+                  <Image
                     src={robot.image}
                     alt={robot.name}
+                    width={400}
+                    height={300}
                     className={`w-full h-full object-contain ${robot.scale}`}
                   />
                 </div>

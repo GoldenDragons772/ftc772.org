@@ -1,6 +1,7 @@
 "use client";
 
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import Image from "next/image";
 import { useEffect } from "react";
 
 const ContactPage = () => {
@@ -43,9 +44,11 @@ const ContactPage = () => {
                   target="_blank"
                   title="Instagram widget"
                 >
-                  <img
+                  <Image
                     src="https://embedsocial.com/cdn/icon/embedsocial-logo.webp"
                     alt="EmbedSocial"
+                    width={100}
+                    height={20}
                   />
                   <div className="es-widget-branding-text">Instagram widget</div>
                 </a>

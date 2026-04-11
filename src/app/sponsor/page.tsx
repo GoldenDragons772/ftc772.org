@@ -1,4 +1,5 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -42,28 +43,40 @@ const Sponsors = () => {
                     {/* Platinum Sponsors */}
                     <div className="foundation h-[18rem] w-full max-w-[32rem] rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] flex items-center p-6 hover:border-yellow/50 transition">
                       <a href="https://www.duke-energy.com/home" target="_blank">
-                        <img
-                          src="/images/brands/dukeEnergy.png"
-                          className="h-full w-full rounded-xl invert brightness-0 object-contain"
-                        />
+                    <div className="relative h-full w-full">
+                      <Image
+                        src="/images/brands/dukeEnergy.png"
+                        alt="Duke Energy"
+                        fill
+                        className="rounded-xl invert brightness-0 object-contain"
+                      />
+                    </div>
                       </a>
                     </div>
 
                     <div className="gssm h-[18rem] w-full max-w-[32rem] rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] flex items-center p-6 hover:border-yellow/50 transition">
                       <a href="https://www.scgssm.org" target="_blank">
-                        <img
-                          src="/images/brands/gssm.png"
-                          className="h-full w-full rounded-xl invert brightness-0 object-contain"
-                        />
+                    <div className="relative h-full w-full">
+                      <Image
+                        src="/images/brands/gssm.png"
+                        alt="GSSM"
+                        fill
+                        className="rounded-xl invert brightness-0 object-contain"
+                      />
+                    </div>
                       </a>
                     </div>
 
                     <div className="foundation h-[18rem] w-full max-w-[32rem] rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] flex items-center p-6 hover:border-yellow/50 transition">
                       <a href="https://www.uscb.edu/academics/honors/index.html" target="_blank">
-                        <img
-                          src="/images/brands/USCBH.png"
-                          className="h-full w-full rounded-l invert brightness-0 object-contain"
-                        />
+                    <div className="relative h-full w-full">
+                      <Image
+                        src="/images/brands/USCBH.png"
+                        alt="USCB Honors"
+                        fill
+                        className="rounded-l invert brightness-0 object-contain"
+                      />
+                    </div>
                       </a>
                     </div>
                   </li>
@@ -74,55 +87,79 @@ const Sponsors = () => {
                     {/* Everyone Else */}
                     <div className="foundation w-64 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] hover:border-yellow/50 transition">
                       <a href="https://www.scgssm.org/who-we-are/gssm-foundation" target="_blank">
-                        <img
-                          src="/images/brands/foundation.png"
-                          className="h-32 rounded-xl invert brightness-0 px-5 py-4"
-                        />
+                    <div className="relative h-32 w-full">
+                      <Image
+                        src="/images/brands/foundation.png"
+                        alt="GSSM Foundation"
+                        fill
+                        className="rounded-xl invert brightness-0 object-contain px-5 py-4"
+                      />
+                    </div>
                       </a>
                     </div>
 
                     <div className="scadmin w-64 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] hover:border-yellow/50 transition">
                       <a href="https://www.admin.sc.gov/" target="_blank">
-                        <img
-                          src="/images/brands/scadmin.png"
-                          className="h-32 rounded-xl invert brightness-0 px-5 py-4"
-                        />
+                    <div className="relative h-32 w-full">
+                      <Image
+                        src="/images/brands/scadmin.png"
+                        alt="SC Admin"
+                        fill
+                        className="rounded-xl invert brightness-0 object-contain px-5 py-4"
+                      />
+                    </div>
                       </a>
                     </div>
 
                     <div className="sarjilaw w-64 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] hover:border-yellow/50 transition">
                       <a href="https://sarjilawfirm.com" target="_blank">
-                        <img
-                          src="/images/brands/sarjilaw.png"
-                          className="h-32 rounded-xl invert brightness-0 px-5 py-4"
-                        />
+                    <div className="relative h-32 w-full">
+                      <Image
+                        src="/images/brands/sarjilaw.png"
+                        alt="Sarji Law Firm"
+                        fill
+                        className="rounded-xl invert brightness-0 object-contain px-5 py-4"
+                      />
+                    </div>
                       </a>
                     </div>
 
                     <div className="andersonbrass w-64 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] hover:border-yellow/50 transition">
                       <a href="https://www.andersonbrass.com/products" target="_blank">
-                        <img
-                          src="/images/brands/andersonbrass.png"
-                          className="h-32 rounded-xl invert brightness-0 px-5 py-4"
-                        />
+                    <div className="relative h-32 w-full">
+                      <Image
+                        src="/images/brands/andersonbrass.png"
+                        alt="Anderson Brass"
+                        fill
+                        className="rounded-xl invert brightness-0 object-contain px-5 py-4"
+                      />
+                    </div>
                       </a>
                     </div>
 
                     <div className="isi w-64 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] hover:border-yellow/50 transition">
                       <a href="https://isirobots.com/" target="_blank">
-                        <img
-                          src="/images/brands/isi.png"
-                          className="h-28 w-full rounded-xl invert brightness-0 object-contain px-8 py-4"
-                        />
+                    <div className="relative h-28 w-full">
+                      <Image
+                        src="/images/brands/isi.png"
+                        alt="ISI"
+                        fill
+                        className="rounded-xl invert brightness-0 object-contain px-8 py-4"
+                      />
+                    </div>
                       </a>
                     </div>
 
                     <div className="goldendragon w-64 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] hover:border-yellow/50 transition">
                       <a href="https://www.goldendragon2hartsville.com/" target="_blank">
-                        <img
-                          src="/images/brands/gdlogo.png"
-                          className="h-32 rounded-xl invert brightness-0 px-5 py-4"
-                        />
+                    <div className="relative h-32 w-full">
+                      <Image
+                        src="/images/brands/gdlogo.png"
+                        alt="Golden Dragon"
+                        fill
+                        className="rounded-xl invert brightness-0 object-contain px-5 py-4"
+                      />
+                    </div>
                       </a>
                     </div>
 
@@ -143,9 +180,9 @@ const Sponsors = () => {
                     {[
                       <span key="1">Go to <a href="https://scgssm.org/donate/" target="_blank" rel="noopener noreferrer" className="font-semibold text-yellow hover:underline decoration-yellow/50 underline-offset-4 transition">https://scgssm.org/donate/</a></span>,
                       <span key="2">Select a donation amount and billing type. (one-time or recurring)</span>,
-                      <span key="3">Click the "I want to support" drop-down, and select <span className="font-semibold text-white">GSSM Robotics.</span></span>,
+                      <span key="3">Click the &quot;I want to support&quot; drop-down, and select <span className="font-semibold text-white">GSSM Robotics.</span></span>,
                       <span key="4">Select if you are donating on behalf of an organization or wish to stay anonymous.</span>,
-                      <span key="5">In the "Comment" field, specify <span className="font-semibold text-yellow">"Team #772 Golden Dragons"</span> as the team you would like to support with your donation.</span>,
+                      <span key="5">In the &quot;Comment&quot; field, specify <span className="font-semibold text-yellow">&quot;Team #772 Golden Dragons&quot;</span> as the team you would like to support with your donation.</span>,
                       <span key="6">Enter your contact information and pay!</span>
                     ].map((step, idx) => (
                       <li key={idx} className="pl-10 relative">
