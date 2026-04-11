@@ -47,7 +47,7 @@ const Hero = () => {
               {[
                 { label: "Years Competing", value: "18+" },
                 { label: "Outreach Hours", value: "3,000+" },
-                { label: "State Awards", value: "10+" },
+                { label: "Competition Awards", value: "14" },
               ].map((stat) => (
                 <div
                   key={stat.label}

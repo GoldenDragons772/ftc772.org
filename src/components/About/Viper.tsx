@@ -21,7 +21,7 @@ const checkIcon = (
 );
 
 const Viper = () => {
-  const observerOptions = useMemo(() => ({ 
+  const observerOptions = useMemo(() => ({
     threshold: 0.1,
     rootMargin: "-35% 0px -35% 0px"
   }), []);
@@ -37,7 +37,7 @@ const Viper = () => {
   const schedule = [
     { title: "SC Midlands Scrim.", detail: "Competed" },
     { title: "SC Upstate Scrim.", detail: "Competed" },
-    { title: "SC Midlands Qual.", detail: "Tournament Finalist" },
+    { title: "SC Midlands Qual.", detail: "Tournament Finalist, Inspire 1st" },
   ];
 
   const abilities = [

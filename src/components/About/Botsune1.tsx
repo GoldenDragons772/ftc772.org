@@ -21,9 +21,9 @@ const checkIcon = (
 );
 
 const Botsune1 = () => {
-  const observerOptions = useMemo(() => ({ 
+  const observerOptions = useMemo(() => ({
     threshold: 0.1,
-    rootMargin: "-35% 0px -35% 0px" 
+    rootMargin: "-35% 0px -35% 0px"
   }), []);
   const [ref, isInView] = useInView(observerOptions);
 
@@ -35,9 +35,9 @@ const Botsune1 = () => {
   ];
 
   const schedule = [
-    { title: "GSSM Scrim. 2", detail: "Tournament Finalist" },
-    { title: "SC Upstate Qual.", detail: "Tournament Winner" },
-    { title: "SC State Champ.", detail: "Tournament Winner" },
+    { title: "GSSM Scrim. 2", detail: "Tournament Finalist, Inspire 1st" },
+    { title: "SC Upstate Qual.", detail: "Tournament Winner, Inspire 1st" },
+    { title: "SC State Champ.", detail: "Tournament Winner, Inspire 1st" },
   ];
 
   const abilities = [

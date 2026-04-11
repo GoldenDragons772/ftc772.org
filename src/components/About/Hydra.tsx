@@ -21,7 +21,7 @@ const checkIcon = (
 );
 
 const Hydra = () => {
-  const observerOptions = useMemo(() => ({ 
+  const observerOptions = useMemo(() => ({
     threshold: 0.1,
     rootMargin: "-35% 0px -35% 0px"
   }), []);
@@ -35,7 +35,7 @@ const Hydra = () => {
   ];
 
   const schedule = [
-    { title: "SC State Champ.", detail: "Tournament Finalist" },
+    { title: "SC State Champ.", detail: "Tournament Finalist, Inspire 1st" },
     { title: "World Champ.", detail: "Division Semifinalist" },
     { title: "Chicago Robotics Invit.", detail: "Enrico Fermi Scouting Award" },
   ];
