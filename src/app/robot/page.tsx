@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <>
-      <div className="relative overflow-hidden bg-[#171717]">
+      <div className="relative overflow-hidden bg-transparent">
         <div className="absolute inset-0 bg-triangle-mesh bg-cover bg-center opacity-40 blur-[2px] scale-[1.02]" />
         <div className="relative z-10">
           <Breadcrumb

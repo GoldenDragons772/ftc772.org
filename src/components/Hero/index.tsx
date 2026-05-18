@@ -51,7 +51,7 @@ const Hero = () => {
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-md border border-white/10 bg-[#171717] px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.35)]"
+                  className="rounded-2xl border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] px-4 py-3 shadow-[0_15px_30px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.05)]"
                 >
                   <div className="text-2xl font-semibold text-yellow">{stat.value}</div>
                   <div className="text-xs font-normal uppercase tracking-[0.2em] text-white/70">
@@ -63,7 +63,7 @@ const Hero = () => {
           </div>
 
           <div className="relative">
-            <div className="rounded-md border border-yellow/30 bg-[#171717] p-3 shadow-[0_0_40px_rgba(251,176,64,0.12)]">
+            <div className="rounded-2xl border border-yellow/30 bg-[#0c0c0c]/60 backdrop-blur-[2px] p-3 shadow-[0_15px_30px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.05)]">
               <div className="relative h-[400px] overflow-hidden rounded-md border border-white/10">
                 <Image
                   src="/images/team/team_2026_alt.jpg"
@@ -97,7 +97,7 @@ const Hero = () => {
           ].map((item) => (
             <div
               key={item.title}
-              className="rounded-md border border-white/10 bg-[#171717] p-5 shadow-[0_0_30px_rgba(0,0,0,0.35)]"
+              className="rounded-2xl border border-white/10 bg-[#0c0c0c]/60 backdrop-blur-[2px] p-5 shadow-[0_15px_30px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.05)]"
             >
               <div className="text-lg font-semibold text-white">
                 {item.title}

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const Sponsors = () => {
   return (
     <>
-      <div className="relative overflow-hidden bg-[#171717]">
+      <div className="relative overflow-hidden bg-transparent">
         <div className="absolute inset-0 bg-triangle-mesh bg-cover bg-center opacity-40 blur-[2px] scale-[1.02]" />
         <div className="relative z-10">
           <Breadcrumb
@@ -41,7 +41,7 @@ const Sponsors = () => {
 
 
                     {/* Platinum Sponsors */}
-                    <div className="foundation h-[18rem] w-full max-w-[32rem] rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] flex items-center p-6 hover:border-yellow/50 transition">
+                    <div className="foundation h-[18rem] w-full max-w-[32rem] rounded-[24px] border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] shadow-[0_20px_60px_rgba(0,0,0,0.85),inset_0_1px_1px_rgba(255,255,255,0.05)] flex items-center p-6 hover:border-yellow/50 transition">
                       <a href="https://www.duke-energy.com/home" target="_blank" className="block w-full h-full">
                     <div className="relative h-full w-full">
                       <Image
@@ -55,7 +55,7 @@ const Sponsors = () => {
                       </a>
                     </div>
 
-                    <div className="gssm h-[18rem] w-full max-w-[32rem] rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] flex items-center p-6 hover:border-yellow/50 transition">
+                    <div className="gssm h-[18rem] w-full max-w-[32rem] rounded-[24px] border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] shadow-[0_20px_60px_rgba(0,0,0,0.85),inset_0_1px_1px_rgba(255,255,255,0.05)] flex items-center p-6 hover:border-yellow/50 transition">
                       <a href="https://www.scgssm.org" target="_blank" className="block w-full h-full">
                     <div className="relative h-full w-full">
                       <Image
@@ -68,7 +68,7 @@ const Sponsors = () => {
                       </a>
                     </div>
 
-                    <div className="foundation h-[18rem] w-full max-w-[32rem] rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] flex items-center p-6 hover:border-yellow/50 transition">
+                    <div className="foundation h-[18rem] w-full max-w-[32rem] rounded-[24px] border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] shadow-[0_20px_60px_rgba(0,0,0,0.85),inset_0_1px_1px_rgba(255,255,255,0.05)] flex items-center p-6 hover:border-yellow/50 transition">
                       <a href="https://www.uscb.edu/academics/honors/index.html" target="_blank" className="block w-full h-full">
                     <div className="relative h-full w-full">
                       <Image
@@ -86,7 +86,7 @@ const Sponsors = () => {
 
 
                     {/* Everyone Else */}
-                    <div className="foundation w-64 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] hover:border-yellow/50 transition">
+                    <div className="foundation w-64 rounded-[24px] border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] shadow-[0_20px_60px_rgba(0,0,0,0.85),inset_0_1px_1px_rgba(255,255,255,0.05)] hover:border-yellow/50 transition">
                       <a href="https://www.scgssm.org/who-we-are/gssm-foundation" target="_blank">
                     <div className="relative h-32 w-full">
                       <Image
@@ -99,7 +99,7 @@ const Sponsors = () => {
                       </a>
                     </div>
 
-                    <div className="scadmin w-64 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] hover:border-yellow/50 transition">
+                    <div className="scadmin w-64 rounded-[24px] border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] shadow-[0_20px_60px_rgba(0,0,0,0.85),inset_0_1px_1px_rgba(255,255,255,0.05)] hover:border-yellow/50 transition">
                       <a href="https://www.admin.sc.gov/" target="_blank">
                     <div className="relative h-32 w-full">
                       <Image
@@ -112,7 +112,7 @@ const Sponsors = () => {
                       </a>
                     </div>
 
-                    <div className="sarjilaw w-64 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] hover:border-yellow/50 transition">
+                    <div className="sarjilaw w-64 rounded-[24px] border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] shadow-[0_20px_60px_rgba(0,0,0,0.85),inset_0_1px_1px_rgba(255,255,255,0.05)] hover:border-yellow/50 transition">
                       <a href="https://sarjilawfirm.com" target="_blank">
                     <div className="relative h-32 w-full">
                       <Image
@@ -125,7 +125,7 @@ const Sponsors = () => {
                       </a>
                     </div>
 
-                    <div className="andersonbrass w-64 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] hover:border-yellow/50 transition">
+                    <div className="andersonbrass w-64 rounded-[24px] border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] shadow-[0_20px_60px_rgba(0,0,0,0.85),inset_0_1px_1px_rgba(255,255,255,0.05)] hover:border-yellow/50 transition">
                       <a href="https://www.andersonbrass.com/products" target="_blank">
                     <div className="relative h-32 w-full">
                       <Image
@@ -138,7 +138,7 @@ const Sponsors = () => {
                       </a>
                     </div>
 
-                    <div className="isi w-64 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] hover:border-yellow/50 transition">
+                    <div className="isi w-64 rounded-[24px] border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] shadow-[0_20px_60px_rgba(0,0,0,0.85),inset_0_1px_1px_rgba(255,255,255,0.05)] hover:border-yellow/50 transition">
                       <a href="https://isirobots.com/" target="_blank">
                     <div className="relative h-28 w-full">
                       <Image
@@ -151,7 +151,7 @@ const Sponsors = () => {
                       </a>
                     </div>
 
-                    <div className="goldendragon w-64 rounded-md border border-white/10 bg-[#171717] shadow-[0_0_30px_rgba(0,0,0,0.35)] hover:border-yellow/50 transition">
+                    <div className="goldendragon w-64 rounded-[24px] border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] shadow-[0_20px_60px_rgba(0,0,0,0.85),inset_0_1px_1px_rgba(255,255,255,0.05)] hover:border-yellow/50 transition">
                       <a href="https://www.goldendragon2hartsville.com/" target="_blank">
                     <div className="relative h-32 w-full">
                       <Image
@@ -176,7 +176,7 @@ const Sponsors = () => {
                   </div>
                 </div>
 
-                <div className="w-full max-w-3xl rounded-md border border-white/10 bg-[#171717] px-8 py-10 shadow-[0_0_30px_rgba(0,0,0,0.35)] transition-all hover:border-yellow/20">
+                <div className="w-full max-w-3xl rounded-[24px] border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] px-8 py-10 shadow-[0_20px_60px_rgba(0,0,0,0.85),inset_0_1px_1px_rgba(255,255,255,0.05)] transition-all hover:border-yellow/50">
                   <ol className="relative border-l border-yellow/20 space-y-10 ml-3 md:ml-6">
                     {[
                       <span key="1">Go to <a href="https://scgssm.org/donate/" target="_blank" rel="noopener noreferrer" className="font-semibold text-yellow hover:underline decoration-yellow/50 underline-offset-4 transition">https://scgssm.org/donate/</a></span>,

@@ -26,7 +26,7 @@ const SectionTitle = ({
             {title}
           </h2>
           <h2 
-            className={`absolute inset-0 font-display text-3xl lowercase !leading-tight bg-gradient-to-r from-[#FFF7b0] via-yellow to-yellow-dark text-transparent bg-clip-text transition-opacity duration-700 sm:text-4xl md:text-[45px] ${gradientActive ? "opacity-100" : "opacity-0"}`}
+            className={`absolute inset-0 font-display text-3xl lowercase !leading-tight gold-shine transition-opacity duration-700 sm:text-4xl md:text-[45px] ${gradientActive ? "opacity-100" : "opacity-0"}`}
             aria-hidden="true"
           >
             {title}

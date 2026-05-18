@@ -46,7 +46,7 @@ const RecentRobots = () => {
             <Link
               key={index}
               href={`/robot#${robot.id}`}
-              className={`group relative w-full max-w-[350px] overflow-hidden rounded-md border border-white/10 bg-[#171717] p-8 transition-all duration-300 hover:-translate-y-1 hover:${robot.color} hover:${robot.shadow} flex flex-col`}
+              className={`group relative w-full max-w-[350px] overflow-hidden rounded-[24px] border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] p-8 shadow-[0_15px_30px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.05)] transition-all duration-300 hover:-translate-y-2 hover:${robot.color} hover:${robot.shadow} flex flex-col`}
             >
               <div className="relative z-10 mb-6 flex-grow flex items-center justify-center">
                 <div className="w-full h-48 transform transition-transform duration-500 group-hover:scale-110">

@@ -36,7 +36,7 @@ const Botsune1 = () => {
 
   const schedule = [
     { title: "GSSM Scrim. 2", detail: "Tournament Finalist, Inspire 1st" },
-    { title: "SC Upstate Qual.", detail: "Tournament Winner, Inspire 1st" },
+    { title: "SC Midlands Qual.", detail: "Tournament Winner, Inspire 1st" },
     { title: "SC State Champ.", detail: "Tournament Winner, Inspire 1st" },
   ];
 
@@ -52,11 +52,11 @@ const Botsune1 = () => {
         <div className="border-b border-white/10 pb-16 md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap-reverse items-center">
             <div className="w-full px-4 lg:w-1/2">
-              <div ref={ref} className="rounded-md border border-white/10 bg-black/60 p-6 shadow-[0_0_35px_rgba(0,0,0,0.45)] mb-6">
+              <div ref={ref} className="rounded-2xl border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] p-6 shadow-[0_15px_30px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.05)] mb-6">
                 <SectionTitle
                   title="Botsune Miku I"
                   paragraph="Botsune Miku is the first iteration robot for Golden Dragons' 2025-26 season. 
-                              Miku has competed at both the SC Upstate Tournament and the SC State Championship, where it was the tournament winning robot at each event.
+                              Miku has competed at both the SC Midlands Tournament and the SC State Championship, where it was the tournament winning robot at each event.
                               This robot features a spindexer design that allows it to actively sort artifacts on field. It also contains a turreted shooter that can point
                               at the goal from anywhere on the field, and an indexer system that allows the robot to fire all 3 artifacts in 0.5 Seconds."
                   mb="0"
@@ -73,20 +73,15 @@ const Botsune1 = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] sm:mb-5 max-w-[500px] lg:mr-0 flex justify-center">
-                <div className="model">
+                <div className="model w-full">
                   <model-viewer
                     className="w-full h-[500px]"
                     src="/images/robot/model/2026_V2.glb"
                     camera-controls
                     camera-orbit="50deg 80deg 30m"
-                    loading="auto"
+                    loading="lazy"
                     powerPreference="low-power"
                     exposure="0.65"
-                    shadow-softness="0"
-                    disable-tap
-                    //poster="/images/robot/2025.png"
-                    disable-pan
-                    tone-mapping="neutral"
                     shadow-intensity="1"
                     alt="Model Loading Failed"
                   />

@@ -40,11 +40,11 @@ const RobotInfoBox = ({ quickFacts, schedule, abilities }: RobotInfoBoxProps) =>
           </div>
           <div className="space-y-2">
             {schedule.map((item) => (
-              <div key={item.title} className="flex flex-wrap items-center gap-2">
-                <span className="rounded-sm bg-white/10 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
+              <div key={item.title} className="flex flex-col items-start gap-1.5 mb-2">
+                <span className="rounded-[8px] metallic-yellow px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-black border border-[rgba(255,255,255,0.4)] shadow-[0_0_10px_rgba(255,186,36,0.2)]">
                   {item.title}
                 </span>
-                <span className="text-sm text-white/80">{item.detail}</span>
+                <span className="text-xs text-white/80">{item.detail}</span>
               </div>
             ))}
           </div>

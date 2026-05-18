@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="relative z-10 bg-[#171717] border-t border-white/10 pt-16 md:pt-20 lg:pt-24">
+      <footer className="relative z-10 bg-[#0c0c0c]/60 backdrop-blur-[40px] border-t border-[#FFBA24]/20 pt-16 md:pt-20 lg:pt-24 shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
@@ -173,7 +173,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#FFBA24]/20 to-transparent"></div>
         </div>
       </footer>
     </>

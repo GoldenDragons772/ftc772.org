@@ -52,7 +52,7 @@ const Hydra = () => {
         <div className="border-b border-white/10 pb-16 md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap-reverse items-center">
             <div className="w-full px-4 lg:w-1/2">
-              <div ref={ref} className="rounded-md border border-white/10 bg-black/60 p-6 shadow-[0_0_35px_rgba(0,0,0,0.45)] mb-6">
+              <div ref={ref} className="rounded-2xl border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] p-6 shadow-[0_15px_30px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.05)] mb-6">
                 <SectionTitle
                   title="Hydra"
                   paragraph="Hydra is the Custom Robot for Golden Dragons' 2024-25 season. This robot is a lightweight and efficient machine used to score as many samples and specimen as possible during the match as well as hanging during endgame. This robot was an evolution of Viper and kept to the original naming conventions."
@@ -70,20 +70,15 @@ const Hydra = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] sm:mb-5 max-w-[500px] lg:mr-0 flex justify-center">
-                <div className="model">
+                <div className="model w-full">
                   <model-viewer
                     className="w-full h-[500px]"
                     src="/images/robot/model/2025_V2.glb"
                     camera-controls
                     camera-orbit="50deg 80deg 25m"
-                    loading="auto"
+                    loading="lazy"
                     powerPreference="low-power"
                     exposure="0.65"
-                    shadow-softness="0"
-                    disable-tap
-                    //poster="/images/robot/2025.png"
-                    disable-pan
-                    tone-mapping="neutral"
                     shadow-intensity="1"
                     alt="Model Loading Failed"
                   />
