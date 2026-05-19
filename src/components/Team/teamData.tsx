@@ -6,14 +6,14 @@ const teamData: Team[] = [
     id: 1,
     image: "albert.jpg",
     name: "Albert Mathisz",
-    role: ["Software Captain", "Mechanical", "Outreach/Port", "Strategy"],
+    role: ["Software Captain", "Mechanical", "Outreach/Port"],
     type: "member"
   },
   {
     id: 2,
     image: "griffin.jpeg",
     name: "Griffin LaRue",
-    role: ["Mechanical Captain", "Drive Captain", "Outreach/Port", "Strategy"],
+    role: ["Mechanical Captain", "Drive/Strategy Captain", "Outreach/Port"],
     type: "member"
   },
   {
@@ -48,7 +48,7 @@ const teamData: Team[] = [
     id: 7,
     image: "rishi.jpeg",
     name: "Rishi Patel",
-    role: ["Drive"],
+    role: ["Drive/Strategy"],
     type: "mentor"
   },
   {
@@ -104,7 +104,7 @@ const teamData: Team[] = [
     id: 16,
     image: "logan.jpg",
     name: "Logan Pacheco",
-    role: ["Mechanical", "Electrical", "Drive"],
+    role: ["Mechanical", "Electrical", "Drive/Strategy"],
     type: "member"
   },
   {
@@ -118,28 +118,28 @@ const teamData: Team[] = [
     id: 19,
     image: "marie.jpg",
     name: "Marie Alvarez",
-    role: ["Mechanical", "Outreach/Port", "Drive", "Scouting"],
+    role: ["Mechanical", "Outreach/Port", "Drive/Strategy", "Scouting"],
     type: "member"
   },
   {
     id: 20,
     image: "shree.jpeg",
     name: "Shree Patel",
-    role: ["Software", "Outreach/Port", "Drive", "Scouting"],
+    role: ["Software", "Outreach/Port", "Drive/Strategy", "Scouting"],
     type: "member"
   },
   {
     id: 21,
     image: "victor.jpg",
     name: "Victor Zhang",
-    role: ["Software", "Mechanical", "Drive"],
+    role: ["Software", "Mechanical", "Drive/Strategy"],
     type: "member"
   },
   {
     id: 22,
     image: "shreeji.jpg",
     name: "Shreeji Patel",
-    role: ["Mechanical", "Electrical", "Outreach/Port", "Drive", "Scouting"],
+    role: ["Mechanical", "Electrical", "Outreach/Port", "Drive/Strategy", "Scouting"],
     type: "member"
   },
   {
