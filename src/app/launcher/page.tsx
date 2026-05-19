@@ -1,18 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function LauncherLogin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState("");
   const router = useRouter();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const savedAuth = localStorage.getItem("gd_admin_authenticated");
+      if (savedAuth === "true") {
+        router.push("/launcher/dashboard");
+      }
+    }
+  }, [router]);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     if (username === "GDAdmin" && password === "TheGoldenSigma2007!") {
+      if (rememberMe) {
+        localStorage.setItem("gd_admin_authenticated", "true");
+      } else {
+        sessionStorage.setItem("gd_admin_authenticated", "true");
+      }
       router.push("/launcher/dashboard");
     } else {
       setError("Invalid username or password");
@@ -39,10 +54,10 @@ export default function LauncherLogin() {
                 className="mb-3 text-center text-3xl sm:text-4xl text-[#FFBA24] lowercase tracking-wider drop-shadow-[0_0_10px_rgba(255,186,36,0.2)] font-names"
                 style={{ fontFamily: '"Supercharge Straight Expand", sans-serif' }}
               >
-                launcher login
+                77tools suite login
               </h3>
               <p className="mb-11 text-center font-body text-sm font-medium text-white/60 tracking-widest uppercase">
-                Sign in to access Launcher
+                Sign in to access 77Tools Suite
               </p>
               <form onSubmit={handleLogin}>
                 <div className="mb-6 flex flex-col items-center">
@@ -81,12 +96,30 @@ export default function LauncherLogin() {
                     required
                   />
                 </div>
+                
+                <div className="mb-6 mt-8 flex items-center justify-center gap-3">
+                  <input
+                    type="checkbox"
+                    id="rememberMe"
+                    checked={rememberMe}
+                    onChange={(e) => setRememberMe(e.target.checked)}
+                    className="h-4 w-4 cursor-pointer rounded border-white/10 bg-white/5 text-[#FFBA24] focus:ring-0 accent-[#FFBA24] transition-all duration-300"
+                  />
+                  <label
+                    htmlFor="rememberMe"
+                    className="font-body text-xs font-semibold text-white/60 hover:text-white uppercase tracking-wider cursor-pointer select-none transition-colors duration-300"
+                  >
+                    Stay signed in on this device
+                  </label>
+                </div>
+
                 {error && (
                   <p className="mb-6 text-center font-body text-sm font-bold text-red-400 tracking-wide">
                     {error}
                   </p>
                 )}
-                <div className="mb-6 mt-8 flex justify-center">
+                
+                <div className="mb-6 mt-6 flex justify-center">
                   <button
                     type="submit"
                     className="flex w-full items-center justify-center font-body rounded-2xl border border-white/10 border-t-white/30 bg-white/10 px-9 py-4 text-sm font-bold text-white uppercase tracking-widest backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-[#FFBA24]/80 hover:bg-[#FFBA24]/90 hover:text-black hover:shadow-[0_10px_25px_rgba(255,186,36,0.3)]"

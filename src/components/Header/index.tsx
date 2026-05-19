@@ -103,7 +103,7 @@ const Header = () => {
                 />
                 {isLauncher && (
                   <span className="text-xl lowercase tracking-wider mt-1" style={{ fontFamily: '"Supercharge Expand", sans-serif' }}>
-                    <span className="text-[#FFBA24]">Golden</span> <span className="text-white">Dragons</span>
+                    <span className="text-[#FFBA24]">golden</span> <span className="text-white">dragons</span>
                   </span>
                 )}
               </Link>
@@ -206,7 +206,7 @@ const Header = () => {
                 <div className="flex items-center justify-end pr-16 lg:pr-0 gap-4">
                   <Link
                     href="/launcher"
-                    aria-label="Launcher"
+                    aria-label="77Tools Suite"
                     className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0c0c0c]/40 backdrop-blur-md border border-white/10 text-white transition-all duration-300 hover:text-yellow hover:border-yellow/50 shadow-[0_10px_25px_rgba(0,0,0,0.5)]"
                   >
                     <svg

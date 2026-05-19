@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 const FMSIcon = () => (
@@ -13,13 +15,11 @@ const FMSIcon = () => (
     strokeLinejoin="round"
     className="w-12 h-12 text-[#FFBA24] drop-shadow-[0_0_10px_rgba(255,186,36,0.4)]"
   >
-    {/* Hammer */}
-    <path d="M18 3l3 3-9.5 9.5-3-3L18 3zm-6.5 6.5l-6 6a2 2 0 0 0 0 2.8l1.4 1.4a2 2 0 0 0 2.8 0l6-6-4.2-4.2z" strokeWidth="1.2" opacity="0.5" />
-    {/* Wrench */}
-    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" strokeWidth="1.2" opacity="0.5" />
-    {/* Gear in center */}
-    <circle cx="12" cy="12" r="3" fill="currentColor" fillOpacity="0.2" />
-    <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2.1 2.1M16.9 16.9l2.1 2.1M5 19l2.1-2.1M16.9 7.1l2.1-2.1" />
+    {/* Clean Gear body */}
+    <circle cx="12" cy="12" r="3" />
+    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z" />
+    {/* Inside crossed wrench and hammer, smaller and cleaner to avoid overlap */}
+    <path d="M14 10l-4 4M10 10l4 4" strokeWidth="1.2" />
   </svg>
 );
 
@@ -95,15 +95,56 @@ const adminLinks = [
 ];
 
 export default function LauncherDashboard() {
+  const router = useRouter();
+  const [authorized, setAuthorized] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const localAuth = localStorage.getItem("gd_admin_authenticated");
+      const sessionAuth = sessionStorage.getItem("gd_admin_authenticated");
+      if (localAuth === "true" || sessionAuth === "true") {
+        setAuthorized(true);
+      } else {
+        router.push("/launcher");
+      }
+    }
+  }, [router]);
+
+  const handleSignOut = () => {
+    if (typeof window !== "undefined") {
+      localStorage.removeItem("gd_admin_authenticated");
+      sessionStorage.removeItem("gd_admin_authenticated");
+      router.push("/launcher");
+    }
+  };
+
+  if (!authorized) {
+    return (
+      <div className="min-h-screen bg-transparent flex items-center justify-center font-body text-white">
+        <div className="text-center font-semibold text-white/50 tracking-widest uppercase">
+          Verifying authorization...
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="relative min-h-screen bg-transparent pt-28 pb-16 md:pb-20 lg:pb-28 lg:pt-[150px] overflow-hidden">
       <div className="container relative z-10">
-        <h1 
-          className="text-5xl lowercase text-[#FFBA24] mb-12 text-center md:text-left drop-shadow-[0_0_15px_rgba(255,186,36,0.3)] font-names"
-          style={{ fontFamily: '"Supercharge Straight Expand", sans-serif' }}
-        >
-          launcher
-        </h1>
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6">
+          <h1 
+            className="text-5xl lowercase text-[#FFBA24] text-center md:text-left drop-shadow-[0_0_15px_rgba(255,186,36,0.3)] font-names"
+            style={{ fontFamily: '"Supercharge Straight Expand", sans-serif' }}
+          >
+            77tools suite
+          </h1>
+          <button
+            onClick={handleSignOut}
+            className="self-center md:self-auto font-body rounded-xl border border-white/10 bg-white/5 hover:border-red-500/50 hover:bg-red-500/10 hover:text-red-400 px-6 py-2.5 text-xs font-bold uppercase tracking-widest backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5"
+          >
+            Sign Out
+          </button>
+        </div>
         
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {adminLinks.map((link, index) => (
@@ -118,7 +159,7 @@ export default function LauncherDashboard() {
                 <link.icon />
               </div>
               <h2 
-                className="text-2xl uppercase text-[#FFBA24] font-names tracking-wider mb-2"
+                className="text-2xl lowercase text-[#FFBA24] font-names tracking-wider mb-2"
                 style={{ fontFamily: '"Supercharge Straight Expand", sans-serif' }}
               >
                 golden dragons
@@ -139,7 +180,7 @@ export default function LauncherDashboard() {
               <GDocsIcon />
             </div>
             <h2 
-              className="text-2xl uppercase text-[#FFBA24] font-names tracking-wider mb-2"
+              className="text-2xl lowercase text-[#FFBA24] font-names tracking-wider mb-2"
               style={{ fontFamily: '"Supercharge Straight Expand", sans-serif' }}
             >
               golden dragons
