@@ -20,18 +20,18 @@ function Team() {
     let baseColor = 'gray';
     let borderClass = 'border-gray-500/60';
     
-    if (r.includes('mech')) { baseColor = 'red'; borderClass = 'border-red-600/60'; }
-    else if (r.includes('soft')) { baseColor = 'blue'; borderClass = 'border-blue-500/60'; }
-    else if (r.includes('drive')) { baseColor = 'purple'; borderClass = 'border-purple-600/60'; }
+    if (r.includes('mech')) { baseColor = 'pastel-purple'; borderClass = 'border-purple-400/60'; }
+    else if (r.includes('soft')) { baseColor = 'pastel-blue'; borderClass = 'border-blue-400/60'; }
+    else if (r.includes('drive')) { baseColor = 'pastel-orange'; borderClass = 'border-orange-400/60'; }
     else if (r.includes('strat')) { baseColor = 'orange'; borderClass = 'border-orange-500/60'; }
-    else if (r.includes('elect')) { baseColor = 'yellow'; borderClass = 'border-yellow/60'; }
-    else if (r.includes('outreach') || r.includes('port')) { baseColor = 'pink'; borderClass = 'border-pink-500/60'; }
+    else if (r.includes('elect')) { baseColor = 'yellow'; borderClass = 'border-[#FFBA24]/60'; }
+    else if (r.includes('outreach') || r.includes('port')) { baseColor = 'pastel-pink'; borderClass = 'border-pink-400/60'; }
     else if (r.includes('scout')) { baseColor = 'cyan'; borderClass = 'border-cyan-400/60'; }
     else if (r.includes('design') || r.includes('media')) { baseColor = 'green'; borderClass = 'border-green-500/60'; }
     else if (r.includes('cnc')) { baseColor = 'indigo'; borderClass = 'border-indigo-500/60'; }
 
     const bgClass = isCaptain ? `metallic-${baseColor} border-[rgba(255,255,255,0.4)]` : `bg-black/20 ${borderClass}`;
-    const textClass = isCaptain ? (baseColor === 'yellow' ? 'text-black' : 'text-white') : 'text-white/80';
+    const textClass = isCaptain ? (baseColor === 'yellow' || baseColor.startsWith('pastel-') ? 'text-black' : 'text-white') : 'text-white/80';
     
     return { bgClass, textClass };
   };
