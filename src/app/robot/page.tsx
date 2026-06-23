@@ -1,11 +1,12 @@
-import Botsune1 from "@/components/About/Botsune1";
-import Clanky from "@/components/About/Clanky";
-import GilesCorey from "@/components/About/GilesCorey";
-import Hydra from "@/components/About/Hydra";
-import Viper from "@/components/About/Viper";
+import Botsune1 from "@/components/Robots/Botsune1";
+import Clanky from "@/components/Robots/Clanky";
+import GilesCorey from "@/components/Robots/GilesCorey";
+import Hydra from "@/components/Robots/Hydra";
+import Viper from "@/components/Robots/Viper";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 import { Metadata } from "next";
+import Botsune2 from "@/components/Robots/Botsune2";
 
 export const metadata: Metadata = {
   title: "Robots | Golden Dragons (772)",
@@ -26,6 +27,7 @@ const AboutPage = () => {
             subtitle="Built for competition"
             subtitleClassName="text-xs text-yellow tracking-[0.4em]"
           />
+          <Botsune2 />
           <Botsune1 />
           <Clanky />
           <Hydra />

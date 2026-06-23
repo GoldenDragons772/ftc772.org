@@ -12,13 +12,13 @@ const robots = [
     scale: "scale-[1.3]",
   },
   {
-    name: "Clanky",
+    name: "Botsune Miku II",
     season: "2025-26",
-    id: "clanky",
+    id: "miku2",
     color: "border-red-600/60",
     shadow: "shadow-[0_0_25px_rgba(220,38,38,0.25)]",
-    image: "/images/robot/render/Clanky.png",
-    scale: "scale-[1.4]",
+    image: "/images/robot/render/Miku2.png",
+    scale: "scale-[1.2]",
   },
   {
     name: "Hydra",

@@ -1,0 +1,98 @@
+"use client";
+import "./model.css";
+import SectionTitle from "../Common/SectionTitle";
+import RobotInfoBox from "./RobotInfoBox";
+import Script from "next/script";
+import { useInView } from "@/hooks/useInView";
+import { useMemo } from "react";
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'model_viewer': any;
+    }
+  }
+}
+
+const checkIcon = (
+  <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
+    <path d="M5.8535 12.6631C5.65824 12.8584 5.34166 12.8584 5.1464 12.6631L0.678505 8.1952C0.483242 7.99994 0.483242 7.68336 0.678505 7.4881L2.32921 5.83739C2.52467 5.64193 2.84166 5.64216 3.03684 5.83791L5.14622 7.95354C5.34147 8.14936 5.65859 8.14952 5.85403 7.95388L13.3797 0.420561C13.575 0.22513 13.8917 0.225051 14.087 0.420383L15.7381 2.07143C15.9333 2.26669 15.9333 2.58327 15.7381 2.77854L5.8535 12.6631Z" />
+  </svg>
+);
+
+const Botsune1 = () => {
+  const observerOptions = useMemo(() => ({
+    threshold: 0.1,
+    rootMargin: "-35% 0px -35% 0px"
+  }), []);
+  const [ref, isInView] = useInView(observerOptions);
+
+  const quickFacts = [
+    { label: "Name", value: "Botsune Miku I" },
+    { label: "Status", value: "In Service" },
+    { label: "Season", value: "2025-26" },
+    { label: "Drive", value: "Custom" },
+  ];
+
+  const schedule = [
+    { title: "GSSM Scrim. 2", detail: "Tournament Finalist, Inspire 1st" },
+    { title: "SC Midlands Qual.", detail: "Tournament Winner, Inspire 1st" },
+    { title: "SC State Champ.", detail: "Tournament Winner, Inspire 1st" },
+  ];
+
+  const abilities = [
+    "Spindexer design to sort artifacts on field.",
+    "Turreted shooter for any-field scoring.",
+    "MagSort system made to fire 3 artifacts in 0.5 seconds.",
+  ];
+
+  return (
+    <section id="botsune" className="relative overflow-hidden pt-16 md:pt-20 lg:pt-28">
+      <div className="container relative z-10">
+        <div className="border-b border-white/10 pb-16 md:pb-20 lg:pb-28">
+          <div className="-mx-4 flex flex-wrap-reverse items-center">
+            <div className="w-full px-4 lg:w-1/2">
+              <div ref={ref} className="rounded-2xl border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] p-6 shadow-[0_15px_30px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.05)] mb-6">
+                <SectionTitle
+                  title="Botsune Miku I"
+                  paragraph="Botsune Miku is the first iteration robot for Golden Dragons' 2025-26 season. 
+                              Miku has competed at both the SC Midlands Tournament and the SC State Championship, where it was the tournament winning robot at each event.
+                              This robot features a spindexer design that allows it to actively sort artifacts on field. It also contains a turreted shooter that can point
+                              at the goal from anywhere on the field, and an indexer system that allows the robot to fire all 3 artifacts in 0.5 Seconds."
+                  mb="0"
+                  width="100%"
+                  gradientActive={isInView}
+                />
+                <div className="my-6 border-t border-white/10" />
+                <RobotInfoBox
+                  quickFacts={quickFacts}
+                  schedule={schedule}
+                  abilities={abilities}
+                />
+              </div>
+            </div>
+            <div className="w-full px-4 lg:w-1/2">
+              <div className="relative mx-auto aspect-[25/24] sm:mb-5 max-w-[500px] lg:mr-0 flex justify-center">
+                <div className="model w-full">
+                  <model-viewer
+                    className="w-full h-[500px]"
+                    src="/images/robot/model/2026_V2.glb"
+                    camera-controls
+                    camera-orbit="50deg 80deg 30m"
+                    loading="lazy"
+                    powerPreference="low-power"
+                    exposure="0.65"
+                    shadow-intensity="1"
+                    alt="Model Loading Failed"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Botsune1;
