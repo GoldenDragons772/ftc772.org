@@ -4,4 +4,5 @@ export type Team = {
   name: string,
   role: string[],
   type: 'member' | 'mentor',
+  gradYear?: string
 }

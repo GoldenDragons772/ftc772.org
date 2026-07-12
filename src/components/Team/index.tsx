@@ -6,13 +6,16 @@ import Image from 'next/image'
 function Team() {
   // Removed custom JS equalization because Tailwind's flex/grid `items-stretch` and `h-full` natively equalizes heights.
   const members = teamData.filter(user => user.type === 'member');
-  const captains = members.filter(user =>
-    user.role.some(role => role.toLowerCase().includes('captain'))
-  );
-  const nonCaptains = members.filter(user =>
-    !user.role.some(role => role.toLowerCase().includes('captain'))
-  );
-  const alumni = teamData.filter(user => user.type === 'mentor');
+  const alumni = teamData.filter(user => user.type === 'mentor').sort((a, b) => {
+    const yearA = a.gradYear ? parseInt(a.gradYear, 10) : 0;
+    const yearB = b.gradYear ? parseInt(b.gradYear, 10) : 0;
+    
+    if (yearA !== yearB) {
+      return yearB - yearA;
+    }
+    
+    return a.name.localeCompare(b.name);
+  });
   const getRoleStyle = (role: string) => {
     const r = role.toLowerCase();
     const isCaptain = r.includes('captain');
@@ -20,12 +23,12 @@ function Team() {
     let baseColor = 'gray';
     let borderClass = 'border-gray-500/60';
     
-    if (r.includes('mech')) { baseColor = 'pastel-purple'; borderClass = 'border-purple-400/60'; }
-    else if (r.includes('soft')) { baseColor = 'pastel-blue'; borderClass = 'border-blue-400/60'; }
-    else if (r.includes('drive')) { baseColor = 'pastel-orange'; borderClass = 'border-orange-400/60'; }
+    if (r.includes('mech')) { baseColor = isCaptain ? 'purple' : 'pastel-purple'; borderClass = isCaptain ? 'border-purple-500/60' : 'border-purple-400/60'; }
+    else if (r.includes('soft')) { baseColor = isCaptain ? 'blue' : 'pastel-blue'; borderClass = isCaptain ? 'border-blue-500/60' : 'border-blue-400/60'; }
+    else if (r.includes('drive')) { baseColor = isCaptain ? 'orange' : 'pastel-orange'; borderClass = 'border-orange-400/60'; }
     else if (r.includes('strat')) { baseColor = 'orange'; borderClass = 'border-orange-500/60'; }
     else if (r.includes('elect')) { baseColor = 'yellow'; borderClass = 'border-[#FFBA24]/60'; }
-    else if (r.includes('outreach') || r.includes('port')) { baseColor = 'pastel-pink'; borderClass = 'border-pink-400/60'; }
+    else if (r.includes('outreach') || r.includes('port')) { baseColor = isCaptain ? 'pink' : 'pastel-pink'; borderClass = isCaptain ? 'border-pink-500/60' : 'border-pink-400/60'; }
     else if (r.includes('scout')) { baseColor = 'cyan'; borderClass = 'border-cyan-400/60'; }
     else if (r.includes('design') || r.includes('media')) { baseColor = 'green'; borderClass = 'border-green-500/60'; }
     else if (r.includes('cnc')) { baseColor = 'indigo'; borderClass = 'border-indigo-500/60'; }
@@ -47,7 +50,7 @@ function Team() {
             </div>
           </div>
           <div className="userProfiles flex flex-wrap justify-center items-stretch gap-4 mb-8">
-            {captains.map((user, id) => (
+            {members.map((user, id) => (
               <div
                 key={id}
                 className="team-card member-card w-52 min-h-[220px] flex flex-col card py-4 px-4 rounded-[24px] border border-yellow/60 shadow-[0_15px_30px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.05)] bg-[#0c0c0c]/60 backdrop-blur-[2px] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(251,176,64,0.35)]"
@@ -55,13 +58,16 @@ function Team() {
                 <div className="image w-full h-24 flex justify-center">
                   <Image width={96} height={96} className='rounded-full border border-white/10 object-cover' src={`/images/team/members/${user.image}`} alt={user.name} />
                 </div>
-                    <div className="pt-3 text-center font-names text-[16px] lowercase tracking-wide leading-snug gold-shine drop-shadow-[0_0_10px_rgba(255,186,36,0.3)] font-bold">{user.name}</div>
-                <div className="role mt-3 flex flex-wrap justify-center content-start gap-1.5 text-center flex-grow">
+                    <div className={`pt-3 text-center font-names lowercase tracking-wide whitespace-nowrap leading-snug gold-shine drop-shadow-[0_0_10px_rgba(255,186,36,0.3)] font-bold ${user.name.includes("Marie") ? "text-[14.5px]" : "text-[16px]"}`}>{user.name}</div>
+                <div className="role mt-3 flex flex-wrap justify-center items-center content-start gap-1.5 text-center flex-grow">
                   {user.role.map((role, idx) => {
                       const style = getRoleStyle(role);
+                      const rLower = role.toLowerCase();
+                      const isLongBadge = rLower.includes('drive') || rLower.includes('strat') || ((rLower.includes('outreach') || rLower.includes('port')) && rLower.includes('captain'));
+                      const badgeTextSize = isLongBadge ? 'text-[8.5px]' : 'text-[10px]';
                       return (
-                        <div key={idx} className={`inline-flex items-center gap-2 rounded-full border ${style.bgClass} px-3 py-1`}>
-                          <span className={`text-[10px] font-semibold uppercase tracking-[0.15em] ${style.textClass}`}>
+                        <div key={idx} className={`inline-flex items-center justify-center h-[22px] rounded-full border ${style.bgClass} px-3`}>
+                          <span className={`${badgeTextSize} font-semibold uppercase tracking-[0.15em] whitespace-nowrap ${style.textClass} mt-[1px]`}>
                             {role}
                           </span>
                         </div>
@@ -71,31 +77,7 @@ function Team() {
               </div>
             ))}
           </div>
-          <div className="userProfiles flex flex-wrap justify-center items-stretch gap-4 mb-12">
-            {nonCaptains.map((user, id) => (
-              <div
-                key={id}
-                className="team-card member-card w-52 min-h-[220px] flex flex-col card py-4 px-4 rounded-[24px] border border-white/10 bg-[#0c0c0c]/60 backdrop-blur-[2px] shadow-[0_15px_30px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.05)] transition-all duration-300 hover:-translate-y-2 hover:border-[#FFBA24]/30 hover:shadow-[0_20px_60px_rgba(0,0,0,0.6)]"
-              >
-                <div className="image w-full h-24 flex justify-center">
-                  <Image width={96} height={96} className='rounded-full border border-white/10 object-cover' src={`/images/team/members/${user.image}`} alt={user.name} />
-                </div>
-                <div className="pt-3 text-center font-names text-[15px] lowercase tracking-wide text-white leading-snug">{user.name}</div>
-                <div className="role mt-3 flex flex-wrap justify-center content-start gap-1.5 text-center flex-grow">
-                  {user.role.map((role, idx) => {
-                      const style = getRoleStyle(role);
-                      return (
-                        <div key={idx} className={`inline-flex items-center gap-2 rounded-full border ${style.bgClass} px-3 py-1`}>
-                          <span className={`text-[10px] font-semibold uppercase tracking-[0.15em] ${style.textClass}`}>
-                            {role}
-                          </span>
-                        </div>
-                      );
-                    })}
-                </div>
-              </div>
-            ))}
-          </div>
+
           <div className="mt-16 mb-8 flex items-center gap-6">
             <h2 className="text-xl md:text-2xl font-semibold uppercase tracking-[0.35em] text-yellow">
               Alumni
@@ -115,17 +97,20 @@ function Team() {
                   </div>
                   <div className="flex flex-col flex-grow text-left overflow-hidden">
                     <div className="flex items-center gap-2 mb-2 w-full overflow-hidden">
-                      <div className={`font-names text-[16px] lowercase tracking-wide leading-snug truncate ${isCaptain ? 'gold-shine drop-shadow-[0_0_10px_rgba(255,186,36,0.3)] font-bold' : 'text-white'}`}>{user.name}</div>
-                      <span className="flex-shrink-0 rounded-[6px] metallic-yellow px-2 py-[2px] text-[9px] font-black tracking-widest text-black border border-[rgba(255,255,255,0.4)] shadow-[0_0_10px_rgba(255,186,36,0.2)] uppercase -translate-y-[2px]">
-                        C/O '25
+                      <div className={`font-names lowercase tracking-wide leading-snug truncate ${isCaptain ? 'gold-shine drop-shadow-[0_0_10px_rgba(255,186,36,0.3)] font-bold' : 'text-white'} ${user.name.includes("Marie") ? "text-[14.5px]" : "text-[16px]"}`}>{user.name}</div>
+                      <span className={`flex-shrink-0 rounded-[6px] ${user.gradYear === '26' ? 'metallic-yellow' : 'metallic-silver'} px-2 py-[2px] text-[9px] font-black tracking-widest text-black border border-[rgba(255,255,255,0.4)] shadow-[0_0_10px_rgba(255,186,36,0.2)] uppercase -translate-y-[2px]`}>
+                        C/O '{user.gradYear || '25'}
                       </span>
                     </div>
-                    <div className="flex flex-wrap content-start gap-1.5">
+                    <div className="flex flex-wrap items-center content-start gap-1.5">
                       {user.role.map((role, idx) => {
                         const style = getRoleStyle(role);
+                        const rLower = role.toLowerCase();
+                        const isLongBadge = rLower.includes('drive') || rLower.includes('strat') || ((rLower.includes('outreach') || rLower.includes('port')) && rLower.includes('captain'));
+                        const badgeTextSize = isLongBadge ? 'text-[8.5px]' : 'text-[10px]';
                         return (
-                          <div key={idx} className={`inline-flex items-center gap-2 rounded-full border ${style.bgClass} px-3 py-1`}>
-                            <span className={`text-[10px] font-semibold uppercase tracking-[0.15em] ${style.textClass}`}>
+                          <div key={idx} className={`inline-flex items-center justify-center h-[22px] rounded-full border ${style.bgClass} px-3`}>
+                            <span className={`${badgeTextSize} font-semibold uppercase tracking-[0.15em] whitespace-nowrap ${style.textClass} mt-[1px]`}>
                               {role}
                             </span>
                           </div>

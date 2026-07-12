@@ -36,7 +36,7 @@ const Botsune1 = () => {
 
   const schedule = [
     { title: "World Champ.", detail: "Goodall Division, 8th Seed 2nd Pick" },
-    { title: "Multinational Tech Invit.", detail: "Attending 2026" },
+    { title: "Multinational Tech Invit.", detail: "18th Place (Qualifications)" },
     { title: "Canadian Rockies Premier Event", detail: "Attending 2026" },
   ];
 

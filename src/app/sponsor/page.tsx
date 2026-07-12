@@ -48,7 +48,7 @@ const Sponsors = () => {
                         src="/images/brands/dukeEnergy.png"
                         alt="Duke Energy"
                         fill
-                        className="rounded-xl invert brightness-0 object-contain"
+                        className="rounded-xl invert brightness-0 object-contain p-3"
                         priority
                       />
                     </div>
@@ -82,7 +82,7 @@ const Sponsors = () => {
                     </div>
                   </li>
 
-                  <li className="gssm mt-6 flex justify-center gap-10 flex-wrap">
+                  <li className="gssm flex w-full max-w-[850px] mx-auto flex-wrap justify-center gap-x-10 gap-y-4 mt-6">
 
 
                     {/* Everyone Else */}
@@ -125,18 +125,6 @@ const Sponsors = () => {
                       </a>
                     </div>
 
-                    <div className="andersonbrass w-64 rounded-[24px] border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] shadow-[0_20px_60px_rgba(0,0,0,0.85),inset_0_1px_1px_rgba(255,255,255,0.05)] hover:border-yellow/50 transition">
-                      <a href="https://www.andersonbrass.com/products" target="_blank">
-                    <div className="relative h-32 w-full">
-                      <Image
-                        src="/images/brands/andersonbrass.png"
-                        alt="Anderson Brass"
-                        fill
-                        className="rounded-xl invert brightness-0 object-contain px-5 py-4"
-                      />
-                    </div>
-                      </a>
-                    </div>
 
                     <div className="isi w-64 rounded-[24px] border border-[#FFBA24]/20 bg-[#0c0c0c]/60 backdrop-blur-[2px] shadow-[0_20px_60px_rgba(0,0,0,0.85),inset_0_1px_1px_rgba(255,255,255,0.05)] hover:border-yellow/50 transition">
                       <a href="https://isirobots.com/" target="_blank">

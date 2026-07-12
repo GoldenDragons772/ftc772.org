@@ -1,6 +1,7 @@
 "use client";
 
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import Script from "next/script";
 
 const ContactPage = () => {
   return (
@@ -17,11 +18,25 @@ const ContactPage = () => {
           />
           <section className="relative overflow-hidden pb-16 pt-6">
             <div className="container relative z-10">
-              {/* Mirror App Social Feed */}
-              <div dangerouslySetInnerHTML={{ __html: `
-                <iframe onload="iFrameSetup(this)" src="https://app.mirror-app.com/feed-socialmix/56b5d7cf-b1b9-4f26-9d10-e48c9c528f54/preview" style="width:100%;border:none;overflow:hidden;background:transparent;color-scheme:dark;" scrolling="no"></iframe>
-                <script src="https://cdn.jsdelivr.net/npm/@mirrorapp/iframe-bridge@latest/dist/index.umd.js"></script>
-              `}} />
+              <div className="w-full">
+                <iframe 
+                  id="mirror-app-iframe"
+                  src="https://app.mirror-app.com/feed-socialmix/56b5d7cf-b1b9-4f26-9d10-e48c9c528f54/preview" 
+                  style={{ width: '100%', minHeight: '800px', border: 'none', overflow: 'hidden', background: 'transparent', colorScheme: 'dark' }} 
+                  scrolling="no"
+                  onLoad={(e) => {
+                    if (typeof window !== 'undefined' && (window as any).iFrameSetup) {
+                      (window as any).iFrameSetup(e.target);
+                    }
+                  }}
+                ></iframe>
+                <Script src="https://cdn.jsdelivr.net/npm/@mirrorapp/iframe-bridge@latest/dist/index.umd.js" onLoad={() => {
+                  const iframe = document.getElementById('mirror-app-iframe');
+                  if (iframe && typeof window !== 'undefined' && (window as any).iFrameSetup) {
+                    (window as any).iFrameSetup(iframe);
+                  }
+                }} />
+              </div>
             </div>
           </section>
         </div>

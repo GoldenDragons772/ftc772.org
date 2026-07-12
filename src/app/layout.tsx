@@ -5,6 +5,7 @@ import { Providers } from "./providers";
 import { Montserrat } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -19,16 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
 
       <body
         className={`${montserrat.variable} bg-[#171717] text-white antialiased`}
       >
-        <div className="animated-fluid-bg"></div>
+        <AnimatedBackground />
         <Providers>
           <Header />
           {children}

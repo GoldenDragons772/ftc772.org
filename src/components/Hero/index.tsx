@@ -26,19 +26,19 @@ const Hero = () => {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/robot"
-                className="rounded-sm bg-yellow px-6 py-3 font-semibold uppercase tracking-wider text-black shadow-[0_10px_30px_rgba(251,176,64,0.25)] transition hover:-translate-y-0.5"
+                className="rounded-full bg-yellow px-6 py-3 font-semibold uppercase tracking-wider text-black shadow-[0_10px_30px_rgba(251,176,64,0.25)] transition hover:-translate-y-0.5"
               >
                 Our Robots
               </Link>
               <Link
                 href="/team"
-                className="rounded-sm border border-yellow/60 px-6 py-3 font-semibold uppercase tracking-wider text-yellow transition hover:bg-[#FFBA24]/10"
+                className="rounded-full border border-yellow/60 px-6 py-3 font-semibold uppercase tracking-wider text-yellow transition hover:bg-[#FFBA24]/10"
               >
                 Meet the Team
               </Link>
               <Link
                 href="/sponsor"
-                className="rounded-sm border border-yellow/60 px-6 py-3 font-semibold uppercase tracking-wider text-yellow transition hover:bg-[#FFBA24]/10"
+                className="rounded-full border border-yellow/60 px-6 py-3 font-semibold uppercase tracking-wider text-yellow transition hover:bg-[#FFBA24]/10"
               >
                 Sponsor Us
               </Link>
@@ -46,7 +46,7 @@ const Hero = () => {
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
               {[
                 { label: "Years Competing", value: "18+" },
-                { label: "Outreach Hours", value: "3,000+" },
+                { label: "Outreach Hours", value: "5,000+" },
                 { label: "Competition Awards", value: "14" },
               ].map((stat) => (
                 <div
@@ -64,7 +64,7 @@ const Hero = () => {
 
           <div className="relative">
             <div className="rounded-2xl border border-yellow/30 bg-[#0c0c0c]/60 backdrop-blur-[2px] p-3 shadow-[0_15px_30px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.05)]">
-              <div className="relative h-[400px] overflow-hidden rounded-md border border-white/10">
+              <div className="relative h-[400px] overflow-hidden rounded-[24px] border border-white/10">
                 <Image
                   src="/images/team/team_2026_alt.jpg"
                   alt="Golden Dragons team"

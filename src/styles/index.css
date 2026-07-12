@@ -109,34 +109,30 @@
     background: linear-gradient(
       to top left, 
       #FFBA24 0%, 
-      #FFF1B8 25%, 
+      #ffe484 25%, 
       #FFBA24 50%,
-      #FFF1B8 75%,
+      #ffe484 75%,
       #FFBA24 100%
     );
     background-size: 200% 200%;
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    animation: shine 3s linear infinite;
+    animation: shine 6s linear infinite;
     display: inline-block;
   }
 }
 
-.metallic-red { background: linear-gradient(to top left, #991b1b 0%, #ef4444 25%, #991b1b 50%, #ef4444 75%, #991b1b 100%); background-size: 200% 200%; animation: shine 3s linear infinite; }
-.metallic-blue { background: linear-gradient(to top left, #1e3a8a 0%, #3b82f6 25%, #1e3a8a 50%, #3b82f6 75%, #1e3a8a 100%); background-size: 200% 200%; animation: shine 3s linear infinite; }
-.metallic-purple { background: linear-gradient(to top left, #581c87 0%, #a855f7 25%, #581c87 50%, #a855f7 75%, #581c87 100%); background-size: 200% 200%; animation: shine 3s linear infinite; }
-.metallic-orange { background: linear-gradient(to top left, #9a3412 0%, #f97316 25%, #9a3412 50%, #f97316 75%, #9a3412 100%); background-size: 200% 200%; animation: shine 3s linear infinite; }
-.metallic-yellow { background: linear-gradient(to top left, #FFBA24 0%, #FFF1B8 25%, #FFBA24 50%, #FFF1B8 75%, #FFBA24 100%); background-size: 200% 200%; animation: shine 3s linear infinite; }
-.metallic-pastel-purple { background: linear-gradient(to top left, #c084fc 0%, #e9d5ff 25%, #c084fc 50%, #e9d5ff 75%, #c084fc 100%); background-size: 200% 200%; animation: shine 3s linear infinite; }
-.metallic-pastel-blue { background: linear-gradient(to top left, #60a5fa 0%, #bfdbfe 25%, #60a5fa 50%, #bfdbfe 75%, #60a5fa 100%); background-size: 200% 200%; animation: shine 3s linear infinite; }
-.metallic-pastel-pink { background: linear-gradient(to top left, #f472b6 0%, #fbcfe8 25%, #f472b6 50%, #fbcfe8 75%, #f472b6 100%); background-size: 200% 200%; animation: shine 3s linear infinite; }
-.metallic-pastel-orange { background: linear-gradient(to top left, #fb923c 0%, #fed7aa 25%, #fb923c 50%, #fed7aa 75%, #fb923c 100%); background-size: 200% 200%; animation: shine 3s linear infinite; }
-.metallic-pink { background: linear-gradient(to top left, #831843 0%, #ec4899 25%, #831843 50%, #ec4899 75%, #831843 100%); background-size: 200% 200%; animation: shine 3s linear infinite; }
-.metallic-cyan { background: linear-gradient(to top left, #164e63 0%, #06b6d4 25%, #164e63 50%, #06b6d4 75%, #164e63 100%); background-size: 200% 200%; animation: shine 3s linear infinite; }
-.metallic-green { background: linear-gradient(to top left, #14532d 0%, #22c55e 25%, #14532d 50%, #22c55e 75%, #14532d 100%); background-size: 200% 200%; animation: shine 3s linear infinite; }
-.metallic-indigo { background: linear-gradient(to top left, #312e81 0%, #6366f1 25%, #312e81 50%, #6366f1 75%, #312e81 100%); background-size: 200% 200%; animation: shine 3s linear infinite; }
-.metallic-gray { background: linear-gradient(to top left, #374151 0%, #9ca3af 25%, #374151 50%, #9ca3af 75%, #374151 100%); background-size: 200% 200%; animation: shine 3s linear infinite; }
+.metallic-red { background: linear-gradient(to top left, #ef4444 0%, #fca5a5 25%, #ef4444 50%, #fca5a5 75%, #ef4444 100%); background-size: 200% 200%; animation: shine 6s linear infinite; }
+.metallic-blue { background: linear-gradient(to top left, #3b82f6 0%, #93c5fd 25%, #3b82f6 50%, #93c5fd 75%, #3b82f6 100%); background-size: 200% 200%; animation: shine 6s linear infinite; }
+.metallic-purple { background: linear-gradient(to top left, #a855f7 0%, #d8b4fe 25%, #a855f7 50%, #d8b4fe 75%, #a855f7 100%); background-size: 200% 200%; animation: shine 6s linear infinite; }
+.metallic-orange { background: linear-gradient(to top left, #f97316 0%, #fdba74 25%, #f97316 50%, #fdba74 75%, #f97316 100%); background-size: 200% 200%; animation: shine 6s linear infinite; }
+.metallic-yellow { background: linear-gradient(to top left, #FFBA24 0%, #ffe484 25%, #FFBA24 50%, #ffe484 75%, #FFBA24 100%); background-size: 200% 200%; animation: shine 6s linear infinite; }
+.metallic-pink { background: linear-gradient(to top left, #ec4899 0%, #f9a8d4 25%, #ec4899 50%, #f9a8d4 75%, #ec4899 100%); background-size: 200% 200%; animation: shine 6s linear infinite; }
+.metallic-cyan { background: linear-gradient(to top left, #06b6d4 0%, #67e8f9 25%, #06b6d4 50%, #67e8f9 75%, #06b6d4 100%); background-size: 200% 200%; animation: shine 6s linear infinite; }
+.metallic-green { background: linear-gradient(to top left, #22c55e 0%, #86efac 25%, #22c55e 50%, #86efac 75%, #22c55e 100%); background-size: 200% 200%; animation: shine 6s linear infinite; }
+.metallic-indigo { background: linear-gradient(to top left, #6366f1 0%, #a5b4fc 25%, #6366f1 50%, #a5b4fc 75%, #6366f1 100%); background-size: 200% 200%; animation: shine 6s linear infinite; }
+.metallic-silver { background: linear-gradient(to top left, #9ca3af 0%, #e5e7eb 25%, #9ca3af 50%, #e5e7eb 75%, #9ca3af 100%); background-size: 200% 200%; animation: shine 6s linear infinite; }
 
 @keyframes shine {
   0% { background-position: 100% 100%; }
