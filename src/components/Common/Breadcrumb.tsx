@@ -6,12 +6,14 @@ const Breadcrumb = ({
   titleClassName,
   subtitle,
   subtitleClassName,
+  style,
 }: {
   pageName: string;
   description: string;
   titleClassName?: string;
   subtitle?: string;
   subtitleClassName?: string;
+  style?: React.CSSProperties;
 }) => {
   return (
     <>
@@ -23,12 +25,13 @@ const Breadcrumb = ({
                 {subtitle ? (
                   <div
                     className={`mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-yellow ${subtitleClassName ?? ""}`}
+                    style={style}
                   >
                     {subtitle}
                   </div>
                 ) : null}
                 <h1
-                  className={`mb-4 font-body text-3xl font-semibold uppercase tracking-[0.08em] text-white sm:text-4xl ${titleClassName ?? ""}`}
+                  className={`heading-bouncy-landing mb-4 font-body text-3xl font-semibold uppercase tracking-[0.08em] text-white sm:text-4xl ${titleClassName ?? ""}`}
                 >
                   {pageName}
                 </h1>

@@ -16,22 +16,11 @@ module.exports = {
 
     screens: {
       xs: "450px",
-      // => @media (min-width: 450px) { ... }
-
       sm: "575px",
-      // => @media (min-width: 576px) { ... }
-
       md: "768px",
-      // => @media (min-width: 768px) { ... }
-
       lg: "992px",
-      // => @media (min-width: 992px) { ... }
-
       xl: "1200px",
-      // => @media (min-width: 1200px) { ... }
-
       "2xl": "1400px",
-      // => @media (min-width: 1400px) { ... }
     },
     extend: {
       fontFamily: {
@@ -44,23 +33,25 @@ module.exports = {
         current: "currentColor",
         transparent: "transparent",
         white: "#FFFFFF",
-        black: "#171717",
-        dark: "#171717",
-        primary: "#4A6CF7",
+        black: "#080808",
+        dark: "#080808",
+        primary: "#FFBA24",
         yellow: "#FFBA24",
+        "yellow-light": "#FFD876",
+        "yellow-pale": "#FFF0C8",
         "yellow-dark": "#CE8D00",
-        "bg-color-dark": "#171C28",
+        "bg-color-dark": "#080808",
         "body-color": {
           DEFAULT: "#919191",
           dark: "#919191",
         },
         stroke: {
           stroke: "#E3E8EF",
-          dark: "#353943",
+          dark: "#1a1a1a",
         },
         gray: {
           ...colors.gray,
-          dark: "#1E232E",
+          dark: "#0c0c0c",
           light: "#F0F2F9",
         },
       },
@@ -78,6 +69,8 @@ module.exports = {
         btn: "0px 1px 2px rgba(4, 10, 34, 0.15)",
         "btn-hover": "0px 1px 2px rgba(0, 0, 0, 0.15)",
         "btn-light": "0px 1px 2px rgba(0, 0, 0, 0.1)",
+        glass: "0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06)",
+        "glass-strong": "0 20px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08)",
       },
       dropShadow: {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
@@ -87,7 +80,6 @@ module.exports = {
         "dragon-grid":
           "linear-gradient(0deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px)",
         "triangle-mesh": "url('/images/backgrounds/TrangleMeshThingy.jpg')",
-
       },
     },
   },

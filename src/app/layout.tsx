@@ -23,7 +23,7 @@ export default function RootLayout({
       <head />
 
       <body
-        className={`${montserrat.variable} bg-[#171717] text-white antialiased`}
+        className={`${montserrat.variable} bg-[#080808] text-white antialiased`}
       >
         <AnimatedBackground />
         <Providers>
@@ -36,4 +36,3 @@ export default function RootLayout({
     </html>
   );
 }
-

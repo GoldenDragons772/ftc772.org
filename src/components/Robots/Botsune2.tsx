@@ -29,15 +29,15 @@ const Botsune1 = () => {
 
   const quickFacts = [
     { label: "Name", value: "Botsune Miku II" },
-    { label: "Status", value: "In Service" },
+    { label: "Status", value: "Outreach Mode" },
     { label: "Season", value: "2025-26" },
     { label: "Drive", value: "Custom" },
   ];
 
   const schedule = [
+    { title: "Canadian Rockies Premier Event", detail: "Champion and Control Award Winner" },
     { title: "World Champ.", detail: "Goodall Division, 8th Seed 2nd Pick" },
     { title: "Multinational Tech Invit.", detail: "18th Place (Qualifications)" },
-    { title: "Canadian Rockies Premier Event", detail: "Attending 2026" },
   ];
 
   const abilities = [
@@ -56,8 +56,7 @@ const Botsune1 = () => {
                 <SectionTitle
                   title="Botsune Miku II"
                   paragraph="Botsune Miku II is the second iteration robot for Golden Dragons' 2025-26 season. 
-                              Miku II has competed at the World Championship where it was the second pick of the 8th seeded alliance in the Goodall Division. Miku II will
-                              also compete at the Multinational Tech Invitational and the Canadian Rockies Premier Event This robot is a complete evolution of Miku I featuring
+                              Miku II was Champion and Control Award Winner at the Canadian Rockies Premier Event, and competed at the World Championship where it was the second pick of the 8th seeded alliance in the Goodall Division. This robot is a complete evolution of Miku I featuring
                               a passthrough archetype to promote quick and efficient scoring."
                   mb="0"
                   width="100%"
