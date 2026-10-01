@@ -73,18 +73,28 @@ const Botsune1 = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] sm:mb-5 max-w-[500px] lg:mr-0 flex justify-center">
-                <div className="model w-full">
+                <div className="model relative w-full h-[500px]">
                   <model-viewer
                     className="w-full h-[500px]"
                     src="/images/robot/model/2026_V2.glb"
+                    poster="/images/robot/render/Miku1_poster.webp"
                     camera-controls
                     camera-orbit="50deg 80deg 30m"
                     loading="lazy"
-                    powerPreference="low-power"
-                    exposure="0.65"
+                    reveal="auto"
+                    powerPreference="high-performance"
+                    exposure="0.85"
+                    shadow-softness="0.5"
+                    disable-tap
+                    disable-pan
+                    tone-mapping="neutral"
                     shadow-intensity="1"
-                    alt="Model Loading Failed"
+                    alt="Botsune Miku I 3D CAD Model"
                   />
+                  <div className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-black/70 px-3 py-1 text-[11px] font-medium tracking-wider uppercase text-yellow border border-yellow/30 backdrop-blur-sm shadow-md flex items-center gap-1.5">
+                    <span className="h-1.5 w-1.5 rounded-full bg-yellow animate-pulse" />
+                    <span>3D Model · Drag to Rotate</span>
+                  </div>
                 </div>
               </div>
             </div>

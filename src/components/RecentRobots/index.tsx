@@ -67,7 +67,7 @@ const RecentRobots = () => {
             <br />
             <span className="text-[#FFBA24]">creations.</span>
           </h2>
-          <Link href="/robot" className="glass-btn-ghost mb-2">
+          <Link href="/robot/" className="glass-btn-ghost mb-2">
             All Robots <span className="text-lg">→</span>
           </Link>
         </div>

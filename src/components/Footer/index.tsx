@@ -113,7 +113,7 @@ const Footer = () => {
                 {[
                   { label: "FIRST", href: "https://www.firstinspires.org/" },
                   { label: "FTC", href: "https://www.firstinspires.org/robotics/ftc" },
-                  { label: "INTO THE DEEP", href: "https://youtu.be/ewlDPvRK4U4?si=81Au6CfuAiAtxrSC" },
+                  { label: "BIOBUZZ", href: "https://www.firstinspires.org/robotics/ftc/game-and-season" },
                 ].map((link) => (
                   <li key={link.label}>
                     <Link

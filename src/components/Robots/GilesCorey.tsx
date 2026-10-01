@@ -42,10 +42,6 @@ const GilesCorey = () => {
   ];
   return (
     <section id="gilescorey" className="relative overflow-hidden pt-16 md:pt-20 lg:pt-28">
-      <Script
-        type="module"
-        src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
-      />
       <div className="container relative z-10">
         <div className="border-b border-white/10 pb-16 md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap-reverse items-center">
@@ -69,17 +65,28 @@ const GilesCorey = () => {
 
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] sm:mb-5 max-w-[500px] lg:mr-0 flex justify-center">
-                <div className="model w-full">
+                <div className="model relative w-full h-[500px]">
                   <model-viewer
                     className="w-full h-[500px]"
                     src="/images/robot/model/2024.glb"
+                    poster="/images/robot/render/2024_poster.webp"
                     camera-controls
                     camera-orbit="40deg 80deg 2m"
                     loading="lazy"
-                    powerPreference="low-power"
-                    exposure="0.65"
+                    reveal="auto"
+                    powerPreference="high-performance"
+                    exposure="0.85"
+                    shadow-softness="0.5"
+                    disable-tap
+                    disable-pan
+                    tone-mapping="neutral"
                     shadow-intensity="1"
+                    alt="Giles Corey 3D CAD Model"
                   />
+                  <div className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-black/70 px-3 py-1 text-[11px] font-medium tracking-wider uppercase text-yellow border border-yellow/30 backdrop-blur-sm shadow-md flex items-center gap-1.5">
+                    <span className="h-1.5 w-1.5 rounded-full bg-yellow animate-pulse" />
+                    <span>3D Model · Drag to Rotate</span>
+                  </div>
                 </div>
               </div>
             </div>

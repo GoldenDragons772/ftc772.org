@@ -20,67 +20,69 @@ interface Tier {
 }
 
 const benefitsList = [
-  "Your logo embedded onto our team website",
-  "A mention on our team competition portfolio",
-  "Your logo on our team's merch",
-  "Your logo on our team posters at international competitions",
-  "Special shoutout on our team's social media",
-  "Your logo on this year's robot",
-  "Engraved custom thank you",
+  "Socials Story Shoutout",
+  "Logo on Website",
+  "Portfolio Acknowledgement",
+  "Logo on Robot",
+  "Logo on Team Merch",
+  "Monthly Updates",
+  "End of Season Report",
+  "Golden Dragons Gift Bags!",
+  "Custom Engraved Metal Thank You!",
 ];
 
 const tiers: Tier[] = [
   {
     id: "silver",
     name: "Silver",
-    price: "$100 – $999",
-    shortDesc: "Foundational support helping fund outreach materials, tools, and local event entry fees.",
+    price: "$100 – $499",
+    shortDesc: "Foundational robotics support including team socials shoutout, website placement, and portfolio acknowledgement.",
     badge: "Tier 01",
     primaryColor: "#E2E8F0",
     accentColor: "#94A3B8",
     glowColor: "rgba(226, 232, 240, 0.35)",
     gradient: "linear-gradient(135deg, #94A3B8 0%, #CBD5E1 50%, #FFFFFF 100%)",
     bgGradient: "radial-gradient(circle 650px at 50% 15%, rgba(226, 232, 240, 0.15) 0%, rgba(148, 163, 184, 0.05) 50%, transparent 80%)",
-    benefits: [true, true, false, false, false, false, false],
+    benefits: [true, true, true, false, false, false, false, false, false],
   },
   {
     id: "gold",
     name: "Gold",
-    price: "$1,000 – $2,499",
-    shortDesc: "Major robotics support directly funding precision mechanical components and team jerseys.",
-    badge: "Tier 02 · Most Popular",
+    price: "$500 – $1,499",
+    shortDesc: "Major robotics support directly funding precision parts, featuring your logo on our competition robot and team merchandise.",
+    badge: "Tier 02 · Best Value",
     primaryColor: "#FFBA24",
     accentColor: "#FFD876",
     glowColor: "rgba(255, 186, 36, 0.45)",
     gradient: "linear-gradient(135deg, #D97706 0%, #FFBA24 50%, #FFE58F 100%)",
     bgGradient: "radial-gradient(circle 650px at 50% 15%, rgba(255, 186, 36, 0.18) 0%, rgba(206, 141, 0, 0.06) 50%, transparent 80%)",
-    benefits: [true, true, true, false, false, false, false],
+    benefits: [true, true, true, true, true, false, false, false, false],
   },
   {
     id: "platinum",
     name: "Platinum",
-    price: "$2,500 – $4,999",
-    shortDesc: "Championship-level partnership giving your brand international stage exposure and social shoutouts.",
+    price: "$1,500 – $2,499",
+    shortDesc: "Championship partnership featuring your logo on the robot and merch, plus exclusive monthly progress updates and end-of-season reports.",
     badge: "Tier 03",
-    primaryColor: "#14B8A6",
-    accentColor: "#2DD4BF",
-    glowColor: "rgba(20, 184, 166, 0.45)",
-    gradient: "linear-gradient(135deg, #0F766E 0%, #14B8A6 45%, #2DD4BF 100%)",
-    bgGradient: "radial-gradient(circle 650px at 50% 15%, rgba(15, 118, 110, 0.22) 0%, rgba(13, 148, 136, 0.07) 50%, transparent 80%)",
-    benefits: [true, true, true, true, true, false, false],
+    primaryColor: "#00DDFF",
+    accentColor: "#66EAFF",
+    glowColor: "rgba(0, 221, 255, 0.45)",
+    gradient: "linear-gradient(135deg, #0099DD 0%, #00DDFF 50%, #E0F9FF 100%)",
+    bgGradient: "radial-gradient(circle 650px at 50% 15%, rgba(0, 221, 255, 0.22) 0%, rgba(0, 153, 221, 0.07) 50%, transparent 80%)",
+    benefits: [true, true, true, true, true, true, true, false, false],
   },
   {
     id: "mythic",
     name: "Mythic",
-    price: "$5,000+",
-    shortDesc: "Premier title sponsorship. Your logo permanently on the competition robot and custom engraved plaque.",
+    price: "$2,500+",
+    shortDesc: "Premier title sponsorship featuring all deliverables, exclusive Golden Dragons gift bags, and a custom engraved metal thank you plaque.",
     badge: "Tier 04 · Ultimate",
     primaryColor: "#A855F7",
     accentColor: "#C084FC",
     glowColor: "rgba(168, 85, 247, 0.45)",
     gradient: "linear-gradient(135deg, #7C3AED 0%, #A855F7 50%, #E9D5FF 100%)",
     bgGradient: "radial-gradient(circle 650px at 50% 15%, rgba(168, 85, 247, 0.2) 0%, rgba(124, 58, 237, 0.07) 50%, transparent 80%)",
-    benefits: [true, true, true, true, true, true, true],
+    benefits: [true, true, true, true, true, true, true, true, true],
   },
 ];
 
@@ -99,33 +101,48 @@ const fundingPurposes = [
   },
   {
     amount: "$3,000 USD",
-    title: "Team Merchandise",
-    desc: "Team jerseys, hats, safety gear, and collectible competition pins.",
+    title: "Team Merchandise & Accessories",
+    desc: "Team jerseys, stickers, hats, safety gear, and collectible competition pins.",
     icon: "👕",
   },
   {
     amount: "$1,250 USD",
     title: "Handouts & Posters",
-    desc: "Outreach documentation, pit displays, and flyers for international competitions.",
+    desc: "Outreach documentation, advertisements for 772, and flyers for international competitions.",
     icon: "📄",
   },
   {
     amount: "$500 USD",
     title: "Filming Equipment",
-    desc: "Microphones, match cameras, and tripods for scouting and outreach media.",
+    desc: "Microphones, match cameras, and mounts/tripods for scouting and outreach media.",
     icon: "🎥",
   },
 ];
 
 const currentSponsors = [
-  { name: "Duke Energy", href: "https://www.duke-energy.com/home", src: "/images/brands/dukeEnergy.png" },
-  { name: "GSSM", href: "https://www.scgssm.org", src: "/images/brands/gssm.png" },
-  { name: "USCB Honors", href: "https://www.uscb.edu/academics/honors/index.html", src: "/images/brands/USCBH.png" },
-  { name: "GSSM Foundation", href: "https://www.scgssm.org/who-we-are/gssm-foundation", src: "/images/brands/foundation.png" },
-  { name: "SC Admin", href: "https://www.admin.sc.gov/", src: "/images/brands/scadmin.png" },
-  { name: "Sarji Law Firm", href: "https://sarjilawfirm.com", src: "/images/brands/sarjilaw.png" },
-  { name: "ISI Robots", href: "https://isirobots.com/", src: "/images/brands/isi.png" },
-  { name: "Golden Dragon Restaurant", href: "https://www.goldendragon2hartsville.com/", src: "/images/brands/gdlogo.png" },
+  {
+    name: "GSSM & GSSM Foundation",
+    href: "https://www.scgssm.org",
+    foundationHref: "https://www.scgssm.org/who-we-are/gssm-foundation",
+    src: "/images/brands/gssm.png",
+    foundationSrc: "/images/brands/foundation.png",
+    featured: true,
+    badge: "Founding Sponsors",
+    padding: "p-2 sm:p-2.5",
+  },
+  {
+    name: "Duke Energy",
+    href: "https://www.duke-energy.com/home",
+    src: "/images/brands/dukeEnergy.png",
+    padding: "p-1.5 sm:p-2",
+  },
+  { name: "USCB Honors", href: "https://www.uscb.edu/academics/honors/index.html", src: "/images/brands/USCBH.png", padding: "px-2 py-3.5 sm:px-3 sm:py-4" },
+  { name: "SC Admin", href: "https://www.admin.sc.gov/", src: "/images/brands/scadmin.png", padding: "p-2 sm:p-2.5" },
+  { name: "Sarji Law Firm", href: "https://sarjilawfirm.com", src: "/images/brands/sarjilaw.png", padding: "p-2 sm:p-2.5" },
+  { name: "ISI Robots", href: "https://isirobots.com/", src: "/images/brands/isi.png", padding: "p-3 sm:p-4" },
+  { name: "Golden Dragon Restaurant", href: "https://www.goldendragon2hartsville.com/", src: "/images/brands/gdlogo.png", padding: "p-2 sm:p-2.5" },
+  { name: "Transnetyx", href: "https://transnetyx.com/", src: "/images/brands/transnetyx.png", padding: "p-2 sm:p-2.5" },
+  { name: "Anderson Brass", href: "https://andersonbrass.com/", src: "/images/brands/andersonbrass.png", padding: "p-2.5 sm:p-3" },
 ];
 
 export default function SponsorPageClient() {
@@ -228,7 +245,7 @@ export default function SponsorPageClient() {
                     >
                       <span className="text-[10px] font-bold uppercase tracking-widest opacity-80">
                         {tier.id === "silver" && "Entry"}
-                        {tier.id === "gold" && "Popular"}
+                        {tier.id === "gold" && "Best Value"}
                         {tier.id === "platinum" && "Premier"}
                         {tier.id === "mythic" && "Ultimate"}
                       </span>
@@ -356,11 +373,13 @@ export default function SponsorPageClient() {
                             {tier.name}
                           </span>
                           <span className="text-[10px] opacity-75 tracking-tight lowercase whitespace-nowrap">
-                            {tier.id === "platinum"
-                              ? "$2,5oo+"
-                              : tier.id === "mythic"
-                              ? "$5,ooo+"
-                              : tier.price.split("–")[0].trim().replace(/0/g, "o") + "+"}
+                            {tier.id === "silver"
+                              ? "$1oo+"
+                              : tier.id === "gold"
+                              ? "$5oo+"
+                              : tier.id === "platinum"
+                              ? "$1,5oo+"
+                              : "$2,5oo+"}
                           </span>
                         </button>
                       );
@@ -622,28 +641,116 @@ export default function SponsorPageClient() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-              {currentSponsors.map((s, idx) => (
-                <a
-                  key={idx}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="glass-panel group flex h-36 flex-col items-center justify-center rounded-[24px] p-5 transition-all duration-300 hover:border-[#FFBA24]/50 hover:scale-105"
-                >
-                  <div className="relative h-16 w-full">
-                    <Image
-                      src={s.src}
-                      alt={s.name}
-                      fill
-                      className="object-contain brightness-0 invert opacity-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105"
-                    />
-                  </div>
-                  <span className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-white/50 group-hover:text-[#FFBA24] transition-colors text-center line-clamp-1">
-                    {s.name}
-                  </span>
-                </a>
-              ))}
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+              {currentSponsors.map((s, idx) => {
+                const isFeatured = (s as any).featured;
+
+                if (isFeatured && (s as any).foundationSrc) {
+                  return (
+                    <div
+                      key={idx}
+                      className="glass-panel group relative col-span-2 sm:col-span-2 md:col-span-2 h-40 sm:h-44 p-5 sm:p-6 border-[#FFBA24]/30 bg-black/75 shadow-[0_10px_30px_-10px_rgba(255,186,36,0.15)] flex flex-col items-center justify-between rounded-[24px] transition-all duration-300 hover:border-[#FFBA24]/50 hover:-translate-y-1 hover:shadow-[0_12px_30px_-10px_rgba(255,186,36,0.25)] overflow-hidden"
+                    >
+                      {/* Subtle inner hover glow */}
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                      {/* Featured badge */}
+                      <span className="absolute top-3 left-4 rounded-full bg-[#FFBA24]/15 border border-[#FFBA24]/30 px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-widest text-[#FFBA24]">
+                        ★ {(s as any).badge || "Founding Sponsors"}
+                      </span>
+
+                      {/* Logo Container for both GSSM and GSSM Foundation */}
+                      <div className="relative flex-1 w-full flex items-center justify-center my-auto min-h-[82px] sm:min-h-[96px] max-h-[104px] px-2 sm:px-4">
+                        <div className="flex w-full h-full items-center justify-center gap-3 sm:gap-6">
+                          <a
+                            href={s.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit GSSM website"
+                            className="relative flex-1 h-full max-h-[72px] sm:max-h-[84px] transition-transform duration-200 hover:scale-105"
+                          >
+                            <Image
+                              src={s.src}
+                              alt="GSSM"
+                              fill
+                              sizes="(max-width: 640px) 160px, 220px"
+                              className="object-contain object-center brightness-0 invert opacity-80 transition-all duration-300 hover:opacity-100 p-1"
+                            />
+                          </a>
+                          <div className="h-10 w-px bg-white/10 flex-shrink-0" />
+                          <a
+                            href={(s as any).foundationHref || s.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit GSSM Foundation website"
+                            className="relative flex-1 h-full max-h-[72px] sm:max-h-[84px] transition-transform duration-200 hover:scale-105"
+                          >
+                            <Image
+                              src={(s as any).foundationSrc}
+                              alt="GSSM Foundation"
+                              fill
+                              sizes="(max-width: 640px) 160px, 220px"
+                              className="object-contain object-center brightness-0 invert opacity-80 transition-all duration-300 hover:opacity-100 p-1"
+                            />
+                          </a>
+                        </div>
+                      </div>
+
+                      {/* Label with dual links */}
+                      <div className="mt-1 flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wider text-center line-clamp-1 w-full px-1">
+                        <a
+                          href={s.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-white/70 hover:text-[#FFBA24] transition-colors"
+                        >
+                          GSSM
+                        </a>
+                        <span className="text-white/30">·</span>
+                        <a
+                          href={(s as any).foundationHref || s.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-white/70 hover:text-[#FFBA24] transition-colors"
+                        >
+                          GSSM Foundation
+                        </a>
+                      </div>
+                    </div>
+                  );
+                }
+
+                return (
+                  <a
+                    key={idx}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="glass-panel group relative flex flex-col items-center justify-between rounded-[24px] transition-all duration-300 hover:border-[#FFBA24]/50 hover:-translate-y-1 hover:shadow-[0_12px_30px_-10px_rgba(255,186,36,0.25)] overflow-hidden h-36 sm:h-40 p-4 sm:p-5"
+                  >
+                    {/* Subtle inner hover glow */}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                    {/* Logo Container */}
+                    <div className="relative flex-1 w-full flex items-center justify-center my-auto min-h-[64px] max-h-[76px] px-2">
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={s.src}
+                          alt={s.name}
+                          fill
+                          sizes="(max-width: 640px) 140px, 200px"
+                          className={`object-contain object-center brightness-0 invert opacity-80 transition-all duration-300 group-hover:opacity-100 ${s.padding}`}
+                        />
+                      </div>
+                    </div>
+
+                    {/* Label */}
+                    <span className="mt-1 font-semibold uppercase tracking-wider text-center line-clamp-1 w-full px-1 transition-colors text-[11px] text-white/50 group-hover:text-[#FFBA24]">
+                      {s.name}
+                    </span>
+                  </a>
+                );
+              })}
             </div>
           </section>
 
@@ -719,10 +826,16 @@ export default function SponsorPageClient() {
                   Open Donation Portal <span className="text-lg">↗</span>
                 </a>
                 <a
-                  href="mailto:contact@ftc772.org?subject=FTC%20772%20Sponsorship%20Inquiry"
-                  className="w-full sm:w-auto glass-btn-ghost justify-center"
+                  href="/docs/sponsorship-packet.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto glass-btn-ghost justify-center inline-flex items-center gap-2"
                 >
-                  Contact Sponsorship Team
+                  <svg className="w-4 h-4 text-[#FFBA24]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  <span>Open Sponsorship Packet (PDF)</span>
+                  <span className="text-sm">↗</span>
                 </a>
               </div>
             </div>

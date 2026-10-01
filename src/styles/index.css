@@ -376,6 +376,44 @@
   100% { background-position: 0% 0%; }
 }
 
+/* ─── POP-OUT PROFILE MODAL ANIMATION ─── */
+@keyframes modalBackdrop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-modal-backdrop {
+  animation: modalBackdrop 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.88) translateY(24px);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.015) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-pop-in {
+  animation: popIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ─── SLIDE AND BOUNCE CAROUSEL ─── */
+.carousel-bounce-track {
+  transition: transform 0.85s cubic-bezier(0.34, 1.42, 0.64, 1);
+}
+
 /* ─── SPONSOR MARQUEE ─── */
 .marquee-viewport {
   overflow: hidden;
@@ -385,9 +423,13 @@
 
 .marquee-track {
   display: flex;
-  gap: 4rem;
-  animation: marqueeScroll 30s linear infinite;
+  gap: 4.5rem;
+  animation: marqueeScroll 35s linear infinite;
   width: max-content;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
 }
 
 @keyframes marqueeScroll {
@@ -411,6 +453,29 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ─── MEDIA COLLAGE MASONRY ─── */
+.media-collage-columns {
+  column-count: 1;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .media-collage-columns {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .media-collage-columns {
+    column-count: 3;
+  }
+}
+
+.media-collage-card {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
 }
 
 

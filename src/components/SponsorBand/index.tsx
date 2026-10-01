@@ -39,33 +39,37 @@ const SponsorBand = () => {
   return (
     <>
       {/* Sponsor Marquee */}
-      <div className="border-y border-white/5 py-8 bg-transparent">
-        <div className="container mb-4 flex items-center justify-between">
+      <div className="border-y border-white/5 py-10 sm:py-12 bg-transparent">
+        <div className="container mb-6 flex items-center justify-between">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#FFBA24]">
             ● Our Partners &amp; Sponsors
           </p>
           <Link
-            href="/sponsor"
+            href="/sponsor/"
             className="text-xs font-medium uppercase tracking-[0.15em] text-white/50 hover:text-[#FFBA24] transition-colors"
           >
             Become a Partner →
           </Link>
         </div>
-        <div className="marquee-viewport py-2">
+        <div className="marquee-viewport py-3">
           <div className="marquee-track items-center">
             {[...sponsors, ...sponsors].map((s, i) => (
-              <div
+              <Link
                 key={i}
-                className="flex h-14 w-36 flex-shrink-0 items-center justify-center px-4"
+                href="/sponsor/"
+                aria-label={`View ${s.name} sponsorship details`}
+                className="group flex h-24 sm:h-28 md:h-32 w-48 sm:w-56 md:w-64 flex-shrink-0 items-center justify-center px-4 transition-transform duration-300 hover:scale-110"
               >
-                <Image
-                  src={s.src}
-                  alt={s.name}
-                  width={120}
-                  height={48}
-                  className="max-h-10 w-auto object-contain brightness-0 invert opacity-75 transition-all duration-300 hover:opacity-100 hover:scale-110"
-                />
-              </div>
+                <div className="relative h-16 sm:h-20 md:h-24 w-40 sm:w-48 md:w-56 flex items-center justify-center">
+                  <Image
+                    src={s.src}
+                    alt={s.name}
+                    fill
+                    sizes="(max-width: 640px) 180px, (max-width: 768px) 220px, 260px"
+                    className="object-contain object-center brightness-0 invert opacity-75 transition-all duration-300 group-hover:opacity-100 drop-shadow-[0_0_12px_rgba(255,255,255,0.15)]"
+                  />
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -98,7 +102,7 @@ const SponsorBand = () => {
               </div>
             </div>
             <div className="flex flex-wrap justify-center md:justify-end gap-4 mt-3 md:mt-0">
-              <Link href="/sponsor" className="glass-btn-solid">
+              <Link href="/sponsor/" className="glass-btn-solid">
                 Become a Sponsor <span className="text-lg">→</span>
               </Link>
               <Link

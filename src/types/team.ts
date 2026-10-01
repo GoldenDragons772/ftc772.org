@@ -3,6 +3,7 @@ export type Team = {
   image: string,
   name: string,
   role: string[],
-  type: 'member' | 'mentor',
-  gradYear?: string
+  type: 'captain' | 'member' | 'mentor',
+  gradYear?: string,
+  bio?: string
 }

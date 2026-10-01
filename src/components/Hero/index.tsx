@@ -103,10 +103,10 @@ const Hero = () => {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link href="/robot" className="glass-btn-solid">
+              <Link href="/robot/" className="glass-btn-solid">
                 See Our Robots <span className="text-lg">→</span>
               </Link>
-              <Link href="/sponsor" className="glass-btn-ghost">
+              <Link href="/sponsor/" className="glass-btn-ghost">
                 Sponsor the Season
               </Link>
             </div>

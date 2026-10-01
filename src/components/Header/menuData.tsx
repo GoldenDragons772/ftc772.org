@@ -10,25 +10,25 @@ const menuData: Menu[] = [
   {
     id: 5,
     title: "Team",
-    path: "/team",
+    path: "/team/",
     newTab: false,
   },
   {
     id: 2,
     title: "Robot",
-    path: "/robot",
+    path: "/robot/",
     newTab: false,
   },
   {
     id: 33,
     title: "Sponsors",
-    path: "/sponsor",
+    path: "/sponsor/",
     newTab: false,
   },
   {
     id: 3,
     title: "Media",
-    path: "/media",
+    path: "/media/",
     newTab: false,
   },
 ];
