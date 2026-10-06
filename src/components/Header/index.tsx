@@ -76,20 +76,26 @@ const Header = () => {
     const timeoutId = setTimeout(updatePill, 100);
     window.addEventListener("resize", updatePill);
 
-    // CRITICAL: When switching browser tabs or windows, re-measure nav pill to avoid broken layout
+    // Re-measure nav pill accurately when switching tabs or windows
     const handleVisibility = () => {
       if (document.visibilityState === "visible") {
-        updatePill();
+        requestAnimationFrame(updatePill);
+        setTimeout(updatePill, 100);
       }
     };
+    const handleFocus = () => {
+      requestAnimationFrame(updatePill);
+      setTimeout(updatePill, 100);
+    };
+
     document.addEventListener("visibilitychange", handleVisibility);
-    window.addEventListener("focus", updatePill);
+    window.addEventListener("focus", handleFocus);
 
     return () => {
       clearTimeout(timeoutId);
       window.removeEventListener("resize", updatePill);
       document.removeEventListener("visibilitychange", handleVisibility);
-      window.removeEventListener("focus", updatePill);
+      window.removeEventListener("focus", handleFocus);
     };
   }, [pathname, navbarOpen, updatePill]);
 

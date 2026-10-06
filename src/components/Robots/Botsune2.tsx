@@ -77,7 +77,7 @@ const Botsune1 = () => {
                     className="w-full h-[500px]"
                     src="/images/robot/model/2026_V3.glb"
                     poster="/images/robot/render/Miku2_poster.webp"
-                    loading="eager"
+                    loading="lazy"
                     reveal="auto"
                     camera-controls
                     camera-orbit="140deg 80deg 20m"

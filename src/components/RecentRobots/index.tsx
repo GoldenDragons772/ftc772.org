@@ -77,7 +77,7 @@ const RecentRobots = () => {
           {robots.map((robot, index) => (
             <Link
               key={index}
-              href={`/robot#${robot.id}`}
+              href={`/robot/#${robot.id}`}
               className={`liquid-glass-card glass-panel group flex flex-col overflow-hidden rounded-[26px] p-8 transition-all duration-500 hover:-translate-y-2 ${robot.borderHover}`}
             >
               {/* Image */}
