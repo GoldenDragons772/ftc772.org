@@ -8,6 +8,7 @@ import "../styles/index.css";
 import AnimatedBackground from "@/components/AnimatedBackground";
 
 import ChunkLoadRecovery from "@/components/Common/ChunkLoadRecovery";
+import ScrollProgressBar from "@/components/Common/ScrollProgressBar";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
         className={`${montserrat.variable} bg-[#080808] text-white antialiased`}
       >
         <ChunkLoadRecovery />
+        <ScrollProgressBar />
         <AnimatedBackground />
         <Providers>
           <Header />

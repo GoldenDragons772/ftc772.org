@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState, useCallback, useRef } from "react";
+import AnimatedStat from "@/components/Common/AnimatedStat";
 
 interface OutreachImage {
   src: string;
@@ -161,23 +162,21 @@ const OutreachSection = () => {
             {/* Key Stats */}
             <div className="mt-10 border-t border-white/10">
               <div className="flex items-baseline gap-6 border-b border-white/10 py-5">
-                <span
+                <AnimatedStat
+                  value="7.5k+"
                   className="text-5xl text-[#FFBA24] lowercase"
                   style={{ fontFamily: '"Supercharge Expand", sans-serif' }}
-                >
-                  7.5k+
-                </span>
+                />
                 <p className="text-sm leading-relaxed text-white/60">
                   Outreach hours dedicated to spreading STEM education across South Carolina and beyond.
                 </p>
               </div>
               <div className="flex items-baseline gap-6 border-b border-white/10 py-5">
-                <span
+                <AnimatedStat
+                  value="5oo+"
                   className="text-5xl text-[#FFBA24] lowercase"
                   style={{ fontFamily: '"Supercharge Expand", sans-serif' }}
-                >
-                  5oo+
-                </span>
+                />
                 <p className="text-sm leading-relaxed text-white/60">
                   Students reached through robotics workshops, summer camps, and school visits.
                 </p>

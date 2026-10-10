@@ -266,19 +266,26 @@ const Header = () => {
                               <Link
                                 href={menuItem.path}
                                 onClick={() => setNavbarOpen(false)}
-                                className={`flex items-center justify-center py-2 text-[13px] uppercase tracking-[0.15em] transition-all duration-300 lg:mr-0 lg:inline-flex lg:px-5 lg:py-2.5 rounded-full ${
+                                className={`flex items-center justify-center py-2 text-[11px] uppercase tracking-[0.15em] transition-all duration-300 lg:mr-0 lg:inline-flex lg:px-5 lg:py-2.5 rounded-full ${
                                   active
                                     ? "text-[#080808] font-bold lg:bg-transparent bg-[#FFBA24] lg:shadow-none shadow-[0_0_20px_rgba(255,186,36,0.4)]"
                                     : "text-white/80 font-medium hover:text-[#FFBA24]"
                                 }`}
                               >
-                                {menuItem.title}
+                                {menuItem.title === "Home" ? (
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-label="Home">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                    <polyline points="9 22 9 12 15 12 15 22" />
+                                  </svg>
+                                ) : (
+                                  menuItem.title
+                                )}
                               </Link>
                             ) : (
                               <>
                                 <p
                                   onClick={() => handleSubmenu(index)}
-                                  className={`flex cursor-pointer items-center justify-between py-2 text-[13px] uppercase tracking-[0.15em] font-medium transition-all duration-300 group-hover:text-[#FFBA24] lg:mr-0 lg:inline-flex lg:px-5 lg:py-2.5 rounded-full ${
+                                  className={`flex cursor-pointer items-center justify-between py-2 text-[11px] uppercase tracking-[0.15em] font-medium transition-all duration-300 group-hover:text-[#FFBA24] lg:mr-0 lg:inline-flex lg:px-5 lg:py-2.5 rounded-full ${
                                     active
                                       ? "text-[#080808] font-bold lg:bg-transparent bg-[#FFBA24] lg:shadow-none shadow-[0_0_20px_rgba(255,186,36,0.4)]"
                                       : "text-white/80"

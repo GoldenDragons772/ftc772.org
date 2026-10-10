@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useCallback, useState } from "react";
+import AnimatedStat from "@/components/Common/AnimatedStat";
 
 const stats = [
   { value: "2o", label: "Years Competing" },
@@ -313,7 +314,7 @@ const Hero = () => {
               key={i}
               className={`py-6 ${i > 0 ? "border-l border-white/10 pl-6" : ""} ${i === 2 ? "max-lg:border-l-0 max-lg:pl-0" : ""}`}
             >
-              <div className="stat-num text-4xl md:text-5xl lg:text-[3.5rem]">{stat.value}</div>
+              <AnimatedStat value={stat.value} className="stat-num text-4xl md:text-5xl lg:text-[3.5rem]" />
               <span className="mt-2 block text-xs font-medium uppercase tracking-[0.15em] text-white/50">
                 {stat.label}
               </span>

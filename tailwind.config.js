@@ -28,6 +28,8 @@ module.exports = {
         display: ["var(--font-display)", "system-ui", "sans-serif"],
         names: ["var(--font-names)", "system-ui", "sans-serif"],
         straight: ["var(--font-straight)", "system-ui", "sans-serif"],
+        spicy: ["'Spicy Sale'", "cursive", "sans-serif"],
+        kelpt: ["'Kelpt A3'", "sans-serif"],
       },
       colors: {
         current: "currentColor",

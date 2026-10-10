@@ -37,5 +37,11 @@ const menuData: Menu[] = [
     path: "/media/",
     newTab: false,
   },
+  {
+    id: 6,
+    title: "Outreach",
+    path: "/outreach/",
+    newTab: false,
+  },
 ];
 export default menuData;

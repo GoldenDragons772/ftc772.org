@@ -12,17 +12,17 @@ const Footer = () => {
         <div className="-mx-4 flex flex-wrap">
           {/* Brand Column */}
           <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
-            <div className="mb-12 max-w-[360px] lg:mb-16">
+            <div className="mb-12 max-w-md lg:mb-16">
               <Link href="/" className="mb-6 flex items-center gap-3">
                 <Image
                   src="/images/logo/logo.png"
                   alt="Golden Dragons logo"
-                  className="h-12 w-12"
-                  width={48}
-                  height={48}
+                  className="h-20 w-20"
+                  width={80}
+                  height={80}
                 />
                 <span
-                  className="text-lg lowercase tracking-wider"
+                  className="text-2xl lowercase tracking-wider"
                   style={{ fontFamily: '"Supercharge Expand", sans-serif' }}
                 >
                   <span className="text-[#FFBA24]">golden</span>{" "}
@@ -30,9 +30,8 @@ const Footer = () => {
                 </span>
               </Link>
               <p className="mb-8 text-xs uppercase tracking-[0.12em] leading-relaxed text-white/40">
-                FTC 772 · South Carolina Governor&apos;s School
-                <br />
-                for Science &amp; Mathematics
+                <span className="block">FTC 772 - South Carolina Governor&apos;s School</span>
+                <span className="block">for Science and Mathematics</span>
               </p>
               <div className="flex items-center gap-5">
                 <a
@@ -160,6 +159,9 @@ const Footer = () => {
         <div className="flex flex-wrap items-center justify-between gap-4 pt-6">
           <p className="text-[10px] uppercase tracking-[0.15em] text-white/30">
             © 2026 Golden Dragons. All Rights Reserved.
+          </p>
+          <p className="text-[10px] uppercase tracking-[0.15em] text-white/30">
+            All FIRST® logos are property of FIRST®.
           </p>
           <p className="text-[10px] uppercase tracking-[0.15em] text-white/20">
             Built with 🐉 in Hartsville, SC

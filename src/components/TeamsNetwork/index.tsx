@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import AnimatedStat from "@/components/Common/AnimatedStat";
 
 interface TeamItem {
   number: string;
@@ -235,19 +236,19 @@ export default function TeamsNetwork() {
           {/* Quick Alliance Stats Bar */}
           <div className="mt-10 pt-6 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
             <div>
-              <div className="text-2xl font-bold text-white font-names">21</div>
+              <AnimatedStat value="21" className="text-2xl font-bold text-white font-names" />
               <div className="text-[10px] uppercase tracking-wider text-white/40 mt-0.5">Connected Teams</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-white font-names">8</div>
+              <AnimatedStat value="8" className="text-2xl font-bold text-white font-names" />
               <div className="text-[10px] uppercase tracking-wider text-white/40 mt-0.5">US States</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-[#FFBA24] font-names">6</div>
+              <AnimatedStat value="6" className="text-2xl font-bold text-[#FFBA24] font-names" />
               <div className="text-[10px] uppercase tracking-wider text-white/40 mt-0.5">Countries</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-[#FFBA24] font-names">1oo%</div>
+              <AnimatedStat value="1oo%" className="text-2xl font-bold text-[#FFBA24] font-names" />
               <div className="text-[10px] uppercase tracking-wider text-white/40 mt-0.5">Gracious Professionalism</div>
             </div>
           </div>
