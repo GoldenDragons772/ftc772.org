@@ -156,6 +156,13 @@ export default function SponsorPageClient() {
     return 0;
   };
   const activeTierIndex = getTierIndex(sliderValue);
+  const setActiveTierIndex = (action: number | ((prev: number) => number)) => {
+    const nextIdx = typeof action === "function" ? action(activeTierIndex) : action;
+    if (nextIdx === 0) setSliderValue(250);
+    else if (nextIdx === 1) setSliderValue(500);
+    else if (nextIdx === 2) setSliderValue(1500);
+    else if (nextIdx === 3) setSliderValue(2500);
+  };
   const currentTier = tiers[activeTierIndex];
 
   return (

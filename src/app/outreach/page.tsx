@@ -1,7 +1,25 @@
 "use client";
 
-import { motion } from "framer-motion";
+import React from "react";
 import Link from "next/link";
+
+// Lightweight zero-dependency motion component (eliminates heavy framer-motion dependency for clean CI builds)
+const motion = {
+  div: ({
+    children,
+    className = "",
+    style = {},
+    initial: _initial,
+    animate: _animate,
+    transition: _transition,
+    whileHover: _whileHover,
+    ...props
+  }: React.HTMLAttributes<HTMLDivElement> & { [key: string]: any }) => (
+    <div className={className} style={style} {...props}>
+      {children}
+    </div>
+  ),
+};
 
 export default function OutreachPage() {
   return (
@@ -41,6 +59,28 @@ export default function OutreachPage() {
           font-weight: 800;
           font-style: normal;
           font-display: swap;
+        }
+
+        @keyframes float-bulb {
+          0%, 100% { transform: translateY(0); opacity: 0.4; filter: drop-shadow(0 0 0px rgba(255,186,36,0)); }
+          50% { transform: translateY(-12px); opacity: 0.95; filter: drop-shadow(0 0 18px rgba(255,186,36,0.75)); }
+        }
+        @keyframes float-robot {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-9px); }
+        }
+        @keyframes float-nodes {
+          0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; filter: drop-shadow(0 0 0px rgba(0,112,210,0)); }
+          50% { transform: translateY(-14px) scale(1.06); opacity: 0.85; filter: drop-shadow(0 0 14px rgba(0,112,210,0.55)); }
+        }
+        .animate-float-bulb {
+          animation: float-bulb 3.2s ease-in-out infinite;
+        }
+        .animate-float-robot {
+          animation: float-robot 4.2s ease-in-out infinite 0.3s;
+        }
+        .animate-float-nodes {
+          animation: float-nodes 5s ease-in-out infinite 0.8s;
         }
       `}</style>
 
@@ -139,21 +179,7 @@ export default function OutreachPage() {
           
           {/* Animated Glowing Lightbulb */}
           <motion.div
-            animate={{
-              y: [0, -12, 0],
-              opacity: [0.4, 0.95, 0.4],
-              filter: [
-                "drop-shadow(0 0 0px rgba(255,186,36,0))",
-                "drop-shadow(0 0 18px rgba(255,186,36,0.75))",
-                "drop-shadow(0 0 0px rgba(255,186,36,0))",
-              ],
-            }}
-            transition={{
-              duration: 3.2,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute bottom-52 left-12"
+            className="absolute bottom-52 left-12 animate-float-bulb"
           >
             <svg className="w-20 h-20 text-[#FFBA24]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-1 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
@@ -164,16 +190,7 @@ export default function OutreachPage() {
 
           {/* Animated Bobbing Robot Mascot */}
           <motion.div
-            animate={{
-              y: [0, -9, 0],
-            }}
-            transition={{
-              duration: 4.2,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 0.3,
-            }}
-            className="absolute bottom-4 left-4"
+            className="absolute bottom-4 left-4 animate-float-robot"
           >
             <svg className="w-36 h-36 text-white/70 drop-shadow-[0_10px_24px_rgba(0,0,0,0.6)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="3" y="11" width="18" height="10" rx="2" />
@@ -188,23 +205,7 @@ export default function OutreachPage() {
 
           {/* Animated Drifting Share/Network Nodes */}
           <motion.div
-            animate={{
-              y: [0, -14, 0],
-              scale: [1, 1.06, 1],
-              opacity: [0.4, 0.85, 0.4],
-              filter: [
-                "drop-shadow(0 0 0px rgba(0,112,210,0))",
-                "drop-shadow(0 0 14px rgba(0,112,210,0.55))",
-                "drop-shadow(0 0 0px rgba(0,112,210,0))",
-              ],
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 0.8,
-            }}
-            className="absolute bottom-40 left-44"
+            className="absolute bottom-40 left-44 animate-float-nodes"
           >
             <svg className="w-[4.5rem] h-[4.5rem] text-[#0070D2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="18" cy="5" r="3" />
