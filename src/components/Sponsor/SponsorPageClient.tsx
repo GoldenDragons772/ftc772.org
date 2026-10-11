@@ -145,6 +145,8 @@ const currentSponsors = [
   { name: "Anderson Brass", href: "https://andersonbrass.com/", src: "/images/brands/andersonbrass.png", padding: "p-2.5 sm:p-3" },
 ];
 
+const TIER_THRESHOLDS = [100, 500, 1500, 2500];
+
 export default function SponsorPageClient() {
   const [sliderValue, setSliderValue] = useState(500); // Default to $500 (Gold)
   const [showMatrix, setShowMatrix] = useState(false);
@@ -158,10 +160,8 @@ export default function SponsorPageClient() {
   const activeTierIndex = getTierIndex(sliderValue);
   const setActiveTierIndex = (action: number | ((prev: number) => number)) => {
     const nextIdx = typeof action === "function" ? action(activeTierIndex) : action;
-    if (nextIdx === 0) setSliderValue(250);
-    else if (nextIdx === 1) setSliderValue(500);
-    else if (nextIdx === 2) setSliderValue(1500);
-    else if (nextIdx === 3) setSliderValue(2500);
+    const clampedIdx = Math.max(0, Math.min(tiers.length - 1, nextIdx));
+    setSliderValue(TIER_THRESHOLDS[clampedIdx]);
   };
   const currentTier = tiers[activeTierIndex];
 
@@ -246,12 +246,7 @@ export default function SponsorPageClient() {
                   return (
                     <button
                       key={tier.id}
-                      onClick={() => {
-                        if (idx === 0) setSliderValue(250);
-                        if (idx === 1) setSliderValue(500);
-                        if (idx === 2) setSliderValue(1500);
-                        if (idx === 3) setSliderValue(2500);
-                      }}
+                      onClick={() => setActiveTierIndex(idx)}
                       className={`relative flex flex-col items-center justify-center rounded-xl py-3 px-2 text-center transition-all duration-300 ${
                         isActive
                           ? "text-black shadow-lg"
@@ -291,7 +286,7 @@ export default function SponsorPageClient() {
                     <div
                       className="absolute left-0 top-0 bottom-0 rounded-full transition-all duration-75 ease-out"
                       style={{
-                        width: `${Math.min((sliderValue / 3000) * 100, 100)}%`,
+                        width: `${Math.min(Math.max(((sliderValue - 100) / (3000 - 100)) * 100, 0), 100)}%`,
                         background: currentTier.gradient,
                         boxShadow: `0 0 16px ${currentTier.glowColor}`,
                       }}
@@ -302,7 +297,7 @@ export default function SponsorPageClient() {
                   <div className="absolute top-5 left-0 right-0 h-2.5 pointer-events-none">
                     {tiers.map((t, idx) => {
                       const isPassed = idx <= activeTierIndex;
-                      const pct = (idx === 0 ? 0 : idx === 1 ? 500 : idx === 2 ? 1500 : 2500) / 3000 * 100;
+                      const pct = ((TIER_THRESHOLDS[idx] - 100) / (3000 - 100)) * 100;
                       return (
                         <div
                           key={t.id}
@@ -321,16 +316,10 @@ export default function SponsorPageClient() {
                   <div
                     className="absolute top-5 pointer-events-none transition-all duration-75 ease-out z-20 flex flex-col items-center"
                     style={{
-                      left: `${Math.min((sliderValue / 3000) * 100, 100)}%`,
+                      left: `${Math.min(Math.max(((sliderValue - 100) / (3000 - 100)) * 100, 0), 100)}%`,
                       transform: "translate(-50%, -50%)",
                     }}
                   >
-                    {/* Floating Dollar Amount */}
-                    <div className="absolute -top-12 px-3 py-1 bg-black/80 backdrop-blur-md rounded-full border text-sm font-bold text-white whitespace-nowrap transition-colors duration-300"
-                         style={{ borderColor: currentTier.primaryColor, boxShadow: `0 0 10px ${currentTier.glowColor}` }}>
-                      ${sliderValue.toLocaleString()}{sliderValue >= 3000 ? '+' : ''}
-                    </div>
-
                     <div
                       className="relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#0a0a0c]/95 border backdrop-blur-xl transition-all duration-500 hover:scale-110"
                       style={{
@@ -365,7 +354,7 @@ export default function SponsorPageClient() {
                   {/* Native Transparent Slider for full Drag & Keyboard Accessibility */}
                   <input
                     type="range"
-                    min="0"
+                    min="100"
                     max="3000"
                     step="50"
                     value={sliderValue}
@@ -454,13 +443,13 @@ export default function SponsorPageClient() {
                       Investment
                     </span>
                     <div
-                      className="tier-price-display text-xl sm:text-2xl md:text-3xl lg:text-[2rem] font-bold tracking-tight whitespace-nowrap lowercase"
+                      className="tier-price-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight whitespace-nowrap lowercase"
                       style={{
                         ['--tier-gradient' as any]: currentTier.gradient,
                         ['--tier-color' as any]: currentTier.primaryColor,
                       }}
                     >
-                      {currentTier.price.replace(/0/g, "o")}
+                      {`$${sliderValue.toLocaleString()}${sliderValue >= 3000 ? '+' : ''}`.replace(/0/g, "o")}
                     </div>
                   </div>
                 </div>
