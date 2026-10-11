@@ -646,7 +646,7 @@ export default function MediaPage() {
 
                             {/* Badges */}
                             <span className="absolute bottom-3 left-3 rounded-full bg-black/75 backdrop-blur-md px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white border border-white/15 flex items-center gap-1.5 shadow">
-                              <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
+                              <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
                               Play Video Inline
                             </span>
                             <span className="absolute top-3 right-3 rounded-full bg-red-600/90 backdrop-blur-md px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white shadow flex items-center gap-1">

@@ -9,25 +9,34 @@ const robots = [
     name: "Botsune Miku I",
     season: "2025-26",
     id: "botsune",
-    image: "/images/robot/render/Miku1.png",
+    image: "/images/robot/render/Miku1_poster.webp",
     accentColor: "rgba(34, 211, 238, 0.35)",
     borderHover: "hover:border-cyan-400/40",
+    hoverTextColor: "group-hover:text-cyan-400",
+    dotColor: "bg-cyan-400",
+    scale: "scale-[1.40]",
   },
   {
     name: "Botsune Miku II",
     season: "2025-26",
     id: "miku2",
-    image: "/images/robot/render/Miku2.png",
+    image: "/images/robot/render/Miku2_poster.webp",
     accentColor: "rgba(220, 38, 38, 0.35)",
     borderHover: "hover:border-red-500/40",
+    hoverTextColor: "group-hover:text-red-500",
+    dotColor: "bg-red-500",
+    scale: "scale-100",
   },
   {
     name: "Hydra",
     season: "2024-25",
     id: "hydra",
-    image: "/images/robot/render/HydraBlack.png",
+    image: "/images/robot/render/Hydra_poster.webp",
     accentColor: "rgba(255, 186, 36, 0.35)",
     borderHover: "hover:border-[#FFBA24]/40",
+    hoverTextColor: "group-hover:text-[#FFBA24]",
+    dotColor: "bg-[#FFBA24]",
+    scale: "scale-[0.92]",
   },
 ];
 
@@ -52,7 +61,7 @@ const RecentRobots = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden py-20 md:py-28">
+    <section className="relative overflow-hidden py-12 md:py-16">
       <div className="container relative z-10">
         {/* Section Header */}
         <div className="mb-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
@@ -83,13 +92,15 @@ const RecentRobots = () => {
               {/* Image */}
               <div className="mb-8 flex flex-grow items-center justify-center">
                 <div className="relative h-52 w-full transition-transform duration-700 group-hover:scale-110 group-hover:rotate-[-2deg]">
-                  <Image
-                    src={robot.image}
-                    alt={robot.name}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
+                  <div className={`relative w-full h-full flex items-center justify-center ${robot.scale || ''}`}>
+                    <Image
+                      src={robot.image}
+                      alt={robot.name}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -99,15 +110,15 @@ const RecentRobots = () => {
                   <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-white/40">
                     {robot.season}
                   </span>
-                  <div className="h-2 w-2 rounded-full bg-[#FFBA24] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <div className={`h-2 w-2 rounded-full ${robot.dotColor} opacity-0 transition-opacity duration-300 group-hover:opacity-100`} />
                 </div>
                 <h3
-                  className="text-xl lowercase tracking-[0.1em] text-white transition-colors duration-300 group-hover:text-[#FFBA24]"
+                  className={`text-xl lowercase tracking-[0.1em] text-white transition-colors duration-300 ${robot.hoverTextColor}`}
                   style={{ fontFamily: '"Supercharge Straight Expand", sans-serif' }}
                 >
                   {robot.name.toLowerCase()}
                 </h3>
-                <div className="mt-4 flex items-center gap-2 text-xs font-medium text-white/50 transition-colors duration-300 group-hover:text-white/70">
+                <div className={`mt-4 flex items-center gap-2 text-xs font-medium text-white/50 transition-colors duration-300 ${robot.hoverTextColor}`}>
                   <span>View Details</span>
                   <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </div>

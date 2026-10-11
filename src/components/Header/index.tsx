@@ -245,8 +245,8 @@ const Header = () => {
                           top: `${pillStyle.top}px`,
                           height: `${pillStyle.height}px`,
                           opacity: pillStyle.opacity,
-                          background: "linear-gradient(135deg, #FFBA24 0%, #FFD876 100%)",
-                          boxShadow: "0 4px 20px rgba(255, 186, 36, 0.4)",
+                          background: "var(--header-active-bg, linear-gradient(135deg, #FFBA24 0%, #FFD876 100%))",
+                          boxShadow: "var(--header-active-shadow, 0 4px 20px rgba(255, 186, 36, 0.4))",
                         }}
                       />
                       {menuData.map((menuItem, index) => {

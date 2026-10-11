@@ -65,7 +65,6 @@ const heroImages: HeroImage[] = [
 ];
 
 const Hero = () => {
-  const shineRef = useRef<HTMLHeadingElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const touchStartXRef = useRef<number | null>(null);
@@ -101,34 +100,6 @@ const Hero = () => {
     touchStartXRef.current = null;
   };
 
-  // Seamless interactive cursor-follow gold shine directly on text
-  const handleMouseMove = useCallback((e: MouseEvent) => {
-    const el = shineRef.current;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    el.style.setProperty("--shine-x", `${x}px`);
-    el.style.setProperty("--shine-y", `${y}px`);
-  }, []);
-
-  const handleMouseLeave = useCallback(() => {
-    const el = shineRef.current;
-    if (!el) return;
-    el.style.setProperty("--shine-x", "-9999px");
-    el.style.setProperty("--shine-y", "-9999px");
-  }, []);
-
-  useEffect(() => {
-    const el = shineRef.current;
-    if (!el) return;
-    el.addEventListener("mousemove", handleMouseMove as any);
-    el.addEventListener("mouseleave", handleMouseLeave as any);
-    return () => {
-      el.removeEventListener("mousemove", handleMouseMove as any);
-      el.removeEventListener("mouseleave", handleMouseLeave as any);
-    };
-  }, [handleMouseMove, handleMouseLeave]);
 
   // Intersection Observer for reveal animations
   useEffect(() => {
@@ -151,7 +122,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative overflow-hidden pt-28 md:pt-36 pb-8">
+    <section id="home" className="relative overflow-hidden pt-24 md:pt-32 pb-4 md:pb-6">
       <div className="container relative z-10">
         {/* Eyebrow */}
         <div className="mb-4 flex items-center gap-4 text-base font-light uppercase tracking-[0.4em] text-[#FFD876]">
@@ -160,17 +131,24 @@ const Hero = () => {
           <span className="h-px w-12 bg-[#FFBA24]/50" />
         </div>
 
-        {/* Wordmark Title with Seamless Direct Cursor Shine */}
-        <h1
-          ref={shineRef}
-          className="wordmark-hero text-5xl lowercase leading-[0.9] tracking-[0.08em] sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7rem]"
-          style={{ fontFamily: '"Supercharge Expand", sans-serif' }}
-          aria-label="golden dragons"
-        >
-          golden
-          <br />
-          dragons
-        </h1>
+        {/* Wordmark Title with Automatically Looping Gold Shine on "Golden" */}
+        <div className="relative inline-block overflow-visible py-2">
+          <h1
+            className="text-5xl lowercase leading-[1.1] tracking-[0.08em] sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] select-none overflow-visible"
+            style={{ fontFamily: '"Supercharge Expand", sans-serif' }}
+            aria-label="golden dragons"
+          >
+            <span className="inline-block overflow-visible filter drop-shadow-[0_0_24px_rgba(255,186,36,0.35)]">
+              <span className="gold-shine overflow-visible pl-1 pr-8 sm:pr-10 md:pr-14 pt-2 pb-3">
+                golden
+              </span>
+            </span>
+            <br />
+            <span className="inline-block text-white filter drop-shadow-[0_0_16px_rgba(255,255,255,0.15)] pl-1 pr-6 pt-1 pb-2 overflow-visible">
+              dragons
+            </span>
+          </h1>
+        </div>
 
         {/* Hero Grid: Copy + Media */}
         <div className="mt-10 grid items-start gap-10 lg:grid-cols-[5fr_7fr]">
@@ -275,7 +253,7 @@ const Hero = () => {
                 <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 sm:p-5 pt-12 flex flex-col sm:flex-row sm:items-end justify-between gap-3 pointer-events-none">
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#FFBA24] animate-pulse" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#FFBA24]" />
                       <p className="text-sm sm:text-base font-semibold tracking-wide text-white drop-shadow-sm">
                         {heroImages[currentSlide].title}
                       </p>
@@ -308,7 +286,7 @@ const Hero = () => {
         </div>
 
         {/* Stats Row */}
-        <div className="reveal-stagger mt-16 grid grid-cols-2 border-t border-white/10 lg:grid-cols-4">
+        <div className="reveal-stagger mt-12 md:mt-14 grid grid-cols-2 border-t border-white/10 lg:grid-cols-4">
           {stats.map((stat, i) => (
             <div
               key={i}

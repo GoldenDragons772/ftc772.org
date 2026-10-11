@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
+import HexagonWaterfall from "./HexagonWaterfall";
 
 const paths = [
   {
@@ -48,7 +49,7 @@ const PathCards = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden py-20 md:py-28">
+    <section className="relative overflow-hidden py-12 md:py-16">
       <div className="container relative z-10">
         <div className="mb-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
           <span className="text-[#FFBA24]">01</span> Start here
@@ -67,24 +68,39 @@ const PathCards = () => {
             <Link
               key={i}
               href={path.href}
-              className="path-card glass-panel group flex min-h-[320px] flex-col justify-between rounded-[26px] p-8"
+              className="path-card glass-panel group relative flex min-h-[320px] flex-col justify-between overflow-hidden rounded-[32px] p-8"
             >
-              <div className="flex items-start justify-between">
-                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40 path-muted transition-colors duration-500">
+              <HexagonWaterfall />
+
+              <div className="relative z-10 flex items-start justify-between">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40 transition-colors duration-700 group-hover:text-black/70">
                   {path.tag}
                 </span>
-                <div className="path-arrow flex h-11 w-11 items-center justify-center rounded-full border border-current text-white/60">
-                  →
+                <div className="path-arrow relative z-20 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white/70 backdrop-blur-md transition-all duration-700 group-hover:border-black/30 group-hover:bg-black group-hover:text-[#FFBA24] group-hover:shadow-[0_4px_24px_rgba(0,0,0,0.45)]">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="transform origin-center transition-transform duration-500 ease-out group-hover:-rotate-45"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
                 </div>
               </div>
-              <div>
+              <div className="relative z-10">
                 <h3
-                  className="mb-3 text-3xl lowercase tracking-[0.06em] md:text-4xl"
+                  className="mb-3 text-3xl lowercase tracking-[0.06em] text-white transition-colors duration-700 md:text-4xl group-hover:text-black drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] group-hover:drop-shadow-none"
                   style={{ fontFamily: '"Supercharge Expand", sans-serif' }}
                 >
                   {path.title.toLowerCase()}
                 </h3>
-                <p className="path-muted text-sm leading-relaxed text-white/60 transition-colors duration-500">
+                <p className="text-sm leading-relaxed text-white/70 transition-colors duration-700 group-hover:text-black/85 group-hover:font-medium drop-shadow-[0_1px_8px_rgba(0,0,0,0.95)] group-hover:drop-shadow-none">
                   {path.description}
                 </p>
               </div>

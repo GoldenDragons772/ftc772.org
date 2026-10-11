@@ -43,14 +43,19 @@ const cads = [
 
 const repos = [
   {
+    name: "Decode",
+    desc: "2025-26 Decode codebase for FIRST Tech Challenge team 772 from SCGSSM",
+    url: "https://github.com/GoldenDragons772/Decode",
+  },
+  {
+    name: "IntoTheDeep",
+    desc: "2024-25 IntoTheDeep codebase for FIRST Tech Challenge team 772 from SCGSSM",
+    url: "https://github.com/GoldenDragons772/IntoTheDeep",
+  },
+  {
     name: "CenterStage",
     desc: "2023-24 CenterStage codebase for FIRST Tech Challenge team 772 from SCGSSM",
     url: "https://github.com/GoldenDragons772/CenterStage",
-  },
-  {
-    name: "Decode",
-    desc: "2025-26 Decode codebase for FIRST Tech Challenge team 772 from SCGSSM ",
-    url: "https://github.com/GoldenDragons772/Decode",
   },
   {
     name: "ftc772.org",
@@ -58,14 +63,9 @@ const repos = [
     url: "https://github.com/GoldenDragons772/ftc772.org",
   },
   {
-    name: "GDocs",
+    name: "G-Docs",
     desc: "Documentation site repository containing our guides and handbooks.",
     url: "https://github.com/GoldenDragons772/GDocs",
-  },
-  {
-    name: "IntoTheDeep",
-    desc: "2024-25 IntoTheDeep codebase for FIRST Tech Challenge team 772 from SCGSSM",
-    url: "https://github.com/GoldenDragons772/IntoTheDeep",
   },
 ];
 
@@ -124,37 +124,24 @@ const OpenSourcePage = () => {
                 className="group relative block w-full rounded-[2rem] overflow-hidden bg-[#141414] border border-[#141414] hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_40px_rgba(var(--color-primary),0.15)] hover:-translate-y-1 p-10 md:p-16 flex flex-col items-center justify-center"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative z-10 w-full mb-8 transition-transform duration-500 group-hover:scale-105 flex justify-center">
-                  <div
-                    className="gdocs-custom-logo select-none"
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      fontFamily: '"Montserrat", sans-serif',
-                      fontWeight: 800,
-                      letterSpacing: '0.05em',
-                      lineHeight: 1,
-                      fontSize: 'clamp(4rem, 10vw, 10rem)',
-                    }}
-                  >
-                    <span style={{ color: '#FFBA24' }}>G</span>
-                    <span style={{ color: '#ffffff' }}>D</span>
-                    <div className="gdocs-dragon-logo-wrapper" style={{ display: 'inline-flex' }}>
-                      <img
-                        src="/images/logo/logo.png"
-                        alt="Dragon Logo"
-                        style={{
-                          height: '0.85em',
-                          width: 'auto',
-                          marginLeft: '0.05em',
-                          marginRight: '0.05em',
-                          objectFit: 'contain',
-                          opacity: 0
-                        }}
-                      />
+                <div className="relative z-10 w-full mb-6 transition-transform duration-500 group-hover:scale-105 flex items-center justify-center gap-4 sm:gap-6">
+                  <div className="relative h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 flex-shrink-0">
+                    <img
+                      src="/images/logo/logo.png"
+                      alt="Golden Dragons"
+                      className="h-full w-full object-contain drop-shadow-[0_0_30px_rgba(255,186,36,0.6)]"
+                    />
+                  </div>
+                  <div className="text-left select-none">
+                    <div
+                      className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-wider text-white flex items-center"
+                      style={{ fontFamily: '"Montserrat", sans-serif' }}
+                    >
+                      <span className="text-[#FFBA24]">G</span>-DOCS
                     </div>
-                    <span style={{ color: '#ffffff' }}>C</span>
-                    <span style={{ color: '#ffffff' }}>S</span>
+                    <div className="text-[11px] sm:text-xs md:text-sm uppercase tracking-[0.3em] text-white/50 font-semibold mt-1">
+                      Team Documentation &amp; Notebooks
+                    </div>
                   </div>
                 </div>
                 <div className="relative z-10 text-center">
@@ -202,12 +189,93 @@ const OpenSourcePage = () => {
                   className="group relative bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 hover:border-primary/40 hover:bg-[#111] transition-all duration-500 flex flex-col overflow-hidden [perspective:1000px] min-h-[300px]"
                 >
                   <style>{`
-                    @keyframes goldShimmer {
-                      0% { background-position: 200% center; }
-                      100% { background-position: -200% center; }
+                    @keyframes glitchGoldRed {
+                      0%, 100% {
+                        text-shadow: 2.5px 0 #FFBA24, -2.5px 0 #EF4444;
+                        transform: translate(0, 0);
+                      }
+                      20% {
+                        text-shadow: -2.5px 0 #FFBA24, 2.5px 0 #EF4444;
+                        transform: translate(-1px, 1px);
+                      }
+                      40% {
+                        text-shadow: 2px 0 #FFBA24, -2px 0 #EF4444;
+                        transform: translate(1px, -1px);
+                      }
+                      60% {
+                        text-shadow: -2px 0 #EF4444, 2px 0 #FFBA24;
+                        transform: translate(-1px, 0);
+                      }
+                      80% {
+                        text-shadow: 3px 0 #FFBA24, -3px 0 #EF4444;
+                        transform: translate(1px, 1px);
+                      }
                     }
-                    .animate-gold-shimmer {
-                      animation: goldShimmer 4s linear infinite;
+
+                    @keyframes glitchQuestionMarkGoldRed {
+                      0%, 100% {
+                        text-shadow:
+                          1px 1px 0 rgba(200, 140, 20, 0.4),
+                          2px 2px 0 rgba(160, 100, 15, 0.35),
+                          3px 3px 0 rgba(120, 70, 10, 0.3),
+                          4px 4px 0 rgba(80, 40, 5, 0.25),
+                          6px 0 #FFBA24, -6px 0 #EF4444, 0 0 35px rgba(255, 186, 36, 0.4);
+                        transform: translate(0, 0);
+                      }
+                      15% {
+                        text-shadow:
+                          1px 1px 0 rgba(200, 140, 20, 0.4),
+                          2px 2px 0 rgba(160, 100, 15, 0.35),
+                          3px 3px 0 rgba(120, 70, 10, 0.3),
+                          -7px 0 #FFBA24, 7px 0 #EF4444, 0 0 45px rgba(239, 68, 68, 0.5);
+                        transform: translate(-3px, 2px);
+                      }
+                      30% {
+                        text-shadow:
+                          1px 1px 0 rgba(200, 140, 20, 0.4),
+                          2px 2px 0 rgba(160, 100, 15, 0.35),
+                          3px 3px 0 rgba(120, 70, 10, 0.3),
+                          8px 0 #FFBA24, -8px 0 #EF4444, 0 0 30px rgba(255, 186, 36, 0.4);
+                        transform: translate(3px, -2px);
+                      }
+                      50% {
+                        text-shadow:
+                          1px 1px 0 rgba(200, 140, 20, 0.4),
+                          2px 2px 0 rgba(160, 100, 15, 0.35),
+                          -5px 0 #FFBA24, 5px 0 #EF4444, 0 0 40px rgba(255, 186, 36, 0.35);
+                        transform: translate(1px, -1px);
+                      }
+                      65% {
+                        text-shadow:
+                          1px 1px 0 rgba(200, 140, 20, 0.4),
+                          2px 2px 0 rgba(160, 100, 15, 0.35),
+                          3px 3px 0 rgba(120, 70, 10, 0.3),
+                          9px 0 #EF4444, -9px 0 #FFBA24, 0 0 45px rgba(239, 68, 68, 0.5);
+                        transform: translate(-4px, 1px);
+                      }
+                      85% {
+                        text-shadow:
+                          1px 1px 0 rgba(200, 140, 20, 0.4),
+                          2px 2px 0 rgba(160, 100, 15, 0.35),
+                          -4px 0 #FFBA24, 4px 0 #EF4444, 0 0 35px rgba(255, 186, 36, 0.4);
+                        transform: translate(2px, 1px);
+                      }
+                    }
+
+                    .glitch-redacted {
+                      display: inline-block;
+                      animation: glitchGoldRed 0.65s infinite steps(2, start);
+                      color: #ffffff;
+                      font-family: 'Supercharge Straight Expand', 'Supercharge', sans-serif;
+                      font-weight: 700;
+                      letter-spacing: 0.12em;
+                      text-transform: lowercase !important;
+                    }
+
+                    .glitch-question-mark {
+                      display: inline-block;
+                      animation: glitchQuestionMarkGoldRed 0.85s infinite steps(2, start);
+                      font-family: 'Supercharge', 'Supercharge Straight Expand', sans-serif;
                     }
                   `}</style>
 
@@ -215,23 +283,25 @@ const OpenSourcePage = () => {
                   <div className="absolute inset-0 z-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_80%)] pointer-events-none" />
 
                   <div className="flex items-start justify-between mb-4 relative z-10">
-                    <h3 className="text-2xl font-normal text-white/70 tracking-[0.15em]" style={{ fontFamily: '"Supercharge Straight Expand", sans-serif' }}>
-                      DragonPather <span className="blur-[4px] select-none group-hover:blur-[2px] transition-all duration-500 bg-[linear-gradient(110deg,#FFBA24,45%,#FFF0C2,55%,#FFBA24)] bg-[length:200%_auto] bg-clip-text text-transparent animate-gold-shimmer drop-shadow-[0_0_8px_rgba(255,186,36,0.6)]">[REDACTED]</span>
+                    <h3 className="text-2xl font-normal text-white/70 tracking-[0.15em] lowercase" style={{ fontFamily: '"Supercharge Straight Expand", sans-serif' }}>
+                      dragonpather <span className="glitch-redacted select-none ml-1 lowercase">[redacted]</span>
                     </h3>
                   </div>
                   <p className="text-white/50 text-lg font-montserrat flex-grow relative z-10">
                     Our next-generation pathing model.
                   </p>
                   
-                  {/* Floating Question Mark */}
-                  <div className="absolute inset-0 flex items-center justify-end pr-16 pointer-events-none z-0">
-                    <span 
-                      className="mt-6 text-[200px] leading-none font-normal text-[#FFBA24]/20 select-none group-hover:text-[#FFBA24]/30 [transform-style:preserve-3d] group-hover:[transform:rotateX(15deg)_rotateY(-20deg)_translateZ(20px)_scale(1.05)] transition-all duration-700 ease-out animate-pulse"
-                      style={{ textShadow: "0 0 40px #FFBA24", fontFamily: '"Supercharge", sans-serif' }}
-                      aria-hidden="true"
-                    >
-                      ?
-                    </span>
+                  {/* Floating 3D Question Mark */}
+                  <div className="absolute inset-0 flex items-center justify-end pr-12 sm:pr-16 pointer-events-none z-0 [perspective:1200px]">
+                    <div className="mt-6 [transform-style:preserve-3d] transition-transform duration-700 ease-out [transform:rotateX(12deg)_rotateY(-20deg)_translateZ(10px)] group-hover:[transform:rotateX(20deg)_rotateY(-32deg)_translateZ(40px)_scale(1.1)]">
+                      <span 
+                        className="glitch-question-mark block text-[180px] sm:text-[210px] leading-none font-normal text-[#FFBA24]/30 select-none group-hover:text-[#FFBA24]/50 transition-colors duration-500"
+                        style={{ fontFamily: '"Supercharge", sans-serif' }}
+                        aria-hidden="true"
+                      >
+                        ?
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -240,8 +310,8 @@ const OpenSourcePage = () => {
             {/* Public CADs Section (Raptoria Style Ready-Cards) */}
             <div>
               <div className="flex items-center gap-6 mb-12">
-                <div className="bg-white px-3 py-1.5 rounded shadow-[0_0_15px_rgba(255,255,255,0.3)] flex-shrink-0">
-                  <img src="/images/logo/onshape.png" alt="OnShape" className="h-6 object-contain" />
+                <div className="flex items-center gap-3 rounded-xl border border-white/15 bg-white/[0.06] px-4 py-2 backdrop-blur-md shadow-lg flex-shrink-0">
+                  <img src="/images/logo/onshape.png" alt="OnShape" className="h-7 sm:h-8 object-contain brightness-0 invert opacity-90" />
                 </div>
                 {/* translate-y-1 is added here to visually center the Supercharge font baseline with the logo */}
                 <h2 className="text-3xl md:text-4xl font-normal text-white tracking-wider lowercase translate-y-1 flex-shrink-0" style={{ fontFamily: '"Supercharge", sans-serif' }}>Public CADs</h2>
@@ -250,10 +320,10 @@ const OpenSourcePage = () => {
 
               <div className="flex flex-col gap-8">
                 {cads.map((cad, index) => (
-                  <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center border border-white/10 rounded-[2rem] p-8 lg:p-12 bg-[#0a0a0a]">
+                  <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start border border-white/10 rounded-[2rem] p-8 lg:p-12 bg-[#0a0a0a]">
                     
-                    {/* Image / Render Side */}
-                    <div className={`relative aspect-[4/3] rounded-2xl overflow-hidden bg-black/40 border border-white/5 flex items-center justify-center p-6 ${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
+                    {/* Image / Render Side - Consistent Left Alignment */}
+                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-black/40 border border-white/5 flex items-center justify-center p-6">
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-60 z-10 pointer-events-none" />
                       {/* Grid Background */}
                       <div className="absolute inset-0 z-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:44px_44px] [mask-image:radial-gradient(circle_at_center,black_25%,transparent_75%)] pointer-events-none" />
@@ -267,12 +337,8 @@ const OpenSourcePage = () => {
                       </div>
                     </div>
 
-                    {/* Text / Info Side */}
-                    <div className={`flex flex-col ${index % 2 !== 0 ? 'lg:order-1' : ''}`}>
-                      <div className="inline-flex items-center gap-2 mb-4">
-                        <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                        <span className="text-primary font-medium tracking-widest text-sm uppercase">Public</span>
-                      </div>
+                    {/* Text / Info Side - Top Justified without redundant Public badge */}
+                    <div className="flex flex-col pt-1 sm:pt-3">
                       <h3 className={`text-4xl lg:text-6xl font-normal uppercase leading-none mb-6 tracking-[0.05em] ${
                         cad.name === 'Botsune Miku II'
                           ? 'bg-[linear-gradient(110deg,#FFBA24,45%,#FFF0C2,55%,#FFBA24)] bg-[length:200%_auto] bg-clip-text text-transparent animate-gold-shimmer drop-shadow-[0_0_12px_rgba(255,186,36,0.4)]'

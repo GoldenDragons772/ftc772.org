@@ -142,13 +142,13 @@ const OutreachSection = () => {
     (currentIndex - 1 + outreachImages.length) % outreachImages.length;
 
   return (
-    <section className="relative overflow-hidden py-20 md:py-28">
+    <section className="relative overflow-hidden py-12 md:py-16">
       <div className="container relative z-10">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1fr]">
           {/* Left Content */}
           <div className="reveal-up">
             <div className="mb-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
-              <span className="text-[#FFBA24]">03</span> Outreach
+              <span className="text-[#FFBA24]">04</span> Outreach
             </div>
             <h2
               className="text-4xl lowercase leading-[0.95] tracking-[0.06em] md:text-5xl lg:text-6xl"
@@ -235,7 +235,7 @@ const OutreachSection = () => {
 
                 {/* Dynamic Floating Caption Pill */}
                 <div className="absolute top-4 left-4 z-10 flex items-center gap-2 rounded-full border border-white/15 bg-black/65 px-3.5 py-1 text-xs font-medium tracking-wide text-white/90 backdrop-blur-md shadow-lg">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#FFBA24] animate-pulse" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#FFBA24]" />
                   <span>{outreachImages[activeDotIndex].caption}</span>
                 </div>
 

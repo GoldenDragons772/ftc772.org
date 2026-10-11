@@ -20,6 +20,13 @@
     --ease: cubic-bezier(0.16, 1, 0.3, 1);
   }
 
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -256,54 +263,35 @@
   66% { background-position: 60% 20%, 40% 80%, 50% 50%, 0% 0%; }
 }
 
-/* ─── GOLD SHINE TEXT ─── */
+/* ─── GOLD SHINE TEXT (from scout.ftc772.org / DragonScouter) ─── */
 @layer utilities {
   .gold-shine {
     background: linear-gradient(
-      to top left,
+      to right,
       #FFBA24 0%,
-      #ffe484 25%,
-      #FFBA24 50%,
-      #ffe484 75%,
+      #FFFFFF 20%,
+      #FFBA24 40%,
       #FFBA24 100%
     );
-    background-size: 200% 200%;
+    background-size: 200% auto;
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    animation: shine 6s linear infinite;
+    animation: goldShine 3s linear infinite;
     display: inline-block;
   }
 }
 
-/* ─── SEAMLESS HERO WORDMARK CURSOR SHINE ─── */
-.wordmark-hero {
-  position: relative;
-  display: inline-block;
-  cursor: default;
-  user-select: none;
-  background-image:
-    radial-gradient(
-      circle 260px at var(--shine-x, -9999px) var(--shine-y, -9999px),
-      #FFFFFF 0%,
-      #FFF5D0 22%,
-      rgba(255, 186, 36, 0.85) 50%,
-      transparent 75%
-    ),
-    linear-gradient(
-      180deg,
-      #FFBA24 0%,
-      #FFBA24 47%,
-      #FFFFFF 53%,
-      #FFFFFF 100%
-    );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  animation: raptoriaHeadingRise 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
-  will-change: transform;
+@keyframes goldShine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
+
+
 
 /* ─── TIER PRICE GRADIENT DISPLAY ─── */
 .tier-price-display {
@@ -346,43 +334,18 @@
 .reveal-stagger.in-view > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 200ms; }
 .reveal-stagger.in-view > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 300ms; }
 
-/* ─── PATH CARDS (Raptoria-style hover expand) ─── */
+/* ─── PATH CARDS (Smooth Golden Brush Fill) ─── */
 .path-card {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  transition: color 0.5s var(--ease), border-color 0.5s var(--ease);
-}
-
-.path-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-  clip-path: circle(0px at calc(100% - 40px) 40px);
-  transition: clip-path 0.8s var(--ease);
-}
-
-.path-card:hover::before {
-  clip-path: circle(160% at calc(100% - 40px) 40px);
+  transition: border-color 0.4s var(--ease), box-shadow 0.4s var(--ease), transform 0.4s var(--ease);
 }
 
 .path-card:hover {
-  color: var(--ink);
-  border-color: transparent;
-}
-
-.path-card:hover .path-muted {
-  color: rgba(8, 8, 8, 0.7);
-}
-
-.path-card:hover .path-arrow {
-  transform: rotate(-45deg);
-}
-
-.path-arrow {
-  transition: transform 0.6s var(--ease);
+  border-color: rgba(255, 215, 80, 0.85);
+  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.75), 0 0 40px rgba(255, 186, 36, 0.4);
+  transform: translateY(-3px);
 }
 
 /* ─── STATS COUNTER ─── */
@@ -545,4 +508,237 @@
 
 .liquid-glass-card:hover::after {
   opacity: 1;
+}
+
+/* ─── SLIDER TIER SPARKS & MYTHIC PURPLE FIRE ─── */
+@keyframes sparkCrackle {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(0.6) rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.2) rotate(15deg);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8) rotate(-10deg);
+  }
+  75% {
+    opacity: 0.95;
+    transform: scale(1.3) rotate(25deg);
+  }
+}
+
+@keyframes sparkOrbit {
+  0% {
+    transform: rotate(0deg) translateX(30px) rotate(0deg) scale(0.7);
+    opacity: 0.4;
+  }
+  50% {
+    transform: rotate(180deg) translateX(36px) rotate(-180deg) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) translateX(30px) rotate(-360deg) scale(0.7);
+    opacity: 0.4;
+  }
+}
+
+@keyframes mythicFlameTongue1 {
+  0%, 100% {
+    transform: scaleY(1) scaleX(1) translateY(0) skewX(-2deg);
+    opacity: 0.92;
+  }
+  30% {
+    transform: scaleY(1.28) scaleX(0.88) translateY(-8px) skewX(3deg);
+    opacity: 1;
+  }
+  60% {
+    transform: scaleY(0.92) scaleX(1.08) translateY(-2px) skewX(-4deg);
+    opacity: 0.85;
+  }
+  85% {
+    transform: scaleY(1.22) scaleX(0.94) translateY(-6px) skewX(2deg);
+    opacity: 0.95;
+  }
+}
+
+@keyframes mythicFlameTongue2 {
+  0%, 100% {
+    transform: scaleY(1.08) scaleX(0.92) translateY(-3px) skewX(4deg);
+    opacity: 0.88;
+  }
+  35% {
+    transform: scaleY(0.88) scaleX(1.12) translateY(0) skewX(-3deg);
+    opacity: 0.82;
+  }
+  70% {
+    transform: scaleY(1.35) scaleX(0.82) translateY(-10px) skewX(5deg);
+    opacity: 1;
+  }
+}
+
+@keyframes mythicFlameCore {
+  0%, 100% {
+    transform: scale(0.96) translateY(0);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.14) translateY(-4px);
+    opacity: 1;
+  }
+}
+
+@keyframes mythicEmberFloat {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.95;
+    transform: translate(calc(var(--emb-x, 0px) * 0.25), -12px) scale(1);
+  }
+  45% {
+    opacity: 0.7;
+    transform: translate(calc(var(--emb-x, 0px) * 0.75), -32px) scale(0.85);
+  }
+  70% {
+    opacity: 0.85;
+    transform: translate(var(--emb-x, 0px), -50px) scale(0.65);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--emb-x, 0px) * 1.35), -72px) scale(0.2);
+  }
+}
+
+@keyframes mythicFireAuraPulse {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(1);
+    filter: blur(12px) drop-shadow(0 0 14px rgba(168, 85, 247, 0.7));
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.18);
+    filter: blur(16px) drop-shadow(0 0 24px rgba(192, 132, 252, 0.9));
+  }
+}
+
+/* ─── PLATINUM SMALL CYAN FLAME ─── */
+@keyframes platFlameTongue1 {
+  0%, 100% {
+    transform: scaleY(1) scaleX(1) translateY(0) skewX(-1.5deg);
+    opacity: 0.92;
+  }
+  30% {
+    transform: scaleY(1.22) scaleX(0.9) translateY(-5px) skewX(2deg);
+    opacity: 1;
+  }
+  60% {
+    transform: scaleY(0.95) scaleX(1.05) translateY(-1px) skewX(-2.5deg);
+    opacity: 0.88;
+  }
+  85% {
+    transform: scaleY(1.15) scaleX(0.94) translateY(-4px) skewX(1.5deg);
+    opacity: 0.95;
+  }
+}
+
+@keyframes platFlameTongue2 {
+  0%, 100% {
+    transform: scaleY(1.05) scaleX(0.94) translateY(-2px) skewX(2.5deg);
+    opacity: 0.9;
+  }
+  35% {
+    transform: scaleY(0.92) scaleX(1.08) translateY(0) skewX(-2deg);
+    opacity: 0.85;
+  }
+  70% {
+    transform: scaleY(1.22) scaleX(0.88) translateY(-6px) skewX(3deg);
+    opacity: 1;
+  }
+}
+
+@keyframes platFlameCore {
+  0%, 100% {
+    transform: scale(0.98) translateY(0);
+    opacity: 0.92;
+  }
+  50% {
+    transform: scale(1.1) translateY(-3px);
+    opacity: 1;
+  }
+}
+
+@keyframes platEmberFloat {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.95;
+    transform: translate(calc(var(--emb-x, 0px) * 0.3), -8px) scale(1);
+  }
+  55% {
+    opacity: 0.7;
+    transform: translate(calc(var(--emb-x, 0px) * 0.7), -22px) scale(0.8);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translate(var(--emb-x, 0px), -36px) scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--emb-x, 0px) * 1.2), -48px) scale(0.2);
+  }
+}
+
+@keyframes platFireAuraPulse {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(0.95);
+    filter: blur(10px) drop-shadow(0 0 10px rgba(0, 221, 255, 0.6));
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.1);
+    filter: blur(12px) drop-shadow(0 0 18px rgba(102, 234, 255, 0.8));
+  }
+}
+
+/* ─── GOLD SLIGHT SPARK LOOP ─── */
+@keyframes goldSparkOrbit {
+  0% {
+    transform: rotate(0deg) translateX(24px) rotate(0deg) scale(0.7);
+    opacity: 0.3;
+  }
+  50% {
+    transform: rotate(180deg) translateX(28px) rotate(-180deg) scale(1.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: rotate(360deg) translateX(24px) rotate(-360deg) scale(0.7);
+    opacity: 0.3;
+  }
+}
+
+@keyframes goldSparkFloat {
+  0% {
+    transform: translate(0, 0) scale(0.4);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.95;
+    transform: translate(calc(var(--g-x, 0px) * 0.4), -6px) scale(1);
+  }
+  60% {
+    opacity: 0.7;
+    transform: translate(calc(var(--g-x, 0px) * 0.8), -15px) scale(0.75);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--g-x, 0px) * 1.2), -24px) scale(0.2);
+  }
 }

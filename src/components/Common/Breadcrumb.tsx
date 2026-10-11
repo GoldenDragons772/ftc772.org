@@ -52,7 +52,10 @@ const Breadcrumb = ({
                     </Link>
                     <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-white/60"></span>
                   </li>
-                  <li className="text-sm font-semibold text-yellow">
+                  <li
+                    className="text-sm font-semibold text-yellow"
+                    style={style ? { color: style.color } : undefined}
+                  >
                     {pageName}
                   </li>
                 </ul>

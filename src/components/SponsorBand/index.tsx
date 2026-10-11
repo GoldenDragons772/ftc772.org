@@ -39,7 +39,7 @@ const SponsorBand = () => {
   return (
     <>
       {/* Sponsor Marquee */}
-      <div className="border-y border-white/5 py-10 sm:py-12 bg-transparent">
+      <div className="border-y border-white/5 py-8 sm:py-10 bg-transparent">
         <div className="container mb-6 flex items-center justify-between">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#FFBA24]">
             ● Our Partners &amp; Sponsors
@@ -76,7 +76,7 @@ const SponsorBand = () => {
       </div>
 
       {/* Sponsor CTA Band */}
-      <section className="relative overflow-hidden py-20 md:py-28">
+      <section className="relative overflow-hidden py-12 md:py-16">
         <div className="container relative z-10">
           <div className="reveal-up glass-panel-strong flex flex-col items-center gap-10 rounded-[32px] px-8 sm:px-12 py-16 md:py-20 text-center md:flex-row md:justify-between md:text-left">
             <div className="flex flex-col sm:flex-row items-center gap-6">
@@ -89,7 +89,7 @@ const SponsorBand = () => {
               />
               <div>
                 <div className="mb-4 sm:mb-5 flex items-center justify-center md:justify-start gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
-                  <span className="text-[#FFBA24]">04</span> Sponsor the season
+                  <span className="text-[#FFBA24]">05</span> Sponsor the season
                 </div>
                 <h2
                   className="text-3xl lowercase leading-[1.05] tracking-[0.06em] md:text-4xl lg:text-5xl mb-3 md:mb-0"

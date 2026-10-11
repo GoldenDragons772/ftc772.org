@@ -5,9 +5,9 @@ import Hydra from "@/components/Robots/Hydra";
 import Viper from "@/components/Robots/Viper";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
-import Script from "next/script";
 import { Metadata } from "next";
 import Botsune2 from "@/components/Robots/Botsune2";
+import ScrollReset from "@/components/Common/ScrollReset";
 
 export const metadata: Metadata = {
   title: "Robots | Golden Dragons (772)",
@@ -16,19 +16,10 @@ export const metadata: Metadata = {
 
 const AboutPage = () => {
   return (
-    <>
-      {/* CAD & 3D Model Performance Hints */}
-      <link rel="preconnect" href="https://ajax.googleapis.com" />
-      <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="anonymous" />
-      <link rel="dns-prefetch" href="https://ajax.googleapis.com" />
-      <link rel="dns-prefetch" href="https://www.gstatic.com" />
-      <Script
-        type="module"
-        src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
-        strategy="afterInteractive"
-      />
+
 
       <div className="relative overflow-hidden bg-transparent">
+        <ScrollReset />
         <div className="absolute inset-0 bg-triangle-mesh bg-cover bg-center opacity-40 blur-[2px] scale-[1.02]" />
         <div className="relative z-10">
           <Breadcrumb
@@ -46,7 +37,6 @@ const AboutPage = () => {
           <GilesCorey />
         </div>
       </div>
-    </>
   );
 };
 

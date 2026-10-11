@@ -228,7 +228,7 @@ export default function OutreachPage() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 backdrop-blur-md"
           >
-            <span className="h-2 w-2 rounded-full bg-[#E52243] animate-ping" />
+            <span className="h-2 w-2 rounded-full bg-[#E52243]" />
             <span 
               className="text-xs uppercase tracking-wider text-white/90"
               style={{ fontFamily: "'Kelpt A3', sans-serif" }}
@@ -251,44 +251,44 @@ export default function OutreachPage() {
             {/* The Logo Lockup Container */}
             <div className="relative inline-block select-none w-[300px] sm:w-[450px] md:w-[580px] lg:w-[660px] transition-transform duration-500 group-hover:scale-105">
               
-              {/* "LEARN" Text styled in Spicy Sale font and aligned right above "I" and "R" of FIRST */}
+              {/* "LEARN" Text styled with rich top-to-bottom 3D gradients and gloss highlights matching the official poster */}
               <div 
                 className="absolute -top-[46%] left-[5.5%] flex items-baseline tracking-[-0.035em] pointer-events-none z-10"
                 style={{
                   fontFamily: "'Spicy Sale', cursive, sans-serif",
                   fontSize: "clamp(2rem, 7.8vw, 4.2rem)",
                   lineHeight: 1,
-                  filter: "drop-shadow(0 3px 8px rgba(0,0,0,0.9))",
+                  filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.85))",
                 }}
               >
-                {/* L - Red */}
-                <span className="relative inline-block text-[#FF2E4D]">
+                {/* L - Coral Red Gradient */}
+                <span className="relative inline-block bg-gradient-to-b from-[#FF5E79] via-[#FF3352] to-[#D91636] bg-clip-text text-transparent">
                   L
-                  <span className="absolute top-[12%] left-[20%] right-[20%] h-[24%] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.75)_0%,transparent_70%)] rounded-full pointer-events-none" />
+                  <span className="absolute top-[10%] left-[18%] right-[18%] h-[28%] bg-gradient-to-b from-white/90 to-transparent rounded-full pointer-events-none" />
                 </span>
                 
-                {/* E - Pink */}
-                <span className="relative inline-block text-[#FF94A8]">
+                {/* E - Bubblegum Pink Gradient */}
+                <span className="relative inline-block bg-gradient-to-b from-[#FFA8BC] via-[#FF7595] to-[#E63965] bg-clip-text text-transparent">
                   E
-                  <span className="absolute top-[12%] left-[20%] right-[20%] h-[24%] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.75)_0%,transparent_70%)] rounded-full pointer-events-none" />
+                  <span className="absolute top-[10%] left-[18%] right-[18%] h-[28%] bg-gradient-to-b from-white/90 to-transparent rounded-full pointer-events-none" />
                 </span>
 
-                {/* A - White */}
-                <span className="relative inline-block text-white">
+                {/* A - Pure White with subtle lower depth */}
+                <span className="relative inline-block bg-gradient-to-b from-[#FFFFFF] via-[#F4F7FB] to-[#D5DFEA] bg-clip-text text-transparent">
                   A
-                  <span className="absolute top-[12%] left-[20%] right-[20%] h-[24%] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.75)_0%,transparent_70%)] rounded-full pointer-events-none" />
+                  <span className="absolute top-[10%] left-[18%] right-[18%] h-[28%] bg-gradient-to-b from-white/95 to-transparent rounded-full pointer-events-none" />
                 </span>
 
-                {/* R - Light Blue */}
-                <span className="relative inline-block text-[#78BDFF]">
+                {/* R - Sky Blue to Deep Cyan Gradient */}
+                <span className="relative inline-block bg-gradient-to-b from-[#7CD0FF] via-[#38A8FF] to-[#0070D2] bg-clip-text text-transparent">
                   R
-                  <span className="absolute top-[12%] left-[20%] right-[20%] h-[24%] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.75)_0%,transparent_70%)] rounded-full pointer-events-none" />
+                  <span className="absolute top-[10%] left-[18%] right-[18%] h-[28%] bg-gradient-to-b from-white/90 to-transparent rounded-full pointer-events-none" />
                 </span>
 
-                {/* N - Blue */}
-                <span className="relative inline-block text-[#0077FF]">
+                {/* N - Vivid Royal Blue Gradient */}
+                <span className="relative inline-block bg-gradient-to-b from-[#4DA6FF] via-[#0D7AFF] to-[#004DA6] bg-clip-text text-transparent">
                   N
-                  <span className="absolute top-[12%] left-[20%] right-[20%] h-[24%] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.75)_0%,transparent_70%)] rounded-full pointer-events-none" />
+                  <span className="absolute top-[10%] left-[18%] right-[18%] h-[28%] bg-gradient-to-b from-white/90 to-transparent rounded-full pointer-events-none" />
                 </span>
               </div>
 
@@ -418,16 +418,11 @@ export default function OutreachPage() {
 
               {/* Mission Statement Glass Card */}
               <div className="relative rounded-2xl border border-white/10 bg-white/[0.03] p-7 sm:p-9 backdrop-blur-xl shadow-2xl">
-                {/* Decorative quote mark */}
-                <div className="absolute top-4 right-6 text-6xl text-white/10 font-serif select-none pointer-events-none">
-                  “
-                </div>
-
                 <p 
                   className="text-white/90 text-lg sm:text-xl leading-relaxed font-medium relative z-10"
                   style={{ fontFamily: "'Kelpt A3', sans-serif" }}
                 >
-                  We started an inititiative aimed to help bridge the knowledge gap between FIRST Robotics Teams! We believe that creating unity between the 3 FIRST Programs is vital to everyone's success.
+                  We started an initiative aimed to help bridge the knowledge gap between FIRST Robotics Teams! We believe that creating unity between the 3 FIRST Programs is vital to everyone&apos;s success.
                 </p>
               </div>
 
@@ -564,7 +559,7 @@ export default function OutreachPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#E52243]/15 via-transparent to-[#0070D2]/15 pointer-events-none" />
         <div className="container mx-auto px-4 text-center relative z-10 max-w-4xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs uppercase tracking-widest text-white/70 mb-4 backdrop-blur-md">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#E52243] animate-pulse" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#E52243]" />
             <span>Outreach Initiative II</span>
           </div>
           <h3 className="text-3xl sm:text-4xl font-extrabold text-white tracking-wide mb-3">

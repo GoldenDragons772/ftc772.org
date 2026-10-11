@@ -9,7 +9,14 @@ function Team() {
 
   const captains = teamData
     .filter(user => user.type === 'captain')
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .sort((a, b) => {
+      const aLeadershipCount = a.role.filter(r => r.toLowerCase().includes('captain')).length;
+      const bLeadershipCount = b.role.filter(r => r.toLowerCase().includes('captain')).length;
+      if (aLeadershipCount !== bLeadershipCount) {
+        return bLeadershipCount - aLeadershipCount;
+      }
+      return a.name.localeCompare(b.name);
+    });
   const members = teamData
     .filter(user => user.type === 'member')
     .sort((a, b) => a.name.localeCompare(b.name));
